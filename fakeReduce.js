@@ -1,17 +1,13 @@
 arreglo = [1, 2, 3, 4];
 let valorActual;
-
-let funcion = function suma(acumulador, valorActual) {
-    return acumulador+valorActual;
-}
-
-console.log(fakeReduce(arreglo, funcion));
+let funcionCualquiera = (x, y) => x*y;
+console.log(fakeReduce(arreglo, funcionCualquiera)); // muestra el resultado del arreglo reducido
 
 
-function fakeReduce(arreglo, funcion) {
-  let acumulador = 0;
-  for (let i = 0; i < arreglo.length; i++) {
-    acumulador = funcion(acumulador, arreglo[i]);
+function fakeReduce(arre, funcion) {
+  let acumulador = 1;
+  for (let i = 0; i < arre.length; i++) {
+    acumulador = funcion(acumulador, arre[i]);
   }
   return acumulador;
 }
