@@ -11,7 +11,6 @@ for (let i=0; i<nuevoArreglo.length; i++) {
     console.log(nuevoArreglo[i]);
 }
 
-
 function fakeFilter(arreglo, funcion) {
     let nuevoArreglo=[];
     let j=0;

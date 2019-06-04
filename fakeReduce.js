@@ -1,7 +1,7 @@
 arreglo = [1, 2, 3, 4];
 let valorActual;
 
-funcion = function producto(acumulador, valorActual) {
+let funcion = function suma(acumulador, valorActual) {
     return acumulador+valorActual;
 }
 
