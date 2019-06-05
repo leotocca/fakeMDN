@@ -1,7 +1,9 @@
+/*
+EL CODIGO COMENTADO ES PARA PROBAR LAS FUNCIONES
 arreglo = [1, 2, 3, 4, 5, 6];
 console.log("Arreglo original: %s", arreglo);
 
-// dos funciones para probar los métodos,
+//dos funciones para probar los métodos,
 //la 1ra devuelve si un valor es impar o no, la 2da el producto de dos parámetros
 let funcionFiltradora = x => x % 2 != 0;
 let funcionReducidora = (x, y) => x + y;
@@ -17,9 +19,10 @@ arregloReducido=fakeReduce(arreglo, function (x,y){
 })
 console.log(`Arreglo reducido: ${arregloReducido}`);
 
+*/
 
 function fakeReduce(arre, funcion) {
-  let acumulador = 0;
+  let acumulador = arre[0];
   for (let i = 1; i < arre.length; i++) {
     acumulador = funcion(acumulador, arre[i]);
   }
