@@ -1,9 +1,9 @@
 function fakeForEach(arr, fn) {
   for (let i = 0; i < arr.length; i++) {
-    //aca lo que estoy haciendo es asignarle a la misma posicion del array, el valor que aplicó la funcion
+    //functions will be called in each of the array elements
     arr[i] = fn(arr[i]);
   }
-  //y aca estoy devolviendo el nuevo array
+  //returns the new array
   return arr;
 }
 
