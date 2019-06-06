@@ -9,3 +9,23 @@ function fakeForEach(arr, fn) {
 
 //console.log(fakeForEach(['tincho', 'peter', 'nico'], x => x + 'Medialunas'));
 //console.log(fakeForEach([1, 2, 3], multiplyBy2 => multiplyBy2 * 2));
+
+/*
+const array = [1, 2, 3, 4, 5];
+
+const even = function(element) {
+  // checks whether an element is even
+  return element % 2 === 0;
+}
+*/
+function fakeSome(arr, fn) {
+  for (let element of arr) {
+    //If fn returns true with any of the array elements, iteration stops
+    if (fn(element)) {
+      return true;
+    }
+  }
+  //si se iteró sobre todo los elementos es porque la función nunca devolvió true, entonces se devuelve false
+  return false;
+}
+//console.log(fakeSome(array, even))
