@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>fakeMDN</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--Barra de navegación-->
+    <div class="nav">
+      <h1>fakeMDN</h1>
+      <p><a href="index.html">Home</a></p>
+    </div>
+    <div class="container">
+      <div class="container1"></div>
+      <!--Container general-->
+      <div class="container2">
+        <!--Primera descripción del metodo-->
+        <div class="text">
+          <p>
+            La funcion
+            <a href="#" class="destacadoazul">fakeForEach()</a> ejecuta la
+            función pasada como parametro por cada elemento del array provisto
+          </p>
+        </div>
+
+        <!--H2-->
+        <div class="titulo">
+          <h2>Sintaxis</h2>
+        </div>
+
+        <!--sandbox-->
+        <div class="sandbox">
+          <p class="code">
+            fakeForEach(arr,fn){<br />
+            <span class="italic">//tu iteración</span><br />
+            });
+          </p>
+        </div>
+
+        <!--subtitulo-->
+
+        <h3>
+          <span class="subtitulo">Parametros </span>
+        </h3>
+
+        <!--descripcion-->
+
+        <h4>
+          <span class="destacado">Array</span>
+        </h4>
+
+        <p class="descripcion tab">Array que será procesada</p>
+
+        <h4>
+          <span class="destacado tab">Función</span>
+        </h4>
+
+        <p class="descripcion tab">Descripcion</p>
+
+        <!--subtitulo-->
+        <h3>
+          <span class="subtitulo">Valor de retorno </span>
+        </h3>
+
+        <p>
+          <span class="destacadoazul">undefined</span>
+        </p>
+
+        <!--H2-->
+        <div class="titulo">
+          <h2>Ejemplos</h2>
+        </div>
+
+        <h3>
+          <span class="subtitulo">Concatenar a cada elemento del string </span>
+        </h3>
+
+        <!--sandbox-->
+        <div class="sandboxjs">
+          <p class="codejs">
+            console.log(fakeForEach(['tincho', 'peter', 'nico'], x => x +
+            'Medialunas'));
+          </p>
+          <p>
+            Se recorre el array provista y se ejecuta la funcion de concatenar
+            el elemento del array con el string "Medialunas"
+          </p>
+        </div>
+
+        <h3>
+          <span class="subtitulo"> Multiplicar los elementos del array </span>
+        </h3>
+
+        <!--sandbox-->
+        <div class="sandboxjs">
+          <p class="codejs">
+            console.log(fakeForEach([1, 2, 3], multiplyBy2 => multiplyBy2 * 2));
+          </p>
+        </div>
+
+        <!--H2-->
+        <div class="titulo">
+          <h2>Ver también</h2>
+        </div>
+
+        <!--Lista de links-->
+        <ul>
+          <li><a href="#" class="destacadoazul">fakeFind()</a></li>
+          <li><a href="#" class="destacadoazul">fakeMap()</a></li>
+          <li><a href="#" class="destacadoazul">fakeFilter()</a></li>
+          <li><a href="#" class="destacadoazul">fakeEvery()</a></li>
+          <li><a href="#" class="destacadoazul">fakeSome()</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
