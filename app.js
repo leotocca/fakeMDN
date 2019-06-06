@@ -25,7 +25,7 @@ function fakeSome(arr, fn) {
       return true;
     }
   }
-  //si se iteró sobre todo los elementos es porque la función nunca devolvió true, entonces se devuelve false
+  //Iterates through the whole array and if it doesnt return true, it will be false.
   return false;
 }
 //console.log(fakeSome(array, even))
