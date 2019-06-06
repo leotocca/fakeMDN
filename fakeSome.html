@@ -18,9 +18,8 @@
         <div class="text">
           <p>
             La funcion
-            <a href="#" class="destacadoazul">fakeForEach()</a> ejecuta la
-            función pasada por un parametro una vez, para cada elemento del
-            array provisto
+            <a href="#" class="destacadoazul">fakeSome()</a> iterara el array y cuando se cumpla la condicion establecida,
+            se ejecutara la funcion
           </p>
         </div>
 
@@ -32,9 +31,14 @@
         <!--sandbox-->
         <div class="sandbox">
           <p class="code">
-            fakeForEach(function callback(currentValue){<br />
-            <span class="italic">//your iterator</span><br />
-            });
+            function fakeSome(arr, fn) {<br/>
+              for (let element of arr) {<br/>
+              if (fn(element)) { <br/>
+                return true;<br/>
+              }</br>
+            }<br/>
+            return false;<br/>
+          } <br/>
           </p>
         </div>
 
@@ -47,16 +51,18 @@
         <!--descripcion-->
 
         <h4>
-          <span class="destacado">callback</span>
+          <span class="destacado">Array</span>
         </h4>
 
-        <p class="descripcion tab">Descripcion</p>
+        <p class="descripcion tab">Array que va a ser iterada</p>
 
         <h4>
-          <span class="destacado tab">currentValue</span>
+          <span class="destacado tab">Funcion</span>
         </h4>
 
-        <p class="descripcion tab">Descripcion</p>
+        <p class="descripcion tab">
+          Funcion que se ejecutara si se cumple la condicion
+        </p>
 
         <!--subtitulo-->
         <h3>
@@ -64,47 +70,26 @@
         </h3>
 
         <p>
-          <span class="destacadoazul">undefined</span>
+          <span class="destacadoazul">Boolean</span>
         </p>
 
         <!--H2-->
         <div class="titulo">
-          <h2>Ejemplos</h2>
+          <h2>Ejemplo</h2>
         </div>
-
-        <!--subtitulo-->
-
-        <h3>
-          <span class="subtitulo">Converting a for loop to a forEach </span>
-        </h3>
 
         <!--sandbox-->
         <div class="sandboxjs">
           <p class="codejs">
-            fakeForEach(function callback(currentValue){<br />
-            <span class="italic">//your iterator</span><br />
-            });
+            const array = [1, 2, 3, 4, 5];<br/>
+const even = function(element) { <br/>
+  return element % 2 === 0; <br/>
+}<br/>
+console.log(fakeSome(array, even));<br/>
           </p>
         </div>
 
         <!--subtitulo-->
-
-        <h3>
-          <span class="subtitulo">Printing the contents of an array </span>
-        </h3>
-
-        <!--Texto-->
-
-        <p>The following code log a line for each element in an array</p>
-
-        <!--sandbox-->
-        <div class="sandboxjs">
-          <p class="codejs">
-            fakeForEach(function callback(currentValue){<br />
-            <span class="italic">//your iterator</span><br />
-            });
-          </p>
-        </div>
 
         <!--H2-->
         <div class="titulo">
@@ -120,6 +105,11 @@
           <li><a href="#" class="destacadoazul">fakeSome()</a></li>
         </ul>
       </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
     </div>
     <script src="app.js"></script>
   </body>
