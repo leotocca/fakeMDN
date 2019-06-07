@@ -31,9 +31,11 @@
         <!--sandbox-->
         <div class="sandbox">
           <p class="code">
-            fakeForEach(arr,fn){<br />
-            <span class="italic">//tu iteración</span><br />
-            });
+            <code>
+              fakeForEach(arr,fn){<br />
+              <span class="italic">//tu iteración</span><br />
+              });
+            </code>
           </p>
         </div>
 
@@ -52,10 +54,12 @@
         <p class="descripcion tab">Array que será procesada</p>
 
         <h4>
-          <span class="destacado tab">Función</span>
+          <span class="destacado">Función</span>
         </h4>
 
-        <p class="descripcion tab">Descripcion</p>
+        <p class="descripcion tab">
+          Función que será ejecutada por cada elemento iterado
+        </p>
 
         <!--subtitulo-->
         <h3>
@@ -78,12 +82,16 @@
         <!--sandbox-->
         <div class="sandboxjs">
           <p class="codejs">
-            console.log(fakeForEach(['tincho', 'peter', 'nico'], x => x +
-            'Medialunas'));
+            <code>
+              console.log(fakeForEach(['tincho', 'peter', 'nico'], x => x
+              +'Medialunas'));
+            </code>
           </p>
           <p>
-            Se recorre el array provista y se ejecuta la funcion de concatenar
-            el elemento del array con el string "Medialunas"
+            <code>
+              Se recorre el array provista y se ejecuta la funcion de concatenar
+              el elemento del array con el string "Medialunas"
+            </code>
           </p>
         </div>
 
@@ -94,7 +102,10 @@
         <!--sandbox-->
         <div class="sandboxjs">
           <p class="codejs">
-            console.log(fakeForEach([1, 2, 3], multiplyBy2 => multiplyBy2 * 2));
+            <code>
+              console.log(fakeForEach([1, 2, 3], multiplyBy2 => multiplyBy2 *
+              2));
+            </code>
           </p>
         </div>
 
