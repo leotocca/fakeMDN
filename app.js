@@ -1,5 +1,3 @@
-
-
 function fakeReduce(arr, callbackFunction) {
   let accumulator = arr[0];
   for (let i = 1; i < arr.length; i++) {
@@ -22,9 +20,9 @@ function fakeFilter(arr, callbackFunction) {
 }
 
 function fakeForEach(arr, fn) {
-  for (let i = 0; i < arr.length; i++) {
+  for (let element of arr) {
     //function will be called in each of the array elements
-    arr[i] = fn(arr[i]);
+    element = fn(element);
   }
   //returns the new array
   return arr;
