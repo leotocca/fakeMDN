@@ -27,12 +27,13 @@ function fakeForEach(arr, fn) {
 }
 
 function fakeSome(arr, fn) {
+  let atLeastOnePassesTheTest = false;
   for (let element of arr) {
     if (fn(element)) {
-      return true;
+      atLeastOnePassesTheTest = true;
     }
   }
-  return false;
+  return atLeastOnePassesTheTest;
 }
 
 function fakeMap(arr, fn) {
