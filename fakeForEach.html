@@ -71,7 +71,7 @@
         </section>
 
         <section class="examples">
-          <h2 class="sectionTitle">Ejemplo</h2>
+          <h2 class="sectionTitle">Ejemplos</h2>
 
           <!--subtitle-->
 
@@ -85,25 +85,31 @@
               let arr = ['a', 'b', 'c'];<br />
               console.log(fakeForEach(arr, (showEachElement = arr =>
               console.log(arr)))); <br />
+              // output 'a' <br />
+              // output 'b' <br />
+              // output 'c' <br />
             </code>
           </section>
 
           <!--subtitle-->
 
           <h3>
-            <span class="subtitle">Printing the contents of an array </span>
+            <span class="subtitle">Convertir un for loop en fakeForEach </span>
           </h3>
-
-          <!--Texto-->
-
-          <p>The following code log a line for each element in an array</p>
 
           <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
-              fakeForEach(function callback(currentValue){<br />
-              <span class="italic">//your iterator</span><br />
-              });
+              const items = ['item1', 'item2', 'item3'];<br />
+              const copy = [];<br />
+              <br />
+              // before<br />
+              for (let i=0; i< items.length; i++) {<br />
+              copy.push(items[i]);<br />
+              }<br />
+              <br />
+              // after<br />
+              fakeForEach(items, (convertir = arr => copy.push(arr)));<br />
             </code>
           </section>
         </section>
