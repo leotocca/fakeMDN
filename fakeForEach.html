@@ -3,116 +3,132 @@
   <head>
     <title>fakeMDN</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="x-icon" href="favicon.ico" />
   </head>
   <body>
     <!--Barra de navegación-->
-    <div class="nav">
+    <nav class="nav">
       <h1>fakeMDN</h1>
       <p><a href="index.html">Home</a></p>
-    </div>
-    <div class="container">
-      <div class="container1"></div>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
       <!--Container general-->
-      <div class="container2">
+      <article class="container2">
         <!--Primera descripción del metodo-->
-        <div class="text">
+        <section class="description text">
           <p>
             La funcion
-            <a href="#" class="destacadoazul">fakeForEach()</a> ejecuta la
-            función pasada como parametro por cada elemento del array provisto
+            <a href="#" class="bluehighlight">fakeForEach()</a> ejecuta la
+            función pasada por un parametro una vez, para cada elemento del
+            array provisto
           </p>
-        </div>
+        </section>
 
-        <!--H2-->
-        <div class="titulo">
-          <h2>Sintaxis</h2>
-        </div>
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
 
-        <!--sandbox-->
-        <div class="sandbox">
-          <p class="code">
-            fakeForEach(arr,fn){<br />
-            <span class="italic">//tu iteración</span><br />
-            });
+          <!--sandbox-->
+          <section class="sandbox">
+            <code class="code">
+              fakeForEach(arr,fn){<br />
+              <span class="italic">//tu iteración</span><br />
+              });
+            </code>
+          </section>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <!--descripcion-->
+
+          <h4>
+            <span class="highlight">Array</span>
+          </h4>
+
+          <p class="descripcion tab">Array que sera iterada</p>
+
+          <h4>
+            <span class="highlight">Función</span>
+          </h4>
+
+          <p class="descripcion tab">
+            Función que será ejecutada por cada elemento iterado
           </p>
-        </div>
 
-        <!--subtitulo-->
+          <!--subtitle-->
+          <h3>
+            <span class="subtitle">Valor de retorno </span>
+          </h3>
 
-        <h3>
-          <span class="subtitulo">Parametros </span>
-        </h3>
-
-        <!--descripcion-->
-
-        <h4>
-          <span class="destacado">Array</span>
-        </h4>
-
-        <p class="descripcion tab">Array que será procesada</p>
-
-        <h4>
-          <span class="destacado tab">Función</span>
-        </h4>
-
-        <p class="descripcion tab">Descripcion</p>
-
-        <!--subtitulo-->
-        <h3>
-          <span class="subtitulo">Valor de retorno </span>
-        </h3>
-
-        <p>
-          <span class="destacadoazul">undefined</span>
-        </p>
-
-        <!--H2-->
-        <div class="titulo">
-          <h2>Ejemplos</h2>
-        </div>
-
-        <h3>
-          <span class="subtitulo">Concatenar a cada elemento del string </span>
-        </h3>
-
-        <!--sandbox-->
-        <div class="sandboxjs">
-          <p class="codejs">
-            console.log(fakeForEach(['tincho', 'peter', 'nico'], x => x +
-            'Medialunas'));
+          <p class="descripcion tab">
+            <span class="bluehighlight">undefined</span>
           </p>
-          <p>
-            Se recorre el array provista y se ejecuta la funcion de concatenar
-            el elemento del array con el string "Medialunas"
-          </p>
-        </div>
+        </section>
 
-        <h3>
-          <span class="subtitulo"> Multiplicar los elementos del array </span>
-        </h3>
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplos</h2>
 
-        <!--sandbox-->
-        <div class="sandboxjs">
-          <p class="codejs">
-            console.log(fakeForEach([1, 2, 3], multiplyBy2 => multiplyBy2 * 2));
-          </p>
-        </div>
+          <!--subtitle-->
 
-        <!--H2-->
-        <div class="titulo">
-          <h2>Ver también</h2>
-        </div>
+          <h3>
+            <span class="subtitle"> Mostrar cada elemento del array </span>
+          </h3>
 
-        <!--Lista de links-->
-        <ul>
-          <li><a href="#" class="destacadoazul">fakeFind()</a></li>
-          <li><a href="#" class="destacadoazul">fakeMap()</a></li>
-          <li><a href="#" class="destacadoazul">fakeFilter()</a></li>
-          <li><a href="#" class="destacadoazul">fakeEvery()</a></li>
-          <li><a href="#" class="destacadoazul">fakeSome()</a></li>
-        </ul>
-      </div>
-    </div>
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+              let arr = ['a', 'b', 'c'];<br />
+              console.log(fakeForEach(arr, (showEachElement = arr =>
+              console.log(arr)))); <br />
+              // output 'a' <br />
+              // output 'b' <br />
+              // output 'c' <br />
+            </code>
+          </section>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle">Convertir un for loop en fakeForEach </span>
+          </h3>
+
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+              const items = ['item1', 'item2', 'item3'];<br />
+              const copy = [];<br />
+              <br />
+              // before<br />
+              for (let i=0; i< items.length; i++) {<br />
+              copy.push(items[i]);<br />
+              }<br />
+              <br />
+              // after<br />
+              fakeForEach(items, (convertir = arr => copy.push(arr)));<br />
+            </code>
+          </section>
+        </section>
+
+        <section class="seealso">
+          <h2 class="sectionTitle">Ver también</h2>
+
+          <!--Lista de links-->
+          <ul>
+            <li><a href="#" class="bluehighlight">fakeFind()</a></li>
+            <li><a href="#" class="bluehighlight">fakeMap()</a></li>
+            <li><a href="#" class="bluehighlight">fakeFilter()</a></li>
+            <li><a href="#" class="bluehighlight">fakeEvery()</a></li>
+            <li><a href="#" class="bluehighlight">fakeSome()</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>
