@@ -21,9 +21,8 @@ function fakeFilter(arr, callbackFunction) {
 
 function fakeForEach(arr, fn) {
   for (let element of arr) {
-    element = fn(element);
+    fn(element);
   }
-  return arr;
 }
 
 function fakeSome(arr, fn) {
