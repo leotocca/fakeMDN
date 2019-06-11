@@ -1,131 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<title>fakeMDN</title>
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<!--Barra de navegación-->
-		<div class="nav">
-			<h1>fakeFilter</h1>
-			<p><a href="index.html">Home</a></p>
-		</div>
-		<div class="container">
-			<div class="container1"></div>
-			<!--Container general-->
-			<div class="container2">
-				<!--Primera descripción del metodo-->
-				<div class="text">
-					<p>
-						La función
-                        <a href="#" class="destacadoazul">fakeFilter()</a> crea un nuevo array
-                         con todos los elementos que cumplan la condición 
-                        implementada por la función dada.
-					</p>
-				</div>
+  <head>
+    <title>fakeMDN</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" type="x-icon" href="favicon.ico"/>
+  </head>
+  <body>
+    <!--Barra de navegación-->
+    <nav class="nav">
+      <h1>fakeFilter</h1>
+      <p><a href="index.html">Home</a></p>
+    </nav>
 
-				<!--H2-->
-				<div class="titulo">
-					<h2>Sintaxis</h2>
-				</div>
+    <main class="container">
+      <aside class="container1"></aside>
+      <!--Container general-->
+      <article class="container2">
+        <!--Primera descripción del metodo-->
+        <section class="description text">
+          <p>
+            La función
+            <a href="#" class="destacadoazul">fakeFilter()</a> crea un nuevo array
+             con todos los elementos que cumplan la condición 
+            implementada por la función dada.
+          </p>
+		</section>
+		
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
 
-				<!--sandbox-->
-				<div class="sandbox">
-					<p class="code">
-                        let arregloFiltrado = fakeFilter(arreglo, funcionFiltradora);
-					</p>
-				</div>
+          <!--sandbox-->
+          <section class="sandbox">
+            <code class="code">
+              let arregloFiltrado = fakeFilter(arreglo, funcionFiltradora);
+            </code>
+          </section>
 
-				<!--subtitulo-->
+          <!--subtitle-->
 
-				<h3>
-					<span class="subtitulo">Parametros </span>
-				</h3>
+          <h3>
+            <span class="subtitle">Parámetros </span>
+          </h3>
 
-				<!--descripcion-->
-                <h4>
-                        <span class="destacado">arreglo</span>
-                </h4>
-                <p class="descripcion tab">El array a ser filtrado
-                </p>
-				<h4>
-					<span class="destacado">funcionFiltradora</span>
-				</h4>
+          <!--descripcion-->
 
-				<p class="descripcion tab">Es la función que se utilizará para filtrar el arreglo,
-                     puede ser anónima, recibe un parámetro, lo evalúa y devuelve true o false
-                     dependiendo de que cumpla o no con la condición que interesa evaluar.  
-                </br></br>let funcionFiltradora = param => true | false</p>
+          <h4>
+            <span class="highlight">arreglo</span>
+          </h4>
 
-				<h4>
-					<span class="destacado tab">param</span>
-				</h4>
+          <p class="descripcion tab">El array a ser filtrado
+          </p>
 
-				<p class="descripcion tab">El valor que funcionFiltradora
-                    evaluará para ver si cumple con la condición que se utilizará de filtro
-                </p>
+          <h4>
+            <span class="highlight tab">funcionFiltradora</span>
+          </h4>
 
-				<!--subtitulo-->
-				<h3>
-					<span class="subtitulo">Valor de retorno </span>
-				</h3>
+          <p class="descripcion tab">Es la función que se utilizará para filtrar el arreglo,
+            puede ser anónima, recibe un parámetro, lo evalúa y devuelve true o false
+            dependiendo de que cumpla o no con la condición que interesa evaluar.  
+           </br></br>let funcionFiltradora = param => true | false
+          </p>
 
-				<p>
-					<span class="destacadoazul">Un array formado solo por los elementos que cumplen
-                         con la condición de interés </span>
-				</p>
+          <h4>
+            <span class="highlight tab">param</span>
+          </h4>
 
-				<!--H2-->
-				<div class="titulo">
-					<h2>Ejemplos</h2>
-				</div>
+          <p class="descripcion tab">
+              El valor que funcionFiltradora
+              evaluará para ver si cumple con 
+              la condición que se utilizará de filtro
+          </p>
 
-				<!--subtitulo-->
+          <!--subtitle-->
+          <h3>
+            <span class="subtitle">Valor de retorno </span>
+          </h3>
 
-				<h3>
-					<span class="subtitulo">Filtrar los elementos impares</span>
-				</h3>
+          <p>
+            <span class="bluehighlight">
+                Un array formado solo por los elementos que cumplen
+                con la condición de interés 
+            </span>
+          </p>
+        </section>
 
-				<!--sandbox-->
-				<div class="sandboxjs">
-					<p class="codejs">
-                            let funcionFiltradora = x => x % 2 != 0;</br>
-                            arregloFiltrado = fakeFilter(arreglo, funcionFiltradora);
-					</p>
-				</div>
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplos</h2>
 
-				<!--subtitulo-->
+          <!--subtitle-->
 
-				<h3>
-					<span class="subtitulo">Elementos negativos </span>
-				</h3>
+          <h3>
+            <span class="subtitle">
+                Filtrar los elementos impares
+            </span>
+          </h3>
 
-				<!--Texto-->
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+                let funcionFiltradora = x => x % 2 != 0;</br>
+                arregloFiltrado = fakeFilter(arreglo, funcionFiltradora);
+            </code>
+          </section>
 
-				<!--sandbox-->
-				<div class="sandboxjs">
-					<p class="codejs">
-                            arregloFiltrado = fakeFilter(arreglo, function (x) {
-                            return (x<0);
-                            })
-                    </p>
-				</div>
+          <!--subtitle-->
 
-				<!--H2-->
-				<div class="titulo">
-					<h2>Ver también</h2>
-				</div>
+          <h3>
+            <span class="subtitle">
+                Elementos negativos  
+            </span>
+          </h3>
 
-				<!--Lista de links-->
-				<ul>
-					<li><a href="#" class="destacadoazul">fakeFind()</a></li>
-					<li><a href="#" class="destacadoazul">fakeMap()</a></li>
-					<li><a href="fakereduce.html" class="destacadoazul">fakeReduce()</a></li>
-					<li><a href="#" class="destacadoazul">fakeEvery()</a></li>
-					<li><a href="#" class="destacadoazul">fakeSome()</a></li>
-				</ul>
-			</div>
-		</div>
-		<script src="app.js"></script>
-	</body>
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+              arregloFiltrado = fakeFilter(arreglo, function (x) {</br>
+              return (x<0);
+              })
+            </code>
+          </section>
+        </section>
+
+        <section class="seealso">
+          <h2 class="sectionTitle">Ver también</h2>
+
+          <!--Lista de links-->
+          <ul>
+            <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
+            <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+            <li><a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a></li>
+            <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+            <li><a href="fakeSome.html" class="bluehighlight">fakeSome()</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>
