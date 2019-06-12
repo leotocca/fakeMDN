@@ -1,116 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeMDN</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>fakeIndexOf()</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
     <!--Barra de navegación-->
-    <div class="nav">
-      <h1>fakeMDN</h1>
-      <p><a href="index.html">Home</a></p>
-    </div>
-    <div class="container">
-      <div class="container1"></div>
+    <nav class="nav">
+      <h1>fakeIndexOf()</h1>
+      <p><a href="../index.html">Home</a></p>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
       <!--Container general-->
-      <div class="container2">
+      <article class="container2">
         <!--Primera descripción del metodo-->
-        <div class="text">
+        <section class="description text">
           <p>
             La funcion
-            <a href="#" class="destacadoazul">fakeSome()</a> iterara el array y cuando se cumpla la condicion establecida,
-            se ejecutara la funcion
+            <a href="#" class="bluehighlight">fakeSome()</a> iterara el array y
+            cuando se cumpla la condicion establecida, se ejecutara la funcion
           </p>
-        </div>
+        </section>
 
-        <!--H2-->
-        <div class="titulo">
-          <h2>Sintaxis</h2>
-        </div>
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
 
-        <!--sandbox-->
-        <div class="sandbox">
-          <p class="code">
-            function fakeSome(arr, fn) {<br/>
-              for (let element of arr) {<br/>
-              if (fn(element)) { <br/>
-                return true;<br/>
-              }</br>
-            }<br/>
-            return false;<br/>
-          } <br/>
+          <!--sandbox-->
+          <section class="sandbox">
+            <p class="code">
+                function fakeSome(arr, fn) {<br/>
+                  for (let element of arr) {<br/>
+                  if (fn(element)) { <br/>
+                    return true;<br/>
+                  }</br>
+                }<br/>
+                return false;<br/>
+              } <br/>
+              </p>
+          </section>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <!--descripcion-->
+
+          <h4>
+            <span class="highlight">Array</span>
+          </h4>
+
+          <p class="descripcion tab">Array a iterar.</p>
+
+          <h4>
+            <span class="highlight">Función</span>
+          </h4>
+
+          <p class="descripcion tab">Funcion que se ejecutara si se cumple la condicion</p>
+
+          <!--subtitle-->
+          <h3>
+            <span class="subtitle">Valor de retorno </span>
+          </h3>
+
+          <p class="descripcion tab">
+              <span class="bluehighlight">Boolean</span>
+            </p>
+        </section>
+
+        <section class="description text">
+          <h2 class="sectionTitle">Descripción</h2>
+          <p>
+            <code class="highlight">fakeSome()</code> ejecuta
+            <code class="highlight">fn</code> una vez por cada elemento presente en el array hasta que tome
+            uno con valor true; sino retornara el valor false.
           </p>
-        </div>
+        </section>
 
-        <!--subtitulo-->
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplo</h2>
 
-        <h3>
-          <span class="subtitulo">Parametros </span>
-        </h3>
+          <!--subtitle-->
 
-        <!--descripcion-->
+          <h3>
+              <span class="subtitle"> Mostrar cada elemento del array </span>
+          </h3>
+          
 
-        <h4>
-          <span class="destacado">Array</span>
-        </h4>
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+                <p class="codejs">
+                  const array = [1, 2, 3, 4, 5];<br/>
+                  const even = function(element) { <br/>
+                  return element % 2 === 0; <br/>
+                  }<br/>
+                   console.log(fakeSome(array, even));<br/>
+                </p>
+            </code>
+          </section>
 
-        <p class="descripcion tab">Array que va a ser iterada</p>
+          <!--subtitle-->
 
-        <h4>
-          <span class="destacado tab">Funcion</span>
-        </h4>
 
-        <p class="descripcion tab">
-          Funcion que se ejecutara si se cumple la condicion
-        </p>
+        <section class="seealso">
+          <h2 class="sectionTitle">Ver también</h2>
 
-        <!--subtitulo-->
-        <h3>
-          <span class="subtitulo">Valor de retorno </span>
-        </h3>
+          <!--Lista de links-->
+          <ul>
+            <li>
+              <a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
+            </li>
+            <li>
+              <a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
+            <li>
+              <a href="fakeSome.html" class="bluehighlight">fakeSome()</a>
+            </li>
+            <li>
+              <a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a>
+            </li>
+            <li>
+              <a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a>
+            </li>
+            <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+            <li>
+              <a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a>
+            </li>
+            <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+            <li>
+              <a href="fakeIndexOfRecursive.html" class="bluehighlight"
+                >fakeIndexOfRecursive()</a
+              >
+            </li>
+            <li>
+              <a href="fakeIntersection.html" class="bluehighlight"
+                >fakeIntersection()</a
+              >
+            </li>
+            <li>
+              <a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
 
-        <p>
-          <span class="destacadoazul">Boolean</span>
-        </p>
-
-        <!--H2-->
-        <div class="titulo">
-          <h2>Ejemplo</h2>
-        </div>
-
-        <!--sandbox-->
-        <div class="sandboxjs">
-          <p class="codejs">
-            const array = [1, 2, 3, 4, 5];<br/>
-const even = function(element) { <br/>
-  return element % 2 === 0; <br/>
-}<br/>
-console.log(fakeSome(array, even));<br/>
-          </p>
-        </div>
-
-        <!--subtitulo-->
-
-        <!--H2-->
-        <div class="titulo">
-          <h2>Ver también</h2>
-        </div>
-
-        <!--Lista de links-->
-        <ul>
-          <li><a href="#" class="destacadoazul">fakeFind()</a></li>
-          <li><a href="#" class="destacadoazul">fakeMap()</a></li>
-          <li><a href="#" class="destacadoazul">fakeFilter()</a></li>
-          <li><a href="#" class="destacadoazul">fakeEvery()</a></li>
-          <li><a href="#" class="destacadoazul">fakeSome()</a></li>
-        </ul>
-      </div>
-    </div>
-    <script src="app.js"></script>
-  </body>
-</html>
-
-    </div>
-    <script src="app.js"></script>
+    <script src="../app.js"></script>
   </body>
 </html>
