@@ -7,19 +7,18 @@ function fakeReduce(arr, callbackFunction) {
 }
 
 function fakeSum(arr) {
-  return fakeReduce(arr, (a, b) => a+b); 
+  return fakeReduce(arr, (a, b) => a + b);
 }
 
 function fakeFilter(arr, callbackFunction) {
-  // filters the array using callbackFunction and returns filtered array
   let newarr = [];
   let j = 0; // j is the index of the new array I´m creating
-  fakeForEach(arr,  elem => {
+  fakeForEach(arr, elem => {
     if (callbackFunction(elem)) {
       newarr[j] = elem;
       j++;
     }
-  })
+  });
   return newarr;
 }
 
@@ -56,3 +55,15 @@ function fakeIncludes(arr, value) {
   return false;
 }
 
+function fakeIndexOf(array, value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return array[i];
+    }
+  }
+  return -1;
+}
+
+function fakeIncludes(arr, value) {
+  return fakeIndexOf(arr, value) === -1 ? false : true;
+}
