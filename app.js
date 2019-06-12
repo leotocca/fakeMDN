@@ -6,6 +6,10 @@ function fakeReduce(arr, callbackFunction) {
   return accumulator;
 }
 
+function fakeSum(arr) {
+  return fakeReduce(arr, (a, b) => a+b); 
+}
+
 function fakeFilter(arr, callbackFunction) {
   let newarr = [];
   let j = 0;
@@ -14,7 +18,7 @@ function fakeFilter(arr, callbackFunction) {
       newarr[j] = arr[i];
       j++;
     }
-  }
+  })
   return newarr;
 }
 
