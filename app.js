@@ -1,5 +1,3 @@
-
-
 function fakeReduce(arr, callbackFunction) {
   let accumulator = arr[0];
   for (let i = 1; i < arr.length; i++) {
@@ -22,51 +20,28 @@ function fakeFilter(arr, callbackFunction) {
 }
 
 function fakeForEach(arr, fn) {
-  for (let i = 0; i < arr.length; i++) {
-    //function will be called in each of the array elements
-    arr[i] = fn(arr[i]);
-  }
-  //returns the new array
-  return arr;
-}
-
-//console.log(fakeForEach(['tincho', 'peter', 'nico'], x => x + 'Medialunas'));
-//console.log(fakeForEach([1, 2, 3], multiplyBy2 => multiplyBy2 * 2));
-
-<<<<<<< HEAD
-=======
-/*
-const array = [1, 2, 3, 4, 5];
-
-const even = function(element) {
-  // checks whether an element is even
-  return element % 2 === 0;
-}
-*/
-function fakeSome(arr, fn) {
   for (let element of arr) {
-    //If fn returns true with any of the array elements, iteration stops
+    fn(element);
+  }
+}
+
+function fakeSome(arr, fn) {
+  let atLeastOnePassesTheTest = false;
+  for (let element of arr) {
     if (fn(element)) {
-      return true;
+      atLeastOnePassesTheTest = true;
     }
   }
-  //Iterates through the whole array and if it doesnt return true, it will be false.
-  return false;
+  return atLeastOnePassesTheTest;
 }
-//console.log(fakeSome(array, even))
 
->>>>>>> 40d185c9381b920a58987c7995ea1fe44a9a4226
 function fakeMap(arr, fn) {
   const arrMaped = [];
-  /* for (let i = 0; i < arr.length; i++) {
-    arrMaped.push(fn(arr[i]));
-  } */
   fakeForEach(arr, function(arr) {
     arrMaped.push(fn(arr));
   });
   return arrMaped;
 }
-//fakeMap([1,2,3], function(x){return x*2});
 
 function fakeIncludes(arr, value) {
   for (let i = 0; i < arr.length; i++) {
@@ -76,4 +51,16 @@ function fakeIncludes(arr, value) {
   }
   return false;
 }
-//fakeIncludes([1,2,3], "a");
+
+function fakeIndexOf(array, value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return array[i];
+    }
+  }
+  return -1;
+}
+
+function fakeIncludes(arr, value) {
+  return fakeIndexOf(arr, value) === -1 ? false : true;
+}

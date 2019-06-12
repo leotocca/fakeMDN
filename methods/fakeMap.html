@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>fakeMap()</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="x-icon" href="../favicon.ico" />
+  </head>
+  <body>
+    <!--Barra de navegación-->
+    <nav class="nav">
+      <h1>fakeMap()</h1>
+      <p><a href="../index.html">Home</a></p>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
+      <!--Container general-->
+      <article class="container2">
+        <!--Primera descripción del metodo-->
+        <section class="description text">
+          <p>
+							La funcion <a href="#" class="bluehighlight mono"">fakeMap()</a> crea un
+							nuevo array con los resultados de la llamada a la función indicada
+							aplicada a cada uno de sus elementos. <br> <br>
+          </p>
+				</section>
+				<section class="sandboxjs">
+						<code class="codejs">
+								const numbers = [1, 5, 10, 15];<br />
+								let doubles = fakeMap(numbers,function(x) {<br />
+								return x * 2;<br />
+								});<br />
+								// doubles is now [2, 10, 20, 30] <br />
+								// numbers is still [1, 5, 10, 15]<br /><br />
+		
+								const numbers = [1, 4, 9];<br />
+								let roots = fakeMap(numbers,Math.sqrt);<br />
+								// roots is now [1, 2, 3]<br />
+								// numbers is still [1, 4, 9]<br />
+						</code>
+					</section>
+
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
+
+          <!--sandbox-->
+          <section class="sandbox">
+            <code class="code mono">
+							let newArray = fakeMap(array, function callback() {<br />
+								<span class="italic tab mono">// Elemento devuelto de newArray</span
+								><br />
+								});
+            </code>
+          </section>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <!--descripcion-->
+
+          <h4>
+            <span class="highlight">array</span>
+          </h4>
+
+          <p class="descripcion tab">Array a iterar.</p>
+
+          <h4>
+            <span class="highlight tab">callback</span>
+          </h4>
+
+          <p class="descripcion tab">Función que producirá un elemento del nuevo array, no recibe argumentos.</p>
+
+        </section>
+
+        <section class="description text">
+          <h2 class="sectionTitle">Descripción</h2>
+          <p>
+            <span class="highlight mono">fakeMap()</span> llama a la función <span class="highlight mono">callback</span> provista <strong>una vez por elemento de un array</strong>, en orden, y construye un nuevo array con los resultados. <br> <br> 
+            <span class="highlight mono">callback</span>  se invoca sólo	para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor. <br> <br>
+          
+	
+          <span class="highlight mono">Callback</span> es llamada con tres argumentos: el valor del elemento, el índice del elemento, y el objeto array que se está recorriendo.<br> <br>
+          Los elementos que sean agregados al array después de que la llamada a map comience no serán visitados por el callback. Si los elementos existentes del array <br> son modificados o eliminados, su valor pasado al callback será el valor en el momento que el map lo visita; los elementos que son eliminados no son visitados.
+          </p>
+        </section>
+
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplos</h2>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle">Procesar un array de números aplicándoles la raíz cuadrada</span>
+          </h3>
+          <p class="description">
+              El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.
+          </p>
+
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+                const numeros= [1, 4, 9];<br />
+                let raices = fakeMap(numeros,Math.sqrt);<br />
+                <span class="italic tab mono">
+                  // raices tiene [1, 2, 3] <br />
+                  // numeros aún mantiene [1, 4, 9] <br />
+                </span>
+          </section>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle"
+              >Mapear un array de números usando una función con un argumento
+            </span>
+          </h3>
+          
+          <p class="description">El siguiente código muestra cómo trabaja map cuando se utiliza una función que requiere de un argumento. <br> El argumento será asignado automáticamente a cada elemento del arreglo conforme map itera el arreglo original.</p>
+
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+                const numeros = [1, 4, 9]; <br />
+                let dobles = fakeMap(numeros,function(num) { <br />
+                <span class="tab mono">return num * 2;</span> <br />
+                });<br /><br />
+    
+                <i class="tab mono">
+                  // dobles es ahora [2, 8, 18] <br />
+                  // numeros sigue siendo [1, 4, 9]</i
+                ><br />
+            </code>
+          </section>
+        </section>
+
+        <section class="seealso">
+          <h2 class="sectionTitle">Ver también</h2>
+
+          <!--Lista de links-->
+          <ul>
+              <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
+              <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
+              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+              <li><a href="fakeSome.html" class="bluehighlight">fakeSome()</a></li>
+              <li><a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a></li>
+              <li><a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a></li>
+              <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+              <li><a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a></li>
+              <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+              <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
+              <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
+              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
+              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+</html>
