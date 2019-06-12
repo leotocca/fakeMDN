@@ -6,8 +6,11 @@ function fakeReduce(arr, callbackFunction) {
   return accumulator;
 }
 
+function fakeSum(arr) {
+  return fakeReduce(arr, (a, b) => a + b);
+}
+
 function fakeFilter(arr, callbackFunction) {
-  // filters the array using callbackFunction and returns filtered array
   let newarr = [];
   let j = 0; // j is the index of the new array I´m creating
   fakeForEach(arr, elem => {
