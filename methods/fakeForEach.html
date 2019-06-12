@@ -32,8 +32,8 @@
           <!--sandbox-->
           <section class="sandbox">
             <code class="code">
-              fakeForEach(function callback(currentValue){<br />
-              <span class="italic">//your iterator</span><br />
+              fakeForEach(arr,fn){<br />
+              <span class="italic">//tu iteración</span><br />
               });
             </code>
           </section>
@@ -47,23 +47,25 @@
           <!--descripcion-->
 
           <h4>
-            <span class="highlight">callback</span>
+            <span class="highlight">Array</span>
           </h4>
 
-          <p class="descripcion tab">Descripcion</p>
+          <p class="descripcion tab">Array que sera iterada</p>
 
           <h4>
-            <span class="highlight tab">currentValue</span>
+            <span class="highlight">Función</span>
           </h4>
 
-          <p class="descripcion tab">Descripcion</p>
+          <p class="descripcion tab">
+            Función que será ejecutada por cada elemento iterado
+          </p>
 
           <!--subtitle-->
           <h3>
             <span class="subtitle">Valor de retorno </span>
           </h3>
 
-          <p>
+          <p class="descripcion tab">
             <span class="bluehighlight">undefined</span>
           </p>
         </section>
@@ -74,34 +76,40 @@
           <!--subtitle-->
 
           <h3>
-            <span class="subtitle">Converting a for loop to a forEach </span>
+            <span class="subtitle"> Mostrar cada elemento del array </span>
           </h3>
 
           <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
-              fakeForEach(function callback(currentValue){<br />
-              <span class="italic">//your iterator</span><br />
-              });
+              let arr = ['a', 'b', 'c'];<br />
+              console.log(fakeForEach(arr, (showEachElement = arr =>
+              console.log(arr)))); <br />
+              // output 'a' <br />
+              // output 'b' <br />
+              // output 'c' <br />
             </code>
           </section>
 
           <!--subtitle-->
 
           <h3>
-            <span class="subtitle">Printing the contents of an array </span>
+            <span class="subtitle">Convertir un for loop en fakeForEach </span>
           </h3>
-
-          <!--Texto-->
-
-          <p>The following code log a line for each element in an array</p>
 
           <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
-              fakeForEach(function callback(currentValue){<br />
-              <span class="italic">//your iterator</span><br />
-              });
+              const items = ['item1', 'item2', 'item3'];<br />
+              const copy = [];<br />
+              <br />
+              // before<br />
+              for (let i=0; i< items.length; i++) {<br />
+              copy.push(items[i]);<br />
+              }<br />
+              <br />
+              // after<br />
+              fakeForEach(items, (convertir = arr => copy.push(arr)));<br />
             </code>
           </section>
         </section>
