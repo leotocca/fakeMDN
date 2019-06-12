@@ -38,6 +38,16 @@ function fakeSome(arr, fn) {
   return atLeastOnePassesTheTest;
 }
 
+function fakeEvery(arr, fn) {
+  let allPassTheTest = true;
+  fakeForEach(arr, element => {
+    if (!fn(element)) {
+      allPassTheTest = false;
+    }
+  });
+  return allPassTheTest;
+}
+
 function fakeMap(arr, fn) {
   const arrMaped = [];
   fakeForEach(arr, function(arr) {

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>fakeEvery</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="x-icon" href="../favicon.ico" />
+  </head>
+  <body>
+    <!--Barra de navegación-->
+    <nav class="nav">
+      <h1>fakeMDN</h1>
+      <p><a href="index.html">Home</a></p>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
+      <!--Container general-->
+      <article class="container2">
+        <!--Primera descripción del metodo-->
+        <section class="description text">
+          <p>
+            La funcion
+            <a href="#" class="bluehighlight">fakeEvery()</a> devuelve un
+            booleano, true si todos los elementos en el arreglo pasan la
+            condición implementada por la función dada y false si alguno no la
+            cumple.
+          </p>
+        </section>
+
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
+
+          <!--sandbox-->
+          <section class="sandbox">
+            <code class="code">
+              fakeForEach(arr,fn){<br />
+              <span class="italic">//tu iteración</span><br />
+              });
+            </code>
+          </section>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <!--descripcion-->
+
+          <h4>
+            <span class="highlight">Array</span>
+          </h4>
+
+          <p class="descripcion tab">Array que sera iterada</p>
+
+          <h4>
+            <span class="highlight">Función</span>
+          </h4>
+
+          <p class="descripcion tab">
+            Función para probar cada elemento del array
+          </p>
+
+          <!--subtitle-->
+          <h3>
+                <span class="highlight">Valor de retorno </span>
+        </h3>
+
+        <p class="descripcion tab">
+                <span class="bluehighlight">boolean</span>
+              </p>
+        </section>
+        <section class="description text">
+          <h2 class="sectionTitle">Descripción</h2>
+          <p>
+            <code class="highlight">fakeEvery()</code> ejecuta la funcion
+            <code class="highlight">fn</code> una vez por cada elemento de la
+            array hasta encontrar uno que haga retornar un valor <code class="highlight">false</code>. Si no se encuentra tal elemento, la funcion <code class="highlight">fakeEvery()</code> de inmediato retorna  false. O si  <code class="highlight">fn()</code> retorna verdadero
+            para todos los elementos, every retornará <code class="highlight">true</code>.
+          </p>
+        </section>
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplo</h2>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle"> Javascript demo </span>
+          </h3>
+
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+              let array1 = [1, 30, 59, 9, 10, 13];<br />
+              function isBelowThreshold(currentValue) { <br />
+              return currentValue < 40;<br />
+              }<br />
+              <br />
+              function fakeEvery(arr, fn) {<br />
+              let allPassTheTest = true; <br />
+              fakeForEach(arr, element => { <br />
+              if (!fn(element)) { <br />
+              allPassTheTest = false; <br />
+              }<br />
+              }); <br />
+              return allPassTheTest; <br />
+              } <br />
+              <br />
+              console.log(fakeEvery(array1, isBelowThreshold)); <br />
+            </code>
+          </section>
+
+          <!--subtitle-->
+
+          
+
+        <section class="seealso">
+          <h2 class="sectionTitle">Ver también</h2>
+
+          <!--Lista de links-->
+          <ul>
+            <li>
+              <a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
+            </li>
+            <li>
+              <a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
+            <li>
+              <a href="fakeSome.html" class="bluehighlight">fakeSome()</a>
+            </li>
+            <li>
+              <a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a>
+            </li>
+            <li>
+              <a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a>
+            </li>
+            <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+            <li>
+              <a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a>
+            </li>
+            <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+            <li>
+              <a href="fakeIndexOfRecursive.html" class="bluehighlight"
+                >fakeIndexOfRecursive()</a
+              >
+            </li>
+            <li>
+              <a href="fakeIntersection.html" class="bluehighlight"
+                >fakeIntersection()</a
+              >
+            </li>
+            <li>
+              <a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+</html>
