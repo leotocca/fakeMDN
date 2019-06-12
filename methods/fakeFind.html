@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeSome()</title>
+    <title>fakeEvery</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
     <!--Barra de navegación-->
     <nav class="nav">
-      <h1>fakeSome()</h1>
-      <p><a href="../index.html">Home</a></p>
+      <h1>fakeFind</h1>
+      <p><a href="index.html">Home</a></p>
     </nav>
 
     <main class="container">
@@ -20,8 +20,8 @@
         <section class="description text">
           <p>
             La funcion
-            <a href="#" class="bluehighlight">fakeSome()</a> comprueba si al menos un elemento del array cumple con la condición
-             implementada por la función proporcionada
+            <a href="#" class="bluehighlight">fakeFind()</a>  devuelve el valor del primer elemento del array que cumple
+             la función <code class="code"> fn </code>de prueba proporcionada. En cualquier otro caso se devuelve <code class="code"> undefined</code>.
           </p>
         </section>
 
@@ -30,16 +30,11 @@
 
           <!--sandbox-->
           <section class="sandbox">
-            <p class="code">
-                function fakeSome(arr, fn) {<br/>
-                  for (let element of arr) {<br/>
-                  if (fn(element)) { <br/>
-                    return true;<br/>
-                  }</br>
-                }<br/>
-                return false;<br/>
-              } <br/>
-              </p>
+            <code class="code">
+              fakeFind(arr,fn){<br />
+              <span class="italic">//tu iteración</span><br />
+              });
+            </code>
           </section>
 
           <!--subtitle-->
@@ -54,58 +49,73 @@
             <span class="highlight">Array</span>
           </h4>
 
-          <p class="descripcion tab">Array a iterar.</p>
+          <p class="descripcion tab">Array que sera iterada</p>
 
           <h4>
             <span class="highlight">Función</span>
           </h4>
 
-          <p class="descripcion tab">Funcion con la condicion a cumplir</p>
+          <p class="descripcion tab">
+            Función como condiciona cumplir por algun elemento del array
+          </p>
 
           <!--subtitle-->
           <h3>
-            <span class="subtitle">Valor de retorno </span>
-          </h3>
+                <span class="highlight">Valor de retorno </span>
+        </h3>
 
-          <p class="descripcion tab">
-              <span class="bluehighlight">Boolean</span>
-            </p>
+        <p class="descripcion tab">
+                Primer elemento del array que cumpla la condicion o <code class="code">undefined</code>
+              </p>
         </section>
-
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">fakeSome()</code> ejecuta
-            <code class="highlight">fn</code> una vez por cada elemento presente en el array hasta que tome
-            uno con valor true; sino retornara el valor false.
+            <code class="highlight">fakeFind()</code> ejecuta la funcion
+            <code class="highlight">fn</code> El método find ejecuta la función fn una vez por cada índice del array hasta que encuentre uno en el que 
+            la fn devuelva un valor true. Si dicho elemento se encuentra, find devuelve inmediatamente el valor del elemento. En caso contrario, find devuelve undefined. 
           </p>
         </section>
-
         <section class="examples">
-          <h2 class="sectionTitle">Ejemplo</h2>
-
-          <!--subtitle-->
-
+          <h2 class="sectionTitle">Ejemplos</h2>
           <h3>
-              <span class="subtitle"> Mostrar cada elemento del array </span>
+            <span class="subtitle"> Demo </span>
           </h3>
-          
-
           <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
-                <p class="codejs">
-                  const array = [1, 2, 3, 4, 5];<br/>
-                  const even = function(element) { <br/>
-                  return element % 2 === 0; <br/>
-                  }<br/>
-                   console.log(fakeSome(array, even));<br/>
-                </p>
+              let array1 = [5, 12, 8, 130, 44];<br />
+               <br />
+               const lessThanTen = function(element) {<br />
+                return element < 1;<br />
+              };<br />
+              <br/>
+              console.log(fakeFind(array1, lessThanTen));<br />
+            </code>
+          </section>
+          <h3>
+            <span class="subtitle"> Encontrar un objeto en un array por una de sus propiedades </span>
+          </h3>
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+              let inventario = [<br />
+              { nombre: 'manzanas', cantidad: 2 },<br />
+              { nombre: 'bananas', cantidad: 0 },<br />
+              { nombre: 'cerezas', cantidad: 5 }<br />
+              ]; <br />
+              function esCereza(fruta) { <br />
+                return fruta.nombre === 'cerezas';<br />
+              } <br />
+               <br />
+               console.log(fakeFind(inventario, esCereza));<br />
+              
             </code>
           </section>
 
           <!--subtitle-->
 
+          
 
         <section class="seealso">
           <h2 class="sectionTitle">Ver también</h2>
