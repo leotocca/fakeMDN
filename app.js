@@ -6,16 +6,20 @@ function fakeReduce(arr, callbackFunction) {
   return accumulator;
 }
 
+function fakeSum(arr) {
+  return fakeReduce(arr, (a, b) => a+b); 
+}
+
 function fakeFilter(arr, callbackFunction) {
   // filters the array using callbackFunction and returns filtered array
   let newarr = [];
   let j = 0; // j is the index of the new array I´m creating
-  for (let i = 0; i < arr.length; i++) {
-    if (callbackFunction(arr[i])) {
-      newarr[j] = arr[i];
+  fakeForEach(arr,  elem => {
+    if (callbackFunction(elem)) {
+      newarr[j] = elem;
       j++;
     }
-  }
+  })
   return newarr;
 }
 
@@ -37,15 +41,11 @@ function fakeSome(arr, fn) {
 
 function fakeMap(arr, fn) {
   const arrMaped = [];
-  /* for (let i = 0; i < arr.length; i++) {
-    arrMaped.push(fn(arr[i]));
-  } */
   fakeForEach(arr, function(arr) {
     arrMaped.push(fn(arr));
   });
   return arrMaped;
 }
-//fakeMap([1,2,3], function(x){return x*2});
 
 function fakeIncludes(arr, value) {
   for (let i = 0; i < arr.length; i++) {
@@ -55,4 +55,4 @@ function fakeIncludes(arr, value) {
   }
   return false;
 }
-//fakeIncludes([1,2,3], "a");
+
