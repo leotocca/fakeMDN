@@ -74,8 +74,8 @@ function fakeIncludes(arr, value) {
 }
 
 function fakeIndexOf(array, value) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === value) {
+	for (let i = 0; i < array.length; i++) {
+    if (array[i] == value) {
       return i;
     }
   }
@@ -83,8 +83,9 @@ function fakeIndexOf(array, value) {
 }
 
 function fakeIndexOfRecursive(arr, val) {
-    if (!arr.length) return -1;
-    return (arr.pop()==val) ? arr.length : fakeIndexOfRecursive(arr, val); 
+	if (typeof(arr)=="string") arr = arr.split('');
+	if (!arr.length) return -1;
+    return (arr.pop()===val) ? arr.length : fakeIndexOfRecursive(arr, val); 
 }
 
 function fakeIncludes(arr, value) {
