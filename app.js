@@ -82,6 +82,11 @@ function fakeIndexOf(array, value) {
   return -1;
 }
 
+function fakeIndexOfRecursive(arr, val) {
+    if (!arr.length) return -1;
+    return (arr.pop()==val) ? arr.length : fakeIndexOfRecursive(arr, val); 
+}
+
 function fakeIncludes(arr, value) {
 	return fakeIndexOf(arr, value) === -1 ? false : true;
 }
