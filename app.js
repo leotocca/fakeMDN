@@ -38,6 +38,24 @@ function fakeSome(arr, fn) {
 	return atLeastOnePassesTheTest;
 }
 
+function fakeEvery(arr, fn) {
+  let allPassTheTest = true;
+  fakeForEach(arr, element => {
+    if (!fn(element)) {
+      allPassTheTest = false;
+    }
+  });
+  return allPassTheTest;
+}
+
+function fakeFind(array1, fn) {
+  for (const elem of array1) {
+    if (fn(elem)) {
+      return elem;
+    }
+  }
+}
+
 function fakeMap(arr, fn) {
 	const arrMaped = [];
 	fakeForEach(arr, function(arr) {
@@ -56,12 +74,12 @@ function fakeIncludes(arr, value) {
 }
 
 function fakeIndexOf(array, value) {
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] === value) {
-			return array[i];
-		}
-	}
-	return -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 function fakeIncludes(arr, value) {

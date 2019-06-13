@@ -9,6 +9,10 @@
 body {
   margin-bottom: 100px;
 }
+.codejs {
+  font-family: monospace;
+  font-size: 0.85em;
+}
 
 .nav {
   display: flex;
@@ -88,26 +92,20 @@ h2 {
   padding: 15px;
   display: block;
   line-height: 1.5;
+}
+
+.subtitle {
   font-family: monospace;
   font-size: 0.9em;
 }
 
 .subtitle {
-<<<<<<< HEAD
   background-color: #333;
   color: #fff;
   font-size: 1.4em;
   text-align: left;
   padding: 2px 5px 2px 30px;
   font-weight: 300;
-=======
-	background-color: #333;
-	color: #fff;
-	font-size: 1.4em;
-	text-align: left;
-	padding: 2px 5px 2px 30px;
-	font-weight: 300;
->>>>>>> master
 }
 
 h3 {
@@ -115,11 +113,11 @@ h3 {
 }
 
 .highlight {
-<<<<<<< HEAD
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 2px;
   padding: 1px 3px;
   color: #333;
+  font-family: monospace;
 }
 
 .bluehighlight {
@@ -127,19 +125,6 @@ h3 {
   border-radius: 2px;
   padding: 1px 3px;
   color: #3d7e9a;
-=======
-	background-color: rgba(220, 220, 220, 0.5);
-	border-radius: 2px;
-	padding: 1px 3px;
-	color: #333;
-}
-
-.bluehighlight {
-	background-color: rgba(220, 220, 220, 0.5);
-	border-radius: 2px;
-	padding: 1px 3px;
-	color: #3d7e9a;
->>>>>>> master
 }
 
 p {

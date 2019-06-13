@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeMDN</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="x-icon" href="favicon.ico" />
+    <title>fakeForEach</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
     <!--Barra de navegación-->
     <nav class="nav">
-      <h1>fakeMDN</h1>
+      <h1>fakeForEach</h1>
       <p><a href="index.html">Home</a></p>
     </nav>
 
@@ -69,7 +69,16 @@
             <span class="bluehighlight">undefined</span>
           </p>
         </section>
-
+        <section class="description text">
+          <h2 class="sectionTitle">Descripción</h2>
+          <p>
+            <code class="highlight">fakeForEach()</code> ejecuta la funcion
+            <code class="highlight">fn</code> una vez por cada elemento de la
+            array. A diferencia de <code class="highlight">map()</code> o
+            <code class="highlight">reduce()</code> este siempre devuelve el
+            valor undefined y no es encadenable
+          </p>
+        </section>
         <section class="examples">
           <h2 class="sectionTitle">Ejemplos</h2>
 
@@ -119,16 +128,50 @@
 
           <!--Lista de links-->
           <ul>
-            <li><a href="#" class="bluehighlight">fakeFind()</a></li>
-            <li><a href="#" class="bluehighlight">fakeMap()</a></li>
-            <li><a href="#" class="bluehighlight">fakeFilter()</a></li>
-            <li><a href="#" class="bluehighlight">fakeEvery()</a></li>
-            <li><a href="#" class="bluehighlight">fakeSome()</a></li>
+            <li>
+              <a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
+            </li>
+            <li>
+              <a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
+            <li>
+              <a href="fakeSome.html" class="bluehighlight">fakeSome()</a>
+            </li>
+            <li>
+              <a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a>
+            </li>
+            <li>
+              <a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a>
+            </li>
+            <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+            <li>
+              <a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a>
+            </li>
+            <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+            <li>
+              <a href="fakeIndexOfRecursive.html" class="bluehighlight"
+                >fakeIndexOfRecursive()</a
+              >
+            </li>
+            <li>
+              <a href="fakeIntersection.html" class="bluehighlight"
+                >fakeIntersection()</a
+              >
+            </li>
+            <li>
+              <a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
           </ul>
         </section>
       </article>
     </main>
 
-    <script src="app.js"></script>
+    <script src="../app.js"></script>
   </body>
 </html>

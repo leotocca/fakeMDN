@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeSome()</title>
+    <title>fakeEvery</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
     <!--Barra de navegación-->
     <nav class="nav">
-      <h1>fakeSome()</h1>
-      <p><a href="../index.html">Home</a></p>
+      <h1>fakeMDN</h1>
+      <p><a href="index.html">Home</a></p>
     </nav>
 
     <main class="container">
@@ -20,8 +20,10 @@
         <section class="description text">
           <p>
             La funcion
-            <a href="#" class="bluehighlight">fakeSome()</a> comprueba si al menos un elemento del array cumple con la condición
-             implementada por la función proporcionada
+            <a href="#" class="bluehighlight">fakeEvery()</a> devuelve un
+            booleano, true si todos los elementos en el arreglo pasan la
+            condición implementada por la función dada y false si alguno no la
+            cumple.
           </p>
         </section>
 
@@ -30,16 +32,11 @@
 
           <!--sandbox-->
           <section class="sandbox">
-            <p class="code">
-                function fakeSome(arr, fn) {<br/>
-                  for (let element of arr) {<br/>
-                  if (fn(element)) { <br/>
-                    return true;<br/>
-                  }</br>
-                }<br/>
-                return false;<br/>
-              } <br/>
-              </p>
+            <code class="code">
+              fakeForEach(arr,fn){<br />
+              <span class="italic">//tu iteración</span><br />
+              });
+            </code>
           </section>
 
           <!--subtitle-->
@@ -54,58 +51,68 @@
             <span class="highlight">Array</span>
           </h4>
 
-          <p class="descripcion tab">Array a iterar.</p>
+          <p class="descripcion tab">Array que sera iterada</p>
 
           <h4>
             <span class="highlight">Función</span>
           </h4>
 
-          <p class="descripcion tab">Funcion con la condicion a cumplir</p>
+          <p class="descripcion tab">
+            Función para probar cada elemento del array
+          </p>
 
           <!--subtitle-->
           <h3>
-            <span class="subtitle">Valor de retorno </span>
-          </h3>
+                <span class="highlight">Valor de retorno </span>
+        </h3>
 
-          <p class="descripcion tab">
-              <span class="bluehighlight">Boolean</span>
-            </p>
+        <p class="descripcion tab">
+                <span class="bluehighlight">boolean</span>
+              </p>
         </section>
-
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">fakeSome()</code> ejecuta
-            <code class="highlight">fn</code> una vez por cada elemento presente en el array hasta que tome
-            uno con valor true; sino retornara el valor false.
+            <code class="highlight">fakeEvery()</code> ejecuta la funcion
+            <code class="highlight">fn</code> una vez por cada elemento de la
+            array hasta encontrar uno que haga retornar un valor <code class="highlight">false</code>. Si no se encuentra tal elemento, la funcion <code class="highlight">fakeEvery()</code> de inmediato retorna  false. O si  <code class="highlight">fn()</code> retorna verdadero
+            para todos los elementos, every retornará <code class="highlight">true</code>.
           </p>
         </section>
-
         <section class="examples">
           <h2 class="sectionTitle">Ejemplo</h2>
 
           <!--subtitle-->
 
           <h3>
-              <span class="subtitle"> Mostrar cada elemento del array </span>
+            <span class="subtitle"> Javascript demo </span>
           </h3>
-          
 
           <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
-                <p class="codejs">
-                  const array = [1, 2, 3, 4, 5];<br/>
-                  const even = function(element) { <br/>
-                  return element % 2 === 0; <br/>
-                  }<br/>
-                   console.log(fakeSome(array, even));<br/>
-                </p>
+              let array1 = [1, 30, 59, 9, 10, 13];<br />
+              function isBelowThreshold(currentValue) { <br />
+              return currentValue < 40;<br />
+              }<br />
+              <br />
+              function fakeEvery(arr, fn) {<br />
+              let allPassTheTest = true; <br />
+              fakeForEach(arr, element => { <br />
+              if (!fn(element)) { <br />
+              allPassTheTest = false; <br />
+              }<br />
+              }); <br />
+              return allPassTheTest; <br />
+              } <br />
+              <br />
+              console.log(fakeEvery(array1, isBelowThreshold)); <br />
             </code>
           </section>
 
           <!--subtitle-->
 
+          
 
         <section class="seealso">
           <h2 class="sectionTitle">Ver también</h2>
