@@ -48,6 +48,14 @@ function fakeEvery(arr, fn) {
   return allPassTheTest;
 }
 
+function fakeFind(array1, fn) {
+  for (const elem of array1) {
+    if (fn(elem)) {
+      return elem;
+    }
+  }
+}
+
 function fakeMap(arr, fn) {
   const arrMaped = [];
   fakeForEach(arr, function(arr) {
