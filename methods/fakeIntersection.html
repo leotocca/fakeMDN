@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>fakeIntersection()</title>
+    <link rel="stylesheet" href="../styles.css" >
+    <link rel="icon" type="x-icon" href="../favicon.ico" >
+  </head>
+  <body>
+    <!--Barra de navegación-->
+    <nav class="nav">
+      <h1>fakeIntersection()</h1>
+      <p><a href="../index.html">Home</a></p>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
+      <!--Container general-->
+      <article class="container2">
+        <!--Primera descripción del metodo-->
+        <section class="description text">
+          <p>
+							La función
+							<a href="#" class="bluehighlight mono">fakeIntersection()</a> devuelve un array nuevo que incluye todos los valores que se repitan en los arrays que se pasaron como argumentos.
+          </p>
+        </section>
+
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
+
+          <!--sandbox-->
+          <section class="sandbox">
+            <code class="code">
+								fakeIntersection(arr1, arr2);
+            </code>
+          </section>
+
+          <!--subtitle-->
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <!--descripcion-->
+
+          <h4>
+            <span class="highlight">array</span>
+          </h4>
+
+          <p class="descripcion tab">Arrays que se van a evaluar para generar un nuevo array que incluya los valores que se repiten</p>
+
+          <!--subtitle-->
+          <h3>
+            <span class="subtitle">Valor de retorno </span>
+          </h3>
+
+          <p>
+            Un <span class="bluehighlight mono">array</span>
+          </p>
+        </section>
+
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplos</h2>
+
+          <!--sandbox-->
+          <section class="sandboxjs">
+            <code class="codejs">
+                fakeIntersection([1, 2, 3, "a"], ["a", 1, 3, 5, 6]); // [1, 3, "a"]<br />
+				fakeIntersection([68, 2, true, "a"], ["a", 1, 3, true, 68]); // [68, true, "a"]<br />
+				fakeIntersection([false, 68, 2, "argh", true, "a"], ["argh", false, 68]); // [false, 68, "argh"]<br />
+            </code>
+          </section>
+
+        <section class="seealso">
+          <h2 class="sectionTitle">Ver también</h2>
+
+          <!--Lista de links-->
+          <ul>
+              <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
+              <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
+              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+              <li><a href="fakeSome.html" class="bluehighlight">fakeSome()</a></li>
+              <li><a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a></li>
+              <li><a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a></li>
+              <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+              <li><a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a></li>
+              <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+              <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
+              <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
+              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
+              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+</html>
