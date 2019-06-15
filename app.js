@@ -11,12 +11,10 @@ function fakeSum(array) {
 }
 
 function fakeFilter(array, callbackFunction) {
-  let arrFiltered = [];
-  let j = 0; // j is the index of the new array I´m creating
+  const arrFiltered = [];
   fakeForEach(array, elem => {
     if (callbackFunction(elem)) {
-      arrFiltered[j] = elem;
-      j++;
+      arrFiltered.push(elem);
     }
   });
   return arrFiltered;
@@ -29,13 +27,12 @@ function fakeForEach(array, callbackFunction) {
 }
 
 function fakeSome(array, callbackFunction) {
-  let atLeastOnePassesTheTest = false;
   for (const element of array) {
     if (callbackFunction(element)) {
-      atLeastOnePassesTheTest = true;
+      return true;
     }
   }
-  return atLeastOnePassesTheTest;
+  return false;
 }
 
 function fakeEvery(array, callbackFunction) {
@@ -90,11 +87,11 @@ function fakeIndexOfRecursive(array, value) {
 }
 
 function fakeIncludes(array, value) {
-  return fakeIndexOf(array, value) === -1 ? false : true;
+  return fakeIndexOf(array, value) != -1;
 }
 
 function fakeIntersection(array1, array2) {
-  let arrIntersection = [];
+  const arrIntersection = [];
   for (const i of arr1) {
     for (const j of arr2) {
       if (i === j) {
@@ -112,7 +109,7 @@ function fakeUnion(arr1, ...arr2) {
   }
   fakeForEach(arr2, function(i) {
     fakeForEach(i, function(j) {
-      if (!arrUnion.includes(j)) {
+      if (!fakeIncludes(arrUnion, j)) {
         arrUnion.push(j);
       }
     });

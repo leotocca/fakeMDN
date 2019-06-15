@@ -6,7 +6,7 @@
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
-    <!--Barra de navegación-->
+
     <nav class="nav">
       <h1>fakeMap()</h1>
       <p><a href="../index.html">Home</a></p>
@@ -14,9 +14,9 @@
 
     <main class="container">
       <aside class="container1"></aside>
-      <!--Container general-->
+
       <article class="container2">
-        <!--Primera descripción del metodo-->
+
         <section class="description text">
           <p>
 							La funcion <a href="#" class="bluehighlight mono"">fakeMap()</a> crea un
@@ -43,23 +43,18 @@
         <section class="sintax">
           <h2 class="sectionTitle">Sintaxis</h2>
 
-          <!--sandbox-->
           <section class="sandbox">
             <code class="code mono">
-							let newArray = fakeMap(array, function callback() {<br />
+							let arrMaped = fakeMap(array, function callback(currentValue) {<br />
 								<span class="italic tab mono">// Elemento devuelto de newArray</span
 								><br />
 								});
             </code>
           </section>
 
-          <!--subtitle-->
-
           <h3>
             <span class="subtitle">Parametros </span>
           </h3>
-
-          <!--descripcion-->
 
           <h4>
             <span class="highlight">array</span>
@@ -71,8 +66,21 @@
             <span class="highlight tab">callback</span>
           </h4>
 
-          <p class="descripcion tab">Función que producirá un elemento del nuevo array, no recibe argumentos.</p>
+          <p class="descripcion tab">Función que producirá un elemento del nuevo array, recibe un argumento</p>
 
+          <h4>
+            <span class="highlight tab">currentValue</span>
+          </h4>
+          <p>
+            El elemento que está siendo procesado.
+          </p>
+          <h3>
+             <span class="subtitle">Valor de retorno </span>
+          </h3>
+  
+          <p>
+            Retorna un nuevo <span class="bluehighlight">array</span> con la función aplicada a cada elemento.
+          </p>
         </section>
 
         <section class="description text">
@@ -90,8 +98,6 @@
         <section class="examples">
           <h2 class="sectionTitle">Ejemplos</h2>
 
-          <!--subtitle-->
-
           <h3>
             <span class="subtitle">Procesar un array de números aplicándoles la raíz cuadrada</span>
           </h3>
@@ -99,7 +105,6 @@
               El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.
           </p>
 
-          <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
                 const numeros= [1, 4, 9];<br />
@@ -110,8 +115,6 @@
                 </span>
           </section>
 
-          <!--subtitle-->
-
           <h3>
             <span class="subtitle"
               >Mapear un array de números usando una función con un argumento
@@ -120,7 +123,6 @@
           
           <p class="description">El siguiente código muestra cómo trabaja map cuando se utiliza una función que requiere de un argumento. <br> El argumento será asignado automáticamente a cada elemento del arreglo conforme map itera el arreglo original.</p>
 
-          <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
                 const numeros = [1, 4, 9]; <br />
@@ -139,7 +141,6 @@
         <section class="seealso">
           <h2 class="sectionTitle">Ver también</h2>
 
-          <!--Lista de links-->
           <ul>
               <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
               <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
@@ -154,6 +155,8 @@
               <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
               <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
               <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+              <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
+              <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
           </ul>
         </section>
       </article>

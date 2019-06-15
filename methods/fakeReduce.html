@@ -6,7 +6,7 @@
 	<link rel="icon" type="x-icon" href="../favicon.ico">
   </head>
   <body>
-    <!--Barra de navegación-->
+    
     <nav class="nav">
       <h1>fakeReduce()</h1>
       <p><a href="../index.html">Home</a></p>
@@ -14,9 +14,9 @@
 
     <main class="container">
       <aside class="container1"></aside>
-      <!--Container general-->
+
       <article class="container2">
-        <!--Primera descripción del metodo-->
+
         <section class="description text">
           <p>
               La función
@@ -29,24 +29,19 @@
         <section class="sintax">
           <h2 class="sectionTitle">Sintaxis</h2>
 
-          <!--sandbox-->
           <section class="sandbox">
             <code class="code">
-                let resultado = fakeReduce(arreglo, funcionReductora);<br />
+                let result = fakeReduce(array, reducFunction);<br />
               </code>
           </section>
-
-          <!--subtitle-->
 
           <h3>
             <span class="subtitle">Parametros </span>
           </h3>
 
-          <!--descripcion-->
-
           <h4>
             <span class="highlight">
-              arreglo
+              array
             </span>
           </h4>
 
@@ -55,13 +50,13 @@
           </p>
 
           <h4>
-            <span class="highlight tab">funcionReductora</span>
+            <span class="highlight tab">reducFunction</span>
           </h4>
 
           <p class="descripcion tab">
               Es la función que se utilizará para procesar arreglo,
               puede ser anónima, recibe dos parámetros y devuelve un resultado:</br>  
-                 let funcionReductora = (param1, param2) => resultado;
+                 let reducFunction = (param1, param2) => result;
           </p>
 
           <h4>
@@ -72,16 +67,14 @@
                 Los dos parámetros que utilizará funcionReductora
                 para calcular el resultado de la función
         </p>
-  
 
-          <!--subtitle-->
-          <h3>
+        <h3>
             <span class="subtitle">Valor de retorno </span>
           </h3>
 
           <p>
-            <span class="bluehighlight">
-              El resultado de reducir el array 
+              El resultado de reducir el <span class="bluehighlight">
+              array 
             </span>
           </p>
         </section>
@@ -89,30 +82,24 @@
         <section class="examples">
           <h2 class="sectionTitle">Ejemplos</h2>
 
-          <!--subtitle-->
-
           <h3>
             <span class="subtitle">Sumar todos los elementos de un array</span>
           </h3>
 
-          <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
-                funcionReducidora = (x, y) => x + y;</br>
-                arregloReducido = fakeReduce(arreglo, funcionReducidora);
+                reducFunction = (x, y) => x + y;</br>
+                arrReduced = fakeReduce(array, reducFunction);
             </code>
           </section>
-
-          <!--subtitle-->
 
           <h3>
             <span class="subtitle">Suma de los cuadrados </span>
           </h3>
 
-          <!--sandbox-->
           <section class="sandboxjs">
             <code class="codejs">
-                arregloReducido = fakeReduce(arreglo, function (x,y) {
+                arrReduced = fakeReduce(array, function (x,y) {
                   return x + y**2;
                   })
             </code>
@@ -122,8 +109,7 @@
         <section class="seealso">
           <h2 class="sectionTitle">Ver también</h2>
 
-          <!--Lista de links-->
-         <ul>
+          <ul>
 	   <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
 	   <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
 	   <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
@@ -137,6 +123,8 @@
 	   <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
 	   <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
 	   <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+     <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
+     <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
 	</ul>
         </section>
       </article>
