@@ -1,6 +1,5 @@
-function fakeReduce(array, callbackFunction) {
-  let accumulator = arr[0];
-  for (let i = 1; i < arr.length; i++) {
+function fakeReduce(arr, callbackFunction, accumulator=0) {
+  for (let i = 0; i < arr.length; i++) {
     accumulator = callbackFunction(accumulator, arr[i]);
   }
   return accumulator;
