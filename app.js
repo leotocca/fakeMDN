@@ -11,11 +11,11 @@ function fakeMax(arr) {
 function fakeReduce(arr, callbackFunction, accumulator) {
   if (accumulator == undefined) {
     accumulator = arr[0];
-    var comienzo = 1;
+    var begin = 1;
   } else {
-    var comienzo = 0;
+    var begin = 0;
   }
-  for (let i = comienzo; i < arr.length; i++) {
+  for (let i = begin; i < arr.length; i++) {
     accumulator = callbackFunction(accumulator, arr[i]);
   }
   return accumulator;
