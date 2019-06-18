@@ -2,7 +2,8 @@
 <html lang="es">
   <head>
     <title>fakeReduce()</title>
-	<link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
 	<link rel="icon" type="x-icon" href="../favicon.ico">
   </head>
   <body>
@@ -30,11 +31,11 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
-
-                let resultado = fakeReduce(arreglo, funcionReductora [, valorInicial] );<br />
-
-              </code>
+            <pre>
+            <code class="javascript">
+              let resultado = fakeReduce(arreglo, funcionReductora [, valorInicial] );
+            </code>
+            </pre>
           </section>
 
           <h3>
@@ -104,23 +105,27 @@
             <span class="subtitle">Sumar todos los elementos de un array</span>
           </h3>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-                reducFunction = (x, y) => x + y;</br>
-                arrReduced = fakeReduce(array, reducFunction);
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="codejs">
+                reducFunction = (x, y) => x + y;
+          arrReduced = fakeReduce(array, reducFunction);
+              </code>
+            </pre>
           </section>
 
           <h3>
             <span class="subtitle">Suma de los cuadrados </span>
           </h3>
 
-          <section class="sandboxjs">
-            <code class="codejs">
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
                 arrReduced = fakeReduce(array, function (x,y) {
-                  return x + y**2;
-                  })
-            </code>
+                return x + y**2;
+                })
+              </code>
+            </pre>
           </section>
         </section>
 
@@ -149,5 +154,7 @@
     </main>
 
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

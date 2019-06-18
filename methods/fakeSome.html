@@ -3,6 +3,7 @@
   <head>
     <title>fakeSome()</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
@@ -29,16 +30,18 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <p class="code">
-                function fakeSome(arr, fn) {<br/>
-                  for (let element of arr) {<br/>
-                  if (fn(element)) { <br/>
-                    return true;<br/>
-                  }</br>
-                }<br/>
-                return false;<br/>
-              } <br/>
-              </p>
+            <pre>
+            <code class="javascript">
+              function fakeSome(arr, fn) {
+                for (let element of arr) {
+                  if (fn(element)) { 
+                    return true;
+                  }
+                }
+                return false;
+              } 
+            </code>
+            </pre>
           </section>
 
           <h3>
@@ -83,16 +86,16 @@
               <span class="subtitle"> Mostrar cada elemento del array </span>
           </h3>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-                <p class="codejs">
-                  const array = [1, 2, 3, 4, 5];<br/>
-                  const even = function(element) { <br/>
-                  return element % 2 === 0; <br/>
-                  }<br/>
-                   console.log(fakeSome(array, even));<br/>
-                </p>
+          <section class="sandbox">
+            <pre>
+            <code class="javascript">
+              const array = [1, 2, 3, 4, 5];
+              const even = function(element) { 
+                return element % 2 === 0; 
+                }
+              console.log(fakeSome(array, even));
             </code>
+            </pre>  
           </section>
 
           <section class="seealso">
@@ -120,5 +123,7 @@
     </main>
 
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

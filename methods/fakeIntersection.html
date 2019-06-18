@@ -3,6 +3,7 @@
   <head>
     <title>fakeIntersection()</title>
     <link rel="stylesheet" href="../styles.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
     <link rel="icon" type="x-icon" href="../favicon.ico" >
   </head>
   <body>
@@ -28,9 +29,11 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
-								fakeIntersection(arr1, arr2);
-            </code>
+            <pre>
+              <code class="javascript">
+                  fakeIntersection(arr1, arr2);
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -55,12 +58,14 @@
         <section class="examples">
           <h2 class="sectionTitle">Ejemplos</h2>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-                fakeIntersection([1, 2, 3, "a"], ["a", 1, 3, 5, 6]); // [1, 3, "a"]<br />
-				fakeIntersection([68, 2, true, "a"], ["a", 1, 3, true, 68]); // [68, true, "a"]<br />
-				fakeIntersection([false, 68, 2, "argh", true, "a"], ["argh", false, 68]); // [false, 68, "argh"]<br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                fakeIntersection([1, 2, 3, "a"], ["a", 1, 3, 5, 6]); // [1, 3, "a"]
+                fakeIntersection([68, 2, true, "a"], ["a", 1, 3, true, 68]); // [68, true, "a"]
+                fakeIntersection([false, 68, 2, "argh", true, "a"], ["argh", false, 68]); // [false, 68, "argh"]
+              </code>
+          </pre>
           </section>
 
         <section class="seealso">
@@ -88,5 +93,7 @@
     </main>
 
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

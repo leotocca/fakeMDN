@@ -3,6 +3,10 @@
   <head>
     <title>fakeIndexOf()</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
+    />
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
@@ -28,9 +32,11 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
-              fakeIndexOf(array, searchElement)
-            </code>
+            <pre>
+              <code class="javascript">
+                fakeIndexOf(array, searchElement)
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -84,15 +90,17 @@
             array
           </p>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-              var array = [2, 9, 9];<br />
-              array.indexOf(2); // 0 <br />
-              array.indexOf(7); // -1 <br />
-              array.indexOf(9, 2); // 2 <br />
-              array.indexOf(2, -1); // -1 <br />
-              array.indexOf(2, -3); // 0 <br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                var array = [2, 9, 9];
+                array.indexOf(2); // 0 
+                array.indexOf(7); // -1 
+                array.indexOf(9, 2); // 2
+                array.indexOf(2, -1); // -1
+                array.indexOf(2, -3); // 0
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -101,19 +109,21 @@
             </span>
           </h3>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-              const indices = []; <br />
-              const array = ['a', 'b', 'a', 'c', 'a', 'd'];<br />
-              const element = 'a';<br />
-              let idx = array.indexOf(element);<br />
-              while (idx != -1) {<br />
-              indices.push(idx);<br />
-              idx = array.indexOf(element, idx + 1);<br />
-              } <br />
-              console.log(indices);<br />
-              // [0, 2, 4] <br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                const indices = []; 
+                const array = ['a', 'b', 'a', 'c', 'a', 'd'];
+                const element = 'a';
+                let idx = array.indexOf(element);
+                while (idx != -1) {
+                indices.push(idx);
+                idx = array.indexOf(element, idx + 1);
+                } 
+                console.log(indices);
+                // [0, 2, 4] 
+              </code>
+            </pre>
           </section>
         </section>
 
@@ -174,7 +184,13 @@
         </section>
       </article>
     </main>
-
     <script src="../app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
+    ></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>

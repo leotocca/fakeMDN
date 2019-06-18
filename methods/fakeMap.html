@@ -3,6 +3,7 @@
   <head>
     <title>fakeMap()</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
@@ -24,32 +25,33 @@
 							aplicada a cada uno de sus elementos. <br> <br>
           </p>
 				</section>
-				<section class="sandboxjs">
-						<code class="codejs">
-								const numbers = [1, 5, 10, 15];<br />
-								let doubles = fakeMap(numbers,function(x) {<br />
-								return x * 2;<br />
-								});<br />
-								// doubles is now [2, 10, 20, 30] <br />
-								// numbers is still [1, 5, 10, 15]<br /><br />
-		
-								const numbers = [1, 4, 9];<br />
-								let roots = fakeMap(numbers,Math.sqrt);<br />
-								// roots is now [1, 2, 3]<br />
-								// numbers is still [1, 4, 9]<br />
-						</code>
+				<section class="sandbox">
+          <pre>
+						<code class="javascript">
+              const numbers = [1, 5, 10, 15];
+              let doubles = fakeMap(numbers,function(x) {
+              return x * 2;
+              // doubles is now [2, 10, 20, 30]
+              // numbers is still [1, 5, 10, 15]
+              const numbers = [1, 4, 9];
+              let roots = fakeMap(numbers,Math.sqrt);
+              // roots is now [1, 2, 3]
+              // numbers is still [1, 4, 9]
+            </code>
+          </pre>
 					</section>
 
         <section class="sintax">
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code mono">
-							let arrMaped = fakeMap(array, function callback(currentValue) {<br />
-								<span class="italic tab mono">// Elemento devuelto de newArray</span
-								><br />
-								});
+            <pre>
+            <code class="javascript">
+              let arrMaped = fakeMap(array, function callback(currentValue) {
+              // Elemento devuelto de newArray
+              });
             </code>
+          </pre>
           </section>
 
           <h3>
@@ -105,14 +107,15 @@
               El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.
           </p>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-                const numeros= [1, 4, 9];<br />
-                let raices = fakeMap(numeros,Math.sqrt);<br />
-                <span class="italic tab mono">
-                  // raices tiene [1, 2, 3] <br />
-                  // numeros aún mantiene [1, 4, 9] <br />
-                </span>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                const numeros= [1, 4, 9];
+                let raices = fakeMap(numeros,Math.sqrt);
+                // raices tiene [1, 2, 3]
+                // numeros aún mantiene [1, 4, 9] 
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -123,18 +126,17 @@
           
           <p class="description">El siguiente código muestra cómo trabaja map cuando se utiliza una función que requiere de un argumento. <br> El argumento será asignado automáticamente a cada elemento del arreglo conforme map itera el arreglo original.</p>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-                const numeros = [1, 4, 9]; <br />
-                let dobles = fakeMap(numeros,function(num) { <br />
-                <span class="tab mono">return num * 2;</span> <br />
-                });<br /><br />
-    
-                <i class="tab mono">
-                  // dobles es ahora [2, 8, 18] <br />
-                  // numeros sigue siendo [1, 4, 9]</i
-                ><br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                const numeros = [1, 4, 9]; 
+                let dobles = fakeMap(numeros,function(num) {
+                return num * 2; 
+                });
+                // dobles es ahora [2, 8, 18]
+                // numeros sigue siendo [1, 4, 9]
+              </code>
+            </pre>
           </section>
         </section>
 
@@ -163,5 +165,7 @@
     </main>
 
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
