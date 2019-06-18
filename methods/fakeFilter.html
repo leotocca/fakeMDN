@@ -2,7 +2,8 @@
 <html lang="es">
   <head>
     <title>fakeFilter()</title>
-	<link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
 	<link rel="icon" type="x-icon" href="../favicon.ico">
   </head>
   <body>
@@ -30,9 +31,11 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
+            <pre>
+              <code class="javascript">
               let arregloFiltrado = fakeFilter(arreglo, funcionFiltradora);
-            </code>
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -88,10 +91,12 @@
           </h3>
 
           <section class="sandboxjs">
-            <code class="codejs">
-                let funcionFiltradora = x => x % 2 != 0;</br>
-                arregloFiltrado = fakeFilter(arreglo, funcionFiltradora);
-            </code>
+            <pre>
+              <code class="javascript">
+                  let funcionFiltradora = x => x % 2 != 0;
+                  arregloFiltrado = fakeFilter(arreglo, funcionFiltradora);
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -101,11 +106,13 @@
           </h3>
 
           <section class="sandboxjs">
-            <code class="codejs">
-              arregloFiltrado = fakeFilter(arreglo, function (x) {</br>
-              return (x<0);
-              })
-            </code>
+            <pre>
+              <code class="javascript">
+                arregloFiltrado = fakeFilter(arreglo, function (x) {
+                return (x < 0); 
+                })
+              </code>
+          </pre>
           </section>
         </section>
 
@@ -134,5 +141,7 @@
     </main>
 
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
