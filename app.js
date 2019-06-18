@@ -8,15 +8,15 @@ function fakeMax(arr) {
   return fakeReduce(arr, (acc, value) => (value > acc ? value : acc));
 }
 
-function fakeReduce(arr, callbackFunction, accumulator) {
-  if (accumulator == undefined) {
-    accumulator = arr[0];
-    var begin = 1;
-  } else {
-    var begin = 0;
+function fakeReduce(arr, callbackFunction, initialValue) {
+  let accumulator = arr[0];
+  let begin = 1;
+  if (initialValue !== undefined) {
+    accumulator = initialValue;
+    begin = 0;
   }
-  for (let i = begin; i < arr.length; i++) {
-    accumulator = callbackFunction(accumulator, arr[i]);
+  for (const elem of arr) {
+    accumulator = callbackFunction(accumulator, elem);
   }
   return accumulator;
 }
