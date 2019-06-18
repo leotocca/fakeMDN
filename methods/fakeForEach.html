@@ -3,6 +3,7 @@
   <head>
     <title>fakeForEach</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
@@ -28,11 +29,13 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
-              fakeForEach(arr,fn){<br />
-              <span class="italic">//tu iteración</span><br />
-              });
-            </code>
+            <pre>
+              <code class="javascript">
+                fakeForEach(arr,fn){<br />
+                <span class="italic">//tu iteración</span><br />
+                });
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -70,34 +73,38 @@
             <span class="subtitle"> Mostrar cada elemento del array </span>
           </h3>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-              let arr = ['a', 'b', 'c'];<br />
-              console.log(fakeForEach(arr, (showEachElement = arr =>
-              console.log(arr)))); <br />
-              // output 'a' <br />
-              // output 'b' <br />
-              // output 'c' <br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                let arr = ['a', 'b', 'c'];
+                console.log(fakeForEach(arr, (showEachElement = arr =>
+                console.log(arr)))); 
+                // output 'a' 
+                // output 'b' 
+                // output 'c'
+              </code>
+            </pre>
           </section>
 
           <h3>
             <span class="subtitle">Convertir un for loop en fakeForEach </span>
           </h3>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-              const items = ['item1', 'item2', 'item3'];<br />
-              const copy = [];<br />
-              <br />
-              // before<br />
-              for (let i=0; i< items.length; i++) {<br />
-              copy.push(items[i]);<br />
-              }<br />
-              <br />
-              // after<br />
-              fakeForEach(items, (convertir = arr => copy.push(arr)));<br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                const items = ['item1', 'item2', 'item3'];
+                const copy = [];
+              
+                // before
+                for (let i=0; i< items.length; i++) {
+                copy.push(items[i]);
+                }
+                
+                // after
+                fakeForEach(items, (convertir = arr => copy.push(arr)));
+              </code>
+            </pre>
           </section>
         </section>
 
@@ -124,7 +131,8 @@
         </section>
       </article>
     </main>
-
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
