@@ -66,6 +66,7 @@ function fakeFind(array, callbackFunction) {
       return elem;
     }
   }
+  return undefined;
 }
 
 function fakeMap(array, callbackFunction) {
