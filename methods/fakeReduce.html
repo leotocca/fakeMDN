@@ -31,7 +31,9 @@
 
           <section class="sandbox">
             <code class="code">
-                let result = fakeReduce(array, reducFunction);<br />
+
+                let resultado = fakeReduce(arreglo, funcionReductora [, valorInicial] );<br />
+
               </code>
           </section>
 
@@ -50,7 +52,9 @@
           </p>
 
           <h4>
+
             <span class="highlight tab">reducFunction</span>
+
           </h4>
 
           <p class="descripcion tab">
@@ -67,6 +71,20 @@
                 Los dos parámetros que utilizará funcionReductora
                 para calcular el resultado de la función
         </p>
+ 
+        <h4>
+          <span class="highlight">
+            valorInicial
+          </span>
+        </h4>
+
+        <p class="descripcion tab">
+            Este parámetro optativo indica el valor inicial que tendrá el acumulador.
+            En caso de omitirse, el acumulador tomará como valor inicial el primer elemento
+            del arreglo y la función comenzará a procesar el arreglo desde la posición 
+            siguiente.
+        </p>
+
 
         <h3>
             <span class="subtitle">Valor de retorno </span>

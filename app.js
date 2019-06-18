@@ -1,6 +1,21 @@
-function fakeReduce(array, callbackFunction) {
-  let accumulator = arr[0];
-  for (let i = 1; i < arr.length; i++) {
+function fakeMin(arr) {
+  if (arr.length == 0) return undefined;
+  return fakeReduce(arr, (acc, value) => (value < acc ? value : acc));
+}
+
+function fakeMax(arr) {
+  if (arr.length == 0) return undefined;
+  return fakeReduce(arr, (acc, value) => (value > acc ? value : acc));
+}
+
+function fakeReduce(arr, callbackFunction, accumulator) {
+  if (accumulator == undefined) {
+    accumulator = arr[0];
+    var comienzo = 1;
+  } else {
+    var comienzo = 0;
+  }
+  for (let i = comienzo; i < arr.length; i++) {
     accumulator = callbackFunction(accumulator, arr[i]);
   }
   return accumulator;
