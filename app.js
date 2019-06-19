@@ -68,14 +68,14 @@ function fakeIncludes(arr, value) {
 	return fakeIndexOf(arr, value) === -1 ? false : true;
 }
 
-function fakeIntersection(arr1, arr2) {
-	let newArr = [];
-	for (let i = 0; i < arr1.length; i++) {
-		for (let j = 0; j < arr2.length; j++) {
-			if (arr1[i] === arr2[j]) {
-				newArr.push(arr2[j]);
+function fakeIntersection(array1, array2) {
+	let arrIntersection = [];
+	for (const i of array1) {
+		for (const j of array2) {
+			if (i === j) {
+				arrIntersection.push(j);
 			}
 		}
 	}
-	return newArr;
+	return arrIntersection;
 }
