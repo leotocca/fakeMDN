@@ -3,6 +3,10 @@
   <head>
     <title>fakeMax()</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
+    />
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
@@ -30,9 +34,11 @@
 
           <!--sandbox-->
           <section class="sandbox">
-            <code class="code">
-              const valorMaximo = fakeMax(arreglo);<br />
-            </code>
+            <pre>
+              <code class="javascript">
+                const valorMaximo = fakeMax(arreglo);
+              </code>
+            </pre>
           </section>
 
           <!--subtitle-->
@@ -75,12 +81,13 @@
           </h3>
 
           <!--sandbox-->
-          <section class="sandboxjs">
-            <code class="codejs">
-                <pre>
-                    arreglo=[1, 2, 3, 4]; 
-                    valorMaximo = fakeMax(arreglo); // 4</pre>
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                arreglo=[1, 2, 3, 4]; 
+                valorMaximo = fakeMax(arreglo); // 4
+              </code>
+          </pre>
           </section>
 
           <!--subtitle-->
@@ -90,12 +97,13 @@
           </h3>
 
           <!--sandbox-->
-          <section class="sandboxjs">
-            <code class="codejs">
-              <pre>
-                  arreglo = ["papa", "puerro", "batata", "cebolla"]; 
-                  ultimaPalabra = fakeMax(arreglo); // "puerro"</pre>
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                arreglo = ["papa", "puerro", "batata", "cebolla"]; 
+                ultimaPalabra = fakeMax(arreglo); // "puerro"
+              </code>
+           </pre>
           </section>
         </section>
 
@@ -155,5 +163,12 @@
     </main>
 
     <script src="../app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
+    ></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>

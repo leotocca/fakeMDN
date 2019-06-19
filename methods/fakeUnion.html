@@ -3,6 +3,7 @@
   <head>
     <title>fakeUnion()</title>
     <link rel="stylesheet" href="../styles.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
     <link rel="icon" type="x-icon" href="../favicon.ico" >
   </head>
   <body>
@@ -28,9 +29,11 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
-								fakeUnion(arrays);
-            </code>
+            <pre>
+              <code class="javascript">
+                  fakeUnion(arrays);
+              </code>
+            </pre>
           </section>
 
           <h3>
@@ -55,12 +58,14 @@
         <section class="examples">
           <h2 class="sectionTitle">Ejemplos</h2>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-                fakeUnion([1 ,2], [3, 4], [5, 8], [743, 95], [85, 863, 9]); // [1, 2, 3, 4, 5, 8, 743, 95, 85, 863, 9]<br />
-								fakeUnion([1 ,2], [3, 4], [743, 95], [85, 863, 9]); // [1, 2, 3, 4, 743, 95, 85, 863, 9]<br />
-								fakeUnion([1 ,2], [3, 4], [85, 863, 9]); // [1, 2, 3, 4, 85, 863, 9]<br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                  fakeUnion([1 ,2], [3, 4], [5, 8], [743, 95], [85, 863, 9]); // [1, 2, 3, 4, 5, 8, 743, 95, 85, 863, 9]<br />
+                  fakeUnion([1 ,2], [3, 4], [743, 95], [85, 863, 9]); // [1, 2, 3, 4, 743, 95, 85, 863, 9]<br />
+                  fakeUnion([1 ,2], [3, 4], [85, 863, 9]); // [1, 2, 3, 4, 85, 863, 9]<br />
+              </code>
+            </pre>
           </section>
 
         <section class="seealso">
@@ -86,7 +91,8 @@
         </section>
       </article>
     </main>
-
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

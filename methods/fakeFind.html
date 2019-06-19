@@ -3,6 +3,7 @@
   <head>
     <title>fakeFind()</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
     <link rel="icon" type="x-icon" href="../favicon.ico">
   </head>
   <body>
@@ -29,11 +30,13 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
-              fakeFind(arr,fn){<br />
-              <span class="italic">//tu iteración</span><br />
-              });
-            </code>
+            <pre>
+              <code class="javascript">
+                fakeFind(arr,fn){
+                //tu iteración
+                });
+              </code>
+          </pre>
           </section>
 
           <h3>
@@ -77,35 +80,38 @@
             <span class="subtitle"> Demo </span>
           </h3>
         
-          <section class="sandboxjs">
-            <code class="codejs">
-              let array1 = [5, 12, 8, 130, 44];<br />
-               <br />
-               const lessThanTen = function(element) {<br />
-                return element < 1;<br />
-              };<br />
-              <br/>
-              console.log(fakeFind(array1, lessThanTen));<br />
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                let array1 = [5, 12, 8, 130, 44];
+                const lessThanTen = function(element) {
+                  return element < 1;
+                };
+              
+                console.log(fakeFind(array1, lessThanTen));
+              </code>
+          </pre>
           </section>
           <h3>
             <span class="subtitle"> Encontrar un objeto en un array por una de sus propiedades </span>
           </h3>
           
-          <section class="sandboxjs">
-            <code class="codejs">
-              let inventario = [<br />
-              { nombre: 'manzanas', cantidad: 2 },<br />
-              { nombre: 'bananas', cantidad: 0 },<br />
-              { nombre: 'cerezas', cantidad: 5 }<br />
-              ]; <br />
-              function esCereza(fruta) { <br />
-                return fruta.nombre === 'cerezas';<br />
-              } <br />
-               <br />
-               console.log(fakeFind(inventario, esCereza));<br />
-              
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                let inventario = [
+                { nombre: 'manzanas', cantidad: 2 },
+                { nombre: 'bananas', cantidad: 0 },
+                { nombre: 'cerezas', cantidad: 5 }
+                ]; 
+                function esCereza(fruta) { 
+                  return fruta.nombre === 'cerezas';
+                } 
+                
+                console.log(fakeFind(inventario, esCereza));
+                
+              </code>
+            </pre>
           </section>
 
         <section class="seealso">
@@ -131,7 +137,8 @@
         </section>
       </article>
     </main>
-
     <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

@@ -2,11 +2,14 @@
 <html lang="es">
   <head>
     <title>fakeMDN</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
+    />
+    <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
-    
     <nav class="nav">
       <h1>fakeMDN</h1>
       <p><a href="../index.html">Home</a></p>
@@ -14,9 +17,8 @@
 
     <main class="container">
       <aside class="container1"></aside>
-      
-      <article class="container2">
 
+      <article class="container2">
         <section class="description text">
           <p>
             La funcion
@@ -30,12 +32,14 @@
           <h2 class="sectionTitle">Sintaxis</h2>
 
           <section class="sandbox">
-            <code class="code">
-              fakeForEach(function callback(currentValue){<br />
-              <span class="italic">//your iterator</span><br />
-              });
-            </code>
-
+            <pre>
+              <code class="javascript">
+                fakeForEach(function callback(currentValue){
+                  //your iterator
+                });
+              </code>
+            </pre>
+          </section>
           <h3>
             <span class="subtitle">Parametros </span>
           </h3>
@@ -68,12 +72,14 @@
             <span class="subtitle">Converting a for loop to a forEach </span>
           </h3>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-              fakeForEach(function callback(currentValue){<br />
-              <span class="italic">//your iterator</span><br />
-              });
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                fakeForEach(function callback(currentValue){
+                  //your iterator
+                });
+              </code>
+           </pre>
           </section>
 
           <h3>
@@ -82,12 +88,14 @@
 
           <p>The following code log a line for each element in an array</p>
 
-          <section class="sandboxjs">
-            <code class="codejs">
-              fakeForEach(function callback(currentValue){<br />
-              <span class="italic">//your iterator</span><br />
-              });
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                fakeForEach(function callback(currentValue){
+                  //your iterator
+                });
+              </code>
+            </pre>
           </section>
         </section>
 
@@ -96,26 +104,67 @@
 
           <!--Lista de links-->
           <ul>
-            <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
-            <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
-            <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
-            <li><a href="fakeSome.html" class="bluehighlight">fakeSome()</a></li>
-            <li><a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a></li>
-            <li><a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a></li>
+            <li>
+              <a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
+            </li>
+            <li>
+              <a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
+            <li>
+              <a href="fakeSome.html" class="bluehighlight">fakeSome()</a>
+            </li>
+            <li>
+              <a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a>
+            </li>
+            <li>
+              <a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a>
+            </li>
             <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
-            <li><a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a></li>
+            <li>
+              <a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a>
+            </li>
             <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
-            <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
-            <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
-            <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
-            <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>     
-            <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
-            <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
+            <li>
+              <a href="fakeIndexOfRecursive.html" class="bluehighlight"
+                >fakeIndexOfRecursive()</a
+              >
+            </li>
+            <li>
+              <a href="fakeIntersection.html" class="bluehighlight"
+                >fakeIntersection()</a
+              >
+            </li>
+            <li>
+              <a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a>
+            </li>
+            <li>
+              <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+            </li>
+            <li>
+              <a href="fakeArrayMin.html" class="bluehighlight"
+                >fakeArrayMin()</a
+              >
+            </li>
+            <li>
+              <a href="fakeArrayMax.html" class="bluehighlight"
+                >fakeArrayMax()</a
+              >
+            </li>
           </ul>
         </section>
       </article>
     </main>
 
     <script src="../app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
+    ></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>

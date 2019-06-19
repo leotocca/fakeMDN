@@ -3,6 +3,10 @@
   <head>
     <title>fakeMin()</title>
     <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
+    />
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
@@ -20,8 +24,8 @@
         <section class="description text">
           <p>
             La función
-            <a href="#" class="bluehighlight">fakeMin()</a> devuelve el menor elemento
-            de un arreglo, acepta arreglos numéricos y de strings.
+            <a href="#" class="bluehighlight">fakeMin()</a> devuelve el menor
+            elemento de un arreglo, acepta arreglos numéricos y de strings.
           </p>
         </section>
 
@@ -30,9 +34,11 @@
 
           <!--sandbox-->
           <section class="sandbox">
-            <code class="code">
-              const valorMinimo = fakeMin(arreglo);<br />
-            </code>
+            <pre>
+              <code class="javascript">
+                const valorMinimo = fakeMin(arreglo);
+              </code>
+            </pre>
           </section>
 
           <!--subtitle-->
@@ -75,12 +81,13 @@
           </h3>
 
           <!--sandbox-->
-          <section class="sandboxjs">
-            <code class="codejs">
-                <pre>
-                    arreglo = [1, 2, 3, 4]; 
-                    valorMinimo = fakeMin(arreglo);   // 1</pre>
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="codejs">
+                arreglo = [1, 2, 3, 4]; 
+                valorMinimo = fakeMin(arreglo);   // 1
+              </code>
+            </pre>
           </section>
 
           <!--subtitle-->
@@ -90,12 +97,13 @@
           </h3>
 
           <!--sandbox-->
-          <section class="sandboxjs">
-            <code class="codejs">
-              <pre>
-                  arreglo = ["papa", "puerro", "batata", "cebolla"]; 
-                  primeraPalabra = fakeMin(arreglo);   // "batata"</pre>
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="codejs">
+                arreglo = ["papa", "puerro", "batata", "cebolla"]; 
+                primeraPalabra = fakeMin(arreglo);   // "batata"
+              </code>
+            </pre>
           </section>
         </section>
 
@@ -155,5 +163,12 @@
     </main>
 
     <script src="../app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
+    ></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>
