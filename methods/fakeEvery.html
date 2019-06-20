@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeForEach</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <title>fakeEvery()</title>
+    <link rel="stylesheet" href="../styles.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
-    <link rel="icon" type="x-icon" href="../favicon.ico" />
+    <link rel="icon" type="x-icon" href="../favicon.ico">
   </head>
   <body>
+
     <nav class="nav">
-      <h1>fakeForEach</h1>
+      <h1>fakeEvery()</h1>
       <p><a href="../index.html">Home</a></p>
     </nav>
 
     <main class="container">
       <aside class="container1"></aside>
+      
+      <article class="container2"> 
 
-      <article class="container2">
         <section class="description text">
           <p>
             La funcion
-            <a href="#" class="bluehighlight">fakeForEach()</a> ejecuta la
-            función pasada por un parametro una vez, para cada elemento del
-            array provisto
+            <a href="#" class="bluehighlight">fakeEvery()</a> devuelve un
+            booleano, true si todos los elementos en el arreglo pasan la
+            condición implementada por la función dada y false si alguno no la
+            cumple.
           </p>
         </section>
 
@@ -30,12 +33,12 @@
 
           <section class="sandbox">
             <pre>
-              <code class="javascript">
-                fakeForEach(arr,fn){<br />
-                <span class="italic">//tu iteración</span><br />
-                });
-              </code>
-            </pre>
+            <code class="JavaScript">
+              fakeForEach(arr,function){
+              //tu iteración
+              });
+            </code>
+          </pre>
           </section>
 
           <h3>
@@ -53,64 +56,59 @@
           </h4>
 
           <p class="descripcion tab">
-            Función que será ejecutada por cada elemento iterado
+            Función para probar cada elemento del array
           </p>
+
+          <h3>
+                <span class="highlight">Valor de retorno </span>
+        </h3>
+
+        <p class="descripcion tab">
+                Un <span class="bluehighlight">boolean</span>.
+              </p>
         </section>
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">fakeForEach()</code> ejecuta la funcion
+            <code class="highlight">fakeEvery()</code> ejecuta la funcion
             <code class="highlight">fn</code> una vez por cada elemento de la
-            array. A diferencia de <code class="highlight">map()</code> o
-            <code class="highlight">reduce()</code> este siempre devuelve el
-            valor undefined y no es encadenable
+            array hasta encontrar uno que haga retornar un valor <code class="highlight">false</code>. Si no se encuentra tal elemento, la funcion <code class="highlight">fakeEvery()</code> de inmediato retorna  false. O si  <code class="highlight">fn()</code> retorna verdadero
+            para todos los elementos, every retornará <code class="highlight">true</code>.
           </p>
         </section>
         <section class="examples">
-          <h2 class="sectionTitle">Ejemplos</h2>
+          <h2 class="sectionTitle">Ejemplo</h2>
 
           <h3>
-            <span class="subtitle"> Mostrar cada elemento del array </span>
+            <span class="subtitle"> Javascript demo </span>
           </h3>
 
           <section class="sandbox">
             <pre>
-              <code class="javascript">
-                let arr = ['a', 'b', 'c'];
-                console.log(fakeForEach(arr, (showEachElement = arr =>
-                console.log(arr)))); 
-                // output 'a' 
-                // output 'b' 
-                // output 'c'
-              </code>
-            </pre>
+            <code class="javascript ">
+              let array1 = [1, 30, 59, 9, 10, 13];<br />
+              function isBelowThreshold(currentValue) { <br />
+              return currentValue < 40;<br />
+              }<br />
+              <br />
+              function fakeEvery(arr, fn) {<br />
+              let allPassTheTest = true; <br />
+              fakeForEach(arr, element => { <br />
+              if (!fn(element)) { <br />
+              allPassTheTest = false; <br />
+              }<br />
+              }); <br />
+              return allPassTheTest; <br />
+              } <br />
+              <br />
+              console.log(fakeEvery(array1, isBelowThreshold)); <br />
+            </code>
+          </pre>
           </section>
-
-          <h3>
-            <span class="subtitle">Convertir un for loop en fakeForEach </span>
-          </h3>
-
-          <section class="sandbox">
-            <pre>
-              <code class="javascript">
-                const items = ['item1', 'item2', 'item3'];
-                const copy = [];
-              
-                // before
-                for (let i=0; i< items.length; i++) {
-                copy.push(items[i]);
-                }
-                
-                // after
-                fakeForEach(items, (convertir = arr => copy.push(arr)));
-              </code>
-            </pre>
-          </section>
-        </section>
 
         <section class="seealso">
           <h2 class="sectionTitle">Ver también</h2>
-
+          
           <ul>
               <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
               <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
@@ -123,14 +121,15 @@
               <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
               <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
               <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
-              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()<a></li>
-              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()<a></li>
+              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
+              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
               <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
               <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
           </ul>
         </section>
       </article>
     </main>
+
     <script src="../app.js"></script>
     <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>

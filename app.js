@@ -1,81 +1,133 @@
-function fakeReduce(arr, callbackFunction) {
-	let accumulator = arr[0];
-	for (let i = 1; i < arr.length; i++) {
-		accumulator = callbackFunction(accumulator, arr[i]);
-	}
-	return accumulator;
+function fakeMin(arr) {
+  if (arr.length === 0) return undefined;
+  return fakeReduce(arr, (acc, value) => (value < acc ? value : acc));
 }
 
-function fakeSum(arr) {
-	return fakeReduce(arr, (a, b) => a + b);
+function fakeMax(arr) {
+  if (arr.length === 0) return undefined;
+  return fakeReduce(arr, (acc, value) => (value > acc ? value : acc));
 }
 
-function fakeFilter(arr, callbackFunction) {
-	let newarr = [];
-	let j = 0; // j is the index of the new array I´m creating
-	fakeForEach(arr, elem => {
-		if (callbackFunction(elem)) {
-			newarr[j] = elem;
-			j++;
-		}
-	});
-	return newarr;
+function fakeReduce(arr, callbackFunction, initialValue) {
+  let accumulator = arr[0];
+  let begin = 1;
+  if (initialValue !== undefined) {
+    accumulator = initialValue;
+    begin = 0;
+  }
+  for (const elem of arr) {
+    accumulator = callbackFunction(accumulator, elem);
+  }
+  return accumulator;
 }
 
-function fakeForEach(arr, fn) {
-	for (let element of arr) {
-		fn(element);
-	}
+function fakeSum(array) {
+  return fakeReduce(array, (a, b) => a + b);
 }
 
-function fakeSome(arr, fn) {
-	let atLeastOnePassesTheTest = false;
-	for (let element of arr) {
-		if (fn(element)) {
-			atLeastOnePassesTheTest = true;
-		}
-	}
-	return atLeastOnePassesTheTest;
+function fakeFilter(array, callbackFunction) {
+  const arrFiltered = [];
+  fakeForEach(array, elem => {
+    if (callbackFunction(elem)) {
+      arrFiltered.push(elem);
+    }
+  });
+  return arrFiltered;
 }
 
-function fakeMap(arr, fn) {
-	const arrMaped = [];
-	fakeForEach(arr, function(arr) {
-		arrMaped.push(fn(arr));
-	});
-	return arrMaped;
+function fakeForEach(array, callbackFunction) {
+  for (const element of array) {
+    callbackFunction(element);
+  }
 }
 
-function fakeIncludes(arr, value) {
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] === value) {
-			return true;
-		}
-	}
-	return false;
+function fakeSome(array, callbackFunction) {
+  for (const element of array) {
+    if (callbackFunction(element)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function fakeEvery(array, callbackFunction) {
+  fakeForEach(array, element => {
+    if (!callbackFunction(element)) {
+      return false;
+    }
+  });
+  return true;
+}
+
+function fakeFind(array, callbackFunction) {
+  for (const elem of array) {
+    if (callbackFunction(elem)) {
+      return elem;
+    }
+  }
+  return undefined;
+}
+
+function fakeMap(array, callbackFunction) {
+  const arrMaped = [];
+  fakeForEach(array, function(array) {
+    arrMaped.push(callbackFunction(array));
+  });
+  return arrMaped;
+}
+
+function fakeIncludes(array, value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function fakeIndexOf(array, value) {
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] === value) {
-			return array[i];
-		}
-	}
-	return -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return i;
+    }
+  }
+  return -1;
 }
 
-function fakeIncludes(arr, value) {
-	return fakeIndexOf(arr, value) === -1 ? false : true;
+function fakeIndexOfRecursive(array, value) {
+  if (!array.length) return -1;
+  return array.pop() === value
+    ? array.length
+    : fakeIndexOfRecursive(array, value);
+}
+
+function fakeIncludes(array, value) {
+  return fakeIndexOf(array, value) !== -1;
 }
 
 function fakeIntersection(array1, array2) {
-	let arrIntersection = [];
-	for (const i of array1) {
-		for (const j of array2) {
-			if (i === j) {
-				arrIntersection.push(j);
-			}
-		}
-	}
-	return arrIntersection;
+  const arrIntersection = [];
+  for (const i of array1) {
+    for (const j of array2) {
+      if (i === j) {
+        arrIntersection.push(j);
+      }
+    }
+  }
+  return arrIntersection;
+}
+
+function fakeUnion(arr1, ...arr2) {
+  const arrUnion = [];
+  for (const i of arr1) {
+    arrUnion.push(i);
+  }
+  fakeForEach(arr2, function(i) {
+    fakeForEach(i, function(j) {
+      if (!fakeIncludes(arrUnion, j)) {
+        arrUnion.push(j);
+      }
+    });
+  });
+  return arrUnion;
 }

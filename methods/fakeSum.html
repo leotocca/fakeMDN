@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeForEach</title>
+    <title>fakeSum()</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
     <link rel="icon" type="x-icon" href="../favicon.ico" />
   </head>
   <body>
+
     <nav class="nav">
-      <h1>fakeForEach</h1>
+      <h1>fakeSum()</h1>
       <p><a href="../index.html">Home</a></p>
     </nav>
 
@@ -16,14 +17,13 @@
       <aside class="container1"></aside>
 
       <article class="container2">
+
         <section class="description text">
           <p>
-            La funcion
-            <a href="#" class="bluehighlight">fakeForEach()</a> ejecuta la
-            función pasada por un parametro una vez, para cada elemento del
-            array provisto
+              La funcion <a href="#" class="bluehighlight mono"">fakeSum()</a> suma todos
+              los elementos de un arreglo y devuelve el valor de esa suma.<br> <br>
           </p>
-        </section>
+				</section>
 
         <section class="sintax">
           <h2 class="sectionTitle">Sintaxis</h2>
@@ -31,9 +31,7 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                fakeForEach(arr,fn){<br />
-                <span class="italic">//tu iteración</span><br />
-                });
+                let variable = fakeSum(array);
               </code>
             </pre>
           </section>
@@ -43,69 +41,36 @@
           </h3>
 
           <h4>
-            <span class="highlight">Array</span>
+            <span class="highlight">array</span>
           </h4>
 
-          <p class="descripcion tab">Array que sera iterada</p>
-
-          <h4>
-            <span class="highlight">Función</span>
-          </h4>
-
-          <p class="descripcion tab">
-            Función que será ejecutada por cada elemento iterado
-          </p>
-        </section>
-        <section class="description text">
-          <h2 class="sectionTitle">Descripción</h2>
+          <p class="descripcion tab">Array cuyos elementos queremos sumar</p>
+          <h3>
+            <span class="subtitle">Valor de retorno</span>
+          </h3>
           <p>
-            <code class="highlight">fakeForEach()</code> ejecuta la funcion
-            <code class="highlight">fn</code> una vez por cada elemento de la
-            array. A diferencia de <code class="highlight">map()</code> o
-            <code class="highlight">reduce()</code> este siempre devuelve el
-            valor undefined y no es encadenable
+            Retorna un <span class="bluehighlight mono">integer</span> con la suma del array.
           </p>
+
         </section>
+
         <section class="examples">
-          <h2 class="sectionTitle">Ejemplos</h2>
+          <h2 class="sectionTitle">Ejemplo</h2>
 
           <h3>
-            <span class="subtitle"> Mostrar cada elemento del array </span>
+            <span class="subtitle">Sumar los elementos de un array</span>
           </h3>
+          <p class="description">
+              Calcular la suma de los elementos del vector array y guardarla en la variable suma</p>
 
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                let arr = ['a', 'b', 'c'];
-                console.log(fakeForEach(arr, (showEachElement = arr =>
-                console.log(arr)))); 
-                // output 'a' 
-                // output 'b' 
-                // output 'c'
+                let variable = fakeSum(array);
               </code>
             </pre>
           </section>
 
-          <h3>
-            <span class="subtitle">Convertir un for loop en fakeForEach </span>
-          </h3>
-
-          <section class="sandbox">
-            <pre>
-              <code class="javascript">
-                const items = ['item1', 'item2', 'item3'];
-                const copy = [];
-              
-                // before
-                for (let i=0; i< items.length; i++) {
-                copy.push(items[i]);
-                }
-                
-                // after
-                fakeForEach(items, (convertir = arr => copy.push(arr)));
-              </code>
-            </pre>
-          </section>
         </section>
 
         <section class="seealso">
@@ -123,8 +88,8 @@
               <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
               <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
               <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
-              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()<a></li>
-              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()<a></li>
+              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
+              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
               <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
               <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
           </ul>

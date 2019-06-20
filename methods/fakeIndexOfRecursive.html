@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeIndexOf()</title>
+    <title>fakeIndexOfRecursive()</title>
     <link rel="stylesheet" href="../styles.css" />
     <link
       rel="stylesheet"
@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav class="nav">
-      <h1>fakeIndexOf()</h1>
+      <h1>fakeIndexOfRecursive()</h1>
       <p><a href="../index.html">Home</a></p>
     </nav>
 
@@ -22,8 +22,8 @@
         <section class="description text">
           <p>
             La funcion
-            <a href="#" class="bluehighlight">fakeIndexOf()</a> retorna el
-            primer índice en el que se puede encontrar un elemento dado en el
+            <a href="#" class="bluehighlight">fakeIndexOfRecursive()</a> retorna
+            el primer índice en el que se puede encontrar un elemento dado en el
             array, ó retorna -1 si el elemento no esta presente.
           </p>
         </section>
@@ -34,7 +34,7 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                fakeIndexOf(array, searchElement)
+                fakeIndexOfRecursive(array, searchElement)
               </code>
             </pre>
           </section>
@@ -69,7 +69,7 @@
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">indexOf()</code> compara
+            <code class="highlight">fakeIndexOfRecursive()</code> compara
             <code class="highlight">searchElement</code> con los elementos del
             array usando
             <span class="bluehighlight">igualdad estricta</span> (el mismo
@@ -82,23 +82,23 @@
 
           <h3>
             <span class="subtitle"
-              >Usando <span class="codejs">indexOf()</span>
+              >Usando <span class="codejs">fakeIndexOfRecursive()</span>
             </span>
           </h3>
           <p>
-            El siguiente ejemplo usa indexof() para localizar valores en un
-            array
+            El siguiente ejemplo usa fakeIndexOfRecursive() para localizar
+            valores en un array
           </p>
 
           <section class="sandbox">
             <pre>
               <code class="javascript">
                 var array = [2, 9, 9];
-                array.indexOf(2); // 0 
-                array.indexOf(7); // -1 
-                array.indexOf(9, 2); // 2
-                array.indexOf(2, -1); // -1
-                array.indexOf(2, -3); // 0
+                array.fakeIndexOfRecursive(2); // 0
+                array.fakeIndexOfRecursive(7); // -1 
+                array.fakeIndexOfRecursive(9, 2); // 2 
+                array.fakeIndexOfRecursive(2, -1); // -1 
+                array.fakeIndexOfRecursive(2, -3); // 0 
               </code>
             </pre>
           </section>
@@ -115,10 +115,10 @@
                 const indices = []; 
                 const array = ['a', 'b', 'a', 'c', 'a', 'd'];
                 const element = 'a';
-                let idx = array.indexOf(element);
+                let idx = array.fakeIndexOfRecursive(element);
                 while (idx != -1) {
                 indices.push(idx);
-                idx = array.indexOf(element, idx + 1);
+                idx = array.fakeIndexOfRecursive(element, idx + 1);
                 } 
                 console.log(indices);
                 // [0, 2, 4] 
@@ -184,6 +184,7 @@
         </section>
       </article>
     </main>
+
     <script src="../app.js"></script>
     <script
       type="text/javascript"

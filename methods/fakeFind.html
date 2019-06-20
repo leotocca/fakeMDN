@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeForEach</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <title>fakeFind()</title>
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
-    <link rel="icon" type="x-icon" href="../favicon.ico" />
+    <link rel="icon" type="x-icon" href="../favicon.ico">
   </head>
   <body>
+    
     <nav class="nav">
-      <h1>fakeForEach</h1>
+      <h1>fakeFind()</h1>
       <p><a href="../index.html">Home</a></p>
     </nav>
 
     <main class="container">
       <aside class="container1"></aside>
-
+      
       <article class="container2">
+        
         <section class="description text">
           <p>
             La funcion
-            <a href="#" class="bluehighlight">fakeForEach()</a> ejecuta la
-            función pasada por un parametro una vez, para cada elemento del
-            array provisto
+            <a href="#" class="bluehighlight">fakeFind()</a>  devuelve el valor del primer elemento del array que cumple
+             la función <code class="code"> fn </code>de prueba proporcionada. En cualquier otro caso se devuelve <code class="code"> undefined</code>.
           </p>
         </section>
 
@@ -31,11 +32,11 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                fakeForEach(arr,fn){<br />
-                <span class="italic">//tu iteración</span><br />
+                fakeFind(arr,fn){
+                //tu iteración
                 });
               </code>
-            </pre>
+          </pre>
           </section>
 
           <h3>
@@ -53,60 +54,65 @@
           </h4>
 
           <p class="descripcion tab">
-            Función que será ejecutada por cada elemento iterado
+            Función como condiciona cumplir por algun elemento del array
           </p>
+
+          <h3>
+                <span class="subtitle">Valor de retorno </span>
+        </h3>
+
+        <p class="descripcion tab">
+                Primer elemento del array que cumpla la condicion o <code class="code bluehighlight">undefined</code>
+              </p>
         </section>
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">fakeForEach()</code> ejecuta la funcion
-            <code class="highlight">fn</code> una vez por cada elemento de la
-            array. A diferencia de <code class="highlight">map()</code> o
-            <code class="highlight">reduce()</code> este siempre devuelve el
-            valor undefined y no es encadenable
+            <code class="highlight">fakeFind()</code> ejecuta la funcion
+            <code class="highlight">fn</code> El método find ejecuta la función fn una vez por cada índice del array hasta que encuentre uno en el que 
+            la fn devuelva un valor true. Si dicho elemento se encuentra, find devuelve inmediatamente el valor del elemento. En caso contrario, find devuelve undefined. 
           </p>
         </section>
+
         <section class="examples">
           <h2 class="sectionTitle">Ejemplos</h2>
-
           <h3>
-            <span class="subtitle"> Mostrar cada elemento del array </span>
+            <span class="subtitle"> Demo </span>
           </h3>
-
+        
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                let arr = ['a', 'b', 'c'];
-                console.log(fakeForEach(arr, (showEachElement = arr =>
-                console.log(arr)))); 
-                // output 'a' 
-                // output 'b' 
-                // output 'c'
-              </code>
-            </pre>
-          </section>
-
-          <h3>
-            <span class="subtitle">Convertir un for loop en fakeForEach </span>
-          </h3>
-
-          <section class="sandbox">
-            <pre>
-              <code class="javascript">
-                const items = ['item1', 'item2', 'item3'];
-                const copy = [];
+                let array1 = [5, 12, 8, 130, 44];
+                const lessThanTen = function(element) {
+                  return element < 1;
+                };
               
-                // before
-                for (let i=0; i< items.length; i++) {
-                copy.push(items[i]);
-                }
+                console.log(fakeFind(array1, lessThanTen));
+              </code>
+          </pre>
+          </section>
+          <h3>
+            <span class="subtitle"> Encontrar un objeto en un array por una de sus propiedades </span>
+          </h3>
+          
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                let inventario = [
+                { nombre: 'manzanas', cantidad: 2 },
+                { nombre: 'bananas', cantidad: 0 },
+                { nombre: 'cerezas', cantidad: 5 }
+                ]; 
+                function esCereza(fruta) { 
+                  return fruta.nombre === 'cerezas';
+                } 
                 
-                // after
-                fakeForEach(items, (convertir = arr => copy.push(arr)));
+                console.log(fakeFind(inventario, esCereza));
+                
               </code>
             </pre>
           </section>
-        </section>
 
         <section class="seealso">
           <h2 class="sectionTitle">Ver también</h2>
@@ -123,8 +129,8 @@
               <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
               <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
               <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
-              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()<a></li>
-              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()<a></li>
+              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
+              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
               <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
               <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
           </ul>

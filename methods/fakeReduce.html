@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeReduce</title>
-	<link rel="stylesheet" href="styles.css" />
-	<link rel="icon" type="x-icon" href="favicon.ico"/>
+    <title>fakeReduce()</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
+	<link rel="icon" type="x-icon" href="../favicon.ico">
   </head>
   <body>
-    <!--Barra de navegación-->
+    
     <nav class="nav">
-      <h1>fakeReduce</h1>
-      <p><a href="index.html">Home</a></p>
+      <h1>fakeReduce()</h1>
+      <p><a href="../index.html">Home</a></p>
     </nav>
 
     <main class="container">
       <aside class="container1"></aside>
-      <!--Container general-->
+
       <article class="container2">
-        <!--Primera descripción del metodo-->
+
         <section class="description text">
           <p>
               La función
-              <a href="#" class="destacadoazul">fakeReduce()</a> aplica una función
+              <a href="#" class="bluehighlight">fakeReduce()</a> aplica una función
                a un acumulador y a cada valor de un array (de izquierda a derecha) 
                para reducirlo a un único valor.
           </p>
@@ -29,24 +30,21 @@
         <section class="sintax">
           <h2 class="sectionTitle">Sintaxis</h2>
 
-          <!--sandbox-->
           <section class="sandbox">
-            <code class="code">
-                let resultado = fakeReduce(arreglo, funcionReductora);<br />
-              </code>
+            <pre>
+            <code class="javascript">
+              let resultado = fakeReduce(arreglo, funcionReductora [, valorInicial] );
+            </code>
+            </pre>
           </section>
-
-          <!--subtitle-->
 
           <h3>
             <span class="subtitle">Parametros </span>
           </h3>
 
-          <!--descripcion-->
-
           <h4>
             <span class="highlight">
-              arreglo
+              array
             </span>
           </h4>
 
@@ -55,13 +53,15 @@
           </p>
 
           <h4>
-            <span class="highlight tab">funcionReductora</span>
+
+            <span class="highlight tab">reducFunction</span>
+
           </h4>
 
           <p class="descripcion tab">
               Es la función que se utilizará para procesar arreglo,
               puede ser anónima, recibe dos parámetros y devuelve un resultado:</br>  
-                 let funcionReductora = (param1, param2) => resultado;
+                 let reducFunction = (param1, param2) => result;
           </p>
 
           <h4>
@@ -72,16 +72,28 @@
                 Los dos parámetros que utilizará funcionReductora
                 para calcular el resultado de la función
         </p>
-  
+ 
+        <h4>
+          <span class="highlight">
+            valorInicial
+          </span>
+        </h4>
 
-          <!--subtitle-->
-          <h3>
+        <p class="descripcion tab">
+            Este parámetro optativo indica el valor inicial que tendrá el acumulador.
+            En caso de omitirse, el acumulador tomará como valor inicial el primer elemento
+            del arreglo y la función comenzará a procesar el arreglo desde la posición 
+            siguiente.
+        </p>
+
+
+        <h3>
             <span class="subtitle">Valor de retorno </span>
           </h3>
 
           <p>
-            <span class="bluehighlight">
-              El resultado de reducir el array 
+              El resultado de reducir el <span class="bluehighlight">
+              array 
             </span>
           </p>
         </section>
@@ -89,51 +101,60 @@
         <section class="examples">
           <h2 class="sectionTitle">Ejemplos</h2>
 
-          <!--subtitle-->
-
           <h3>
             <span class="subtitle">Sumar todos los elementos de un array</span>
           </h3>
 
-          <!--sandbox-->
-          <section class="sandboxjs">
-            <code class="codejs">
-                funcionReducidora = (x, y) => x + y;</br>
-                arregloReducido = fakeReduce(arreglo, funcionReducidora);
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="codejs">
+                reducFunction = (x, y) => x + y;
+          arrReduced = fakeReduce(array, reducFunction);
+              </code>
+            </pre>
           </section>
-
-          <!--subtitle-->
 
           <h3>
             <span class="subtitle">Suma de los cuadrados </span>
           </h3>
 
-          <!--sandbox-->
-          <section class="sandboxjs">
-            <code class="codejs">
-                arregloReducido = fakeReduce(arreglo, function (x,y) {
-                  return x + y**2;
-                  })
-            </code>
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                arrReduced = fakeReduce(array, function (x,y) {
+                return x + y**2;
+                })
+              </code>
+            </pre>
           </section>
         </section>
 
         <section class="seealso">
           <h2 class="sectionTitle">Ver también</h2>
 
-          <!--Lista de links-->
           <ul>
-              <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
-              <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
-              <li><a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a></li>
-              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
-              <li><a href="fakeSome.html" class="bluehighlight">fakeSome()</a></li>
-            </ul>
+	   <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
+	   <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
+	   <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+	   <li><a href="fakeSome.html" class="bluehighlight">fakeSome()</a></li>
+	   <li><a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a></li>
+	   <li><a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a></li>
+	   <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+	   <li><a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a></li>
+	   <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+	   <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
+	   <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
+	   <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
+	   <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
+     <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
+     <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
+	</ul>
         </section>
       </article>
     </main>
 
-    <script src="app.js"></script>
+    <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
