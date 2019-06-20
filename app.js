@@ -1,10 +1,10 @@
 function fakeMin(arr) {
-  if (arr.length == 0) return undefined;
+  if (arr.length === 0) return undefined;
   return fakeReduce(arr, (acc, value) => (value < acc ? value : acc));
 }
 
 function fakeMax(arr) {
-  if (arr.length == 0) return undefined;
+  if (arr.length === 0) return undefined;
   return fakeReduce(arr, (acc, value) => (value > acc ? value : acc));
 }
 
@@ -51,13 +51,12 @@ function fakeSome(array, callbackFunction) {
 }
 
 function fakeEvery(array, callbackFunction) {
-  let allPassTheTest = true;
   fakeForEach(array, element => {
     if (!callbackFunction(element)) {
-      allPassTheTest = false;
+      return false;
     }
   });
-  return allPassTheTest;
+  return true;
 }
 
 function fakeFind(array, callbackFunction) {
@@ -103,13 +102,13 @@ function fakeIndexOfRecursive(array, value) {
 }
 
 function fakeIncludes(array, value) {
-  return fakeIndexOf(array, value) != -1;
+  return fakeIndexOf(array, value) !== -1;
 }
 
 function fakeIntersection(array1, array2) {
   const arrIntersection = [];
-  for (const i of arr1) {
-    for (const j of arr2) {
+  for (const i of array1) {
+    for (const j of array2) {
       if (i === j) {
         arrIntersection.push(j);
       }
