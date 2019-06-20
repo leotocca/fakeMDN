@@ -76,15 +76,6 @@ function fakeMap(array, callbackFunction) {
   return arrMaped;
 }
 
-function fakeIncludes(array, value) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === value) {
-      return true;
-    }
-  }
-  return false;
-}
-
 function fakeIndexOf(array, value) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === value) {
