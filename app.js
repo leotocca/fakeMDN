@@ -12,6 +12,16 @@ function fakeArrayMax(array) {
 	);
 }
 
+function removeDuplicatesFrom(arr) {
+	const duplicateFreeList = [];
+	for (const elem of arr) {
+		if (!fakeIncludes(duplicateFreeList, elem)) {
+			duplicateFreeList.push(elem);
+		}
+	}
+	return duplicateFreeList;
+}
+
 function fakeReduce(array, callbackFunction, initialValue) {
 	let begin = 0;
 	if (initialValue === undefined) {
@@ -111,6 +121,11 @@ function fakeIntersection(array1, array2) {
 		}
 	}
 	return arrIntersection;
+}
+
+function fakeIntersection(array1, array2) {
+	const repetedIntersection = fakeFilter(array1, x => fakeIncludes(array2, x));
+	return removeDuplicatesFrom(repetedIntersection);
 }
 
 function fakeUnion(arr1, ...arr2) {
