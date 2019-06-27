@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeMin()</title>
+    <title>fakeMax()</title>
     <link rel="stylesheet" href="../styles.css" />
     <link
       rel="stylesheet"
@@ -12,7 +12,7 @@
   <body>
     <!--Barra de navegación-->
     <nav class="nav">
-      <h1>fakeMin()</h1>
+      <h1>fakeMax()</h1>
       <p><a href="../index.html">Home</a></p>
     </nav>
 
@@ -24,8 +24,8 @@
         <section class="description text">
           <p>
             La función
-            <a href="#" class="bluehighlight">fakeMin()</a> devuelve el menor
-            elemento de un arreglo, acepta arreglos numéricos y de strings.
+            <a href="#" class="bluehighlight">fakeMax()</a> devuelve el elemento
+            máximo de un arreglo, acepta arreglos numéricos y de strings.
           </p>
         </section>
 
@@ -36,7 +36,7 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                const valorMinimo = fakeMin(arreglo);
+                const valorMaximo = fakeMax(arreglo);
               </code>
             </pre>
           </section>
@@ -44,7 +44,7 @@
           <!--subtitle-->
 
           <h3>
-            <span class="subtitle">Parámetros </span>
+            <span class="subtitle">Parametros </span>
           </h3>
 
           <!--descripcion-->
@@ -66,7 +66,7 @@
 
           <p>
             <span class="bluehighlight">
-              El menor elemento del arreglo
+              El mayor elemento del arreglo
             </span>
           </p>
         </section>
@@ -77,33 +77,33 @@
           <!--subtitle-->
 
           <h3>
-            <span class="subtitle">Obtener el menor elemento de un array</span>
+            <span class="subtitle">Obtener el mayor elemento de un array</span>
           </h3>
 
           <!--sandbox-->
           <section class="sandbox">
             <pre>
-              <code class="codejs">
-                arreglo = [1, 2, 3, 4]; 
-                valorMinimo = fakeMin(arreglo);   // 1
+              <code class="javascript">
+                arreglo=[1, 2, 3, 4]; 
+                valorMaximo = fakeMax(arreglo); // 4
               </code>
-            </pre>
+          </pre>
           </section>
 
           <!--subtitle-->
 
           <h3>
-            <span class="subtitle">Primera palabra en orden alfabético </span>
+            <span class="subtitle">Ultima palabra en orden alfabético </span>
           </h3>
 
           <!--sandbox-->
           <section class="sandbox">
             <pre>
-              <code class="codejs">
+              <code class="javascript">
                 arreglo = ["papa", "puerro", "batata", "cebolla"]; 
-                primeraPalabra = fakeMin(arreglo);   // "batata"
+                ultimaPalabra = fakeMax(arreglo); // "puerro"
               </code>
-            </pre>
+           </pre>
           </section>
         </section>
 
@@ -157,6 +157,10 @@
             <li>
               <a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
             </li>
+            <li><a href="fakeFindIndex.html" class="bluehighlight">fakeFindIndex()</a></li>
+            <li><a href="fakeLastIndexOf.html" class="bluehighlight">fakeLastIndexOf()</a></li>
+            <li><a href="fakeConcat.html" class="bluehighlight">fakeConcat()</a></li>
+        </ul>
           </ul>
         </section>
       </article>
