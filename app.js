@@ -1,17 +1,10 @@
-
 function fakeConcat(array1, array2) {
-	let arrayConcated = [];
-	Array.isArray(array1)
-		? (arrayConcated = array1.slice())
-		: array1 !== undefined
-		? arrayConcated.push(array1)
-		: (newArray = []);
-	if (Array.isArray(array2)) {
-		for (const elem of array2) {
-			arrayConcated.push(elem);
-		}
-	} else if (array2 !== undefined) {
-		arrayConcated.push(array2);
+	const arrayConcated = [];
+	for (const elem of array1) {
+		arrayConcated.push(elem);
+	}
+	for (const elem of array2) {
+		arrayConcated.push(elem);
 	}
 	return arrayConcated;
 }
