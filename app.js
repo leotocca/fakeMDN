@@ -1,3 +1,4 @@
+
 function fakeConcat(array1, array2) {
 	let arrayConcated = [];
 	Array.isArray(array1)
@@ -15,29 +16,44 @@ function fakeConcat(array1, array2) {
 	return arrayConcated;
 }
 
-function fakeMin(arr) {
-	if (arr.length === 0) return undefined;
-	return fakeReduce(arr, (acc, value) => (value < acc ? value : acc));
+function fakeArrayMin(array) {
+	if (array.length === 0) return undefined;
+	return fakeReduce(array, (accumulator, value) =>
+		value < accumulator ? value : accumulator
+	);
 }
 
-function fakeMax(arr) {
-	if (arr.length === 0) return undefined;
-	return fakeReduce(arr, (acc, value) => (value > acc ? value : acc));
+function fakeArrayMax(array) {
+	if (array.length === 0) return undefined;
+	return fakeReduce(arr, (accumulator, value) =>
+		value > accumulator ? value : accumulator
+	);
 }
 
-function fakeReduce(arr, callbackFunction, initialValue) {
-	let accumulator = arr[0];
-	let begin = 1;
-	if (initialValue !== undefined) {
-		accumulator = initialValue;
-		begin = 0;
-	}
+function removeDuplicatesFrom(arr) {
+	const duplicateFreeList = [];
 	for (const elem of arr) {
-		accumulator = callbackFunction(accumulator, elem);
+		if (!fakeIncludes(duplicateFreeList, elem)) {
+			duplicateFreeList.push(elem);
+		}
 	}
+	return duplicateFreeList;
+}
+
+function fakeReduce(array, callbackFunction, initialValue) {
+	let begin = 0;
+	if (initialValue === undefined) {
+		initialValue = arr[0];
+		begin = 1;
+	}
+	let accumulator = initialValue;
+
+	for (let i = begin; i < array.length; i++) {
+		accumulator = callbackFunction(accumulator, arr[i]);
+	}
+
 	return accumulator;
 }
-
 function fakeSum(array) {
 	return fakeReduce(array, (a, b) => a + b);
 }
@@ -125,11 +141,13 @@ function fakeIntersection(array1, array2) {
 	return arrIntersection;
 }
 
+function fakeIntersection(array1, array2) {
+	const repetedIntersection = fakeFilter(array1, x => fakeIncludes(array2, x));
+	return removeDuplicatesFrom(repetedIntersection);
+}
+
 function fakeUnion(arr1, ...arr2) {
-	const arrUnion = [];
-	for (const i of arr1) {
-		arrUnion.push(i);
-	}
+	const arrUnion = arr1.slice();
 	fakeForEach(arr2, function(i) {
 		fakeForEach(i, function(j) {
 			if (!fakeIncludes(arrUnion, j)) {
