@@ -1,3 +1,14 @@
+function fakeConcat(array1, array2) {
+	const arrayConcated = [];
+	for (const elem of array1) {
+		arrayConcated.push(elem);
+	}
+	for (const elem of array2) {
+		arrayConcated.push(elem);
+	}
+	return arrayConcated;
+}
+
 function fakeArrayMin(array) {
 	if (array.length === 0) return undefined;
 	return fakeReduce(array, (accumulator, value) =>
@@ -130,7 +141,6 @@ function fakeIntersection(array1, array2) {
 
 function fakeUnion(arr1, ...arr2) {
 	const arrUnion = arr1.slice();
-
 	fakeForEach(arr2, function(i) {
 		fakeForEach(i, function(j) {
 			if (!fakeIncludes(arrUnion, j)) {
