@@ -1,3 +1,43 @@
+const fakeAreEqual = (array1, array2) => {
+	let result = [];
+	for (let i = 0; i < array1.length; i++) {
+		if (array1[i] === array2[i]) {
+			result.push(true);
+		} else {
+			result.push(false);
+		}
+	}
+
+	if (result.includes(false)) {
+		return false;
+	} else {
+		return true;
+	}
+};
+
+const fakeFindIndex = (arr, callbackfunction) => {
+	for (let i = 0; i < arr.length; i++) {
+		if (callbackfunction(arr[i])) {
+			return i;
+		}
+	}
+	return -1;
+};
+
+const fakeLastIndex = (array, value) => {
+	let result = 0;
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] === value) {
+			result = i;
+		}
+	}
+	if (result !== 0) {
+		return result;
+	} else {
+		return -1;
+	}
+};
+
 function fakeConcat(array1, array2) {
 	const arrayConcated = [];
 	for (const elem of array1) {
@@ -47,6 +87,7 @@ function fakeReduce(array, callbackFunction, initialValue) {
 
 	return accumulator;
 }
+
 function fakeSum(array) {
 	return fakeReduce(array, (a, b) => a + b);
 }
