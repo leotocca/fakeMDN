@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>fakeConcat()</title>
+		<title>fakeLastIndexOf()</title>
 		<link rel="stylesheet" href="../styles.css" />
 		<link
 			rel="stylesheet"
@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<nav class="nav">
-			<h1>fakeConcat()</h1>
+			<h1>fakeLastIndexOf</h1>
 			<p><a href="../index.html">Home</a></p>
 		</nav>
 
@@ -22,9 +22,9 @@
 				<section class="description text">
 					<p>
 						La funcion
-						<a href="#" class="bluehighlight mono">fakeConcat()</a> es usado
-						para concatenar dos elementos. Esta función no cambia los elementos
-						originales, sino que devuelve un array nuevo.
+						<a href="#" class="bluehighlight">fakeLastIndexOf()</a> devuelve la
+						ultima posición en el array del valor que se le provee como
+						parametro.
 					</p>
 				</section>
 
@@ -34,117 +34,55 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                fakeConcat(element1, element2);
+                fakeLastIndexOf(array, value){<br />
+                <span class="italic">//tu iteración</span><br />
+                });
               </code>
             </pre>
 					</section>
+
 					<h3>
 						<span class="subtitle">Parametros </span>
 					</h3>
 
 					<h4>
-						<span class="highlight tab">elementN</span>
+						<span class="highlight">Array</span>
 					</h4>
 
 					<p class="descripcion tab">
-						Arrays y/o elementos a concatenar dentro del nuevo array. Si todos
-						los <span class="bluehighlight mono">valueN</span> son omitidos,
-						concat retorna un array vacío.
+						Array que se evaluara para encontrar el valor.
 					</p>
 
-					<h3>
-						<span class="subtitle">Valor de retorno </span>
-					</h3>
+					<h4>
+						<span class="highlight">Valor</span>
+					</h4>
 
-					<p class="tab">
-						Retorna un nuevo <span class="bluehighlight">array</span> con los
-						elementos concatenados.
+					<p class="descripcion tab">
+						Valor que se va a buscar dentro del array provisto como parametro.
 					</p>
 				</section>
 				<section class="description text">
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
-						La función <code class="highlight">fakeConcat()</code> crea un nuevo
-						<span class="bluehighlight">array</span> que consta de los elementos
-						del objeto que lo llama, seguido, en orden de ingreso, por los
-						elementos de cada parámetro (en caso de que el parámetro sea un
-						array), o el parámetro mismo (en caso de que no sea un array). No se
-						aplica de forma recursiva a parámetros con arreglos anidados.
-					</p>
-					<p>
-						La función <code class="highlight">fakeConcat()</code> no altera el
-						<span class="bluehighlight">array</span> original, ni ninguno de los
-						que fueron ingresados como parámetros, sino que devuelve una copia
-						superficial que contiene copias de los mismos elementos de los
-						arrays originales combinados.
+						<code class="highlight">fakeLastIndexOf()</code> devuelve la última
+						posición del valor que se provee como parametro dentro del array que
+						tambien se provee como parametro. Si el valor no es encontrado
+						dentro del array, se devuelve el valor -1.
 					</p>
 				</section>
-
 				<section class="examples">
 					<h2 class="sectionTitle">Ejemplos</h2>
 
 					<h3>
-						<span class="subtitle">Concatenando valores a un array</span>
+						<span class="subtitle"> Encontrar un valor </span>
 					</h3>
-
-					<p>El siguiente codigo concatena elementos a un array.</p>
 
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-								const alpha = ['a', 'b', 'c'];
-
-								const alphaNumeric = fakeConcat(alpha, [2, 3]);
-
-								console.log(alphaNumeric);
-								// Da como resultado: ['a', 'b', 'c', 2, 3]
-              </code>
-           </pre>
-					</section>
-
-					<h3>
-						<span class="subtitle">Concatenando dos arrays</span>
-					</h3>
-
-					<section class="sandbox">
-						<pre>
-							<code class="javascript">
-								const alpha = ['a', 'b', 'c'],
-								const numeric = [1, 2, 3];
-
-								var alphaNumeric = fakeConcat(alpha,numeric);
-
-								console.log(alphaNumeric);
-								// Da como resultado: ['a', 'b', 'c', 1, 2, 3]
-							</code>
-						</pre>
-					</section>
-
-					<h3>
-						<span class="subtitle">Concatenando arrays anidados</span>
-					</h3>
-
-					<p>
-						En el siguiente código concatena arrays anidados y demuestra
-						retención de referencias:
-					</p>
-
-					<section class="sandbox">
-						<pre>
-							<code class="javascript">
-								const num1 = [[1]];
-								const num2 = [2, [3]];
-
-								const nums = fakeConcat(num1, num2);
-
-								console.log(nums);
-								// Da como resultado: [[1], 2, [3]]
-
-								// modifica el primer elemento de num1
-								num1[0].push(4);
-
-								console.log(nums);
-								// Da como resultado: [[1, 4], 2, [3]]
+                const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo']
+                console.log(fakeLastIndexOf(animals, "Dodo"); 
+                // output esperado = 3;
               </code>
             </pre>
 					</section>
@@ -153,7 +91,6 @@
 				<section class="seealso">
 					<h2 class="sectionTitle">Ver también</h2>
 
-					<!--Lista de links-->
 					<ul>
 						<li>
 							<a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
@@ -217,11 +154,15 @@
 						<li>
 							<a href="fakeConcat.html" class="bluehighlight">fakeConcat()</a>
 						</li>
+						<li>
+							<a href="fakeAreEqual.html" class="bluehighlight"
+								>fakeAreEqual()</a
+							>
+						</li>
 					</ul>
 				</section>
 			</article>
 		</main>
-
 		<script src="../app.js"></script>
 		<script
 			type="text/javascript"
