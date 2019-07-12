@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>fakeFind()</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>_find()</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
-    <link rel="icon" type="x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
     
     <nav class="nav">
-      <h1>fakeFind()</h1>
+      <h1>_find()</h1>
       <p><a href="../index.html">Home</a></p>
     </nav>
 
@@ -21,7 +21,7 @@
         <section class="description text">
           <p>
             La funcion
-            <a href="#" class="bluehighlight">fakeFind()</a>  devuelve el valor del primer elemento del array que cumple
+            <a href="#" class="bluehighlight">_find()</a>  devuelve el valor del primer elemento del array que cumple
              la función <code class="code"> fn </code>de prueba proporcionada. En cualquier otro caso se devuelve <code class="code"> undefined</code>.
           </p>
         </section>
@@ -32,7 +32,7 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                fakeFind(arr,fn){
+                _find(arr,fn){
                 //tu iteración
                 });
               </code>
@@ -68,7 +68,7 @@
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">fakeFind()</code> ejecuta la funcion
+            <code class="highlight">_find()</code> ejecuta la funcion
             <code class="highlight">fn</code> El método find ejecuta la función fn una vez por cada índice del array hasta que encuentre uno en el que 
             la fn devuelva un valor true. Si dicho elemento se encuentra, find devuelve inmediatamente el valor del elemento. En caso contrario, find devuelve undefined. 
           </p>
@@ -88,7 +88,7 @@
                   return element < 1;
                 };
               
-                console.log(fakeFind(array1, lessThanTen));
+                console.log(_Find(array1, lessThanTen));
               </code>
           </pre>
           </section>
@@ -108,36 +108,77 @@
                   return fruta.nombre === 'cerezas';
                 } 
                 
-                console.log(fakeFind(inventario, esCereza));
+                console.log(_find(inventario, esCereza));
                 
               </code>
             </pre>
           </section>
 
-        <section class="seealso">
-          <h2 class="sectionTitle">Ver también</h2>
-
-          <ul>
-              <li><a href="fakeFind.html" class="bluehighlight">fakeFind()</a></li>
-              <li><a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a></li>
-              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
-              <li><a href="fakeSome.html" class="bluehighlight">fakeSome()</a></li>
-              <li><a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a></li>
-              <li><a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a></li>
-              <li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
-              <li><a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a></li>
-              <li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
-              <li><a href="fakeIndexOfRecursive.html" class="bluehighlight">fakeIndexOfRecursive()</a></li>
-              <li><a href="fakeIntersection.html" class="bluehighlight">fakeIntersection()</a></li>
-              <li><a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a></li>
-              <li><a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a></li>
-              <li><a href="fakeArrayMin.html" class="bluehighlight">fakeArrayMin()</a></li>
-              <li><a href="fakeArrayMax.html" class="bluehighlight">fakeArrayMax()</a></li>
-              <li><a href="fakeFindIndex.html" class="bluehighlight">fakeFindIndex()</a></li>
-              <li><a href="fakeLastIndexOf.html" class="bluehighlight">fakeLastIndexOf()</a></li>
-              <li><a href="fakeConcat.html" class="bluehighlight">fakeConcat()</a></li>
-          </ul>
-        </section>
+          <section class="seealso">
+            <h2 class="sectionTitle">Ver también</h2>
+  
+            <ul>
+              <li>
+                <a href="_find.html" class="bluehighlight">_find()</a>
+              </li>
+              <li>
+                <a href="_forEach.html" class="bluehighlight">_forEach()</a>
+              </li>
+              <li>
+                <a href="_every.html" class="bluehighlight">_every()</a>
+              </li>
+              <li>
+                <a href="_some.html" class="bluehighlight">_some()</a>
+              </li>
+              <li>
+                <a href="_filter.html" class="bluehighlight">_filter()</a>
+              </li>
+              <li>
+                <a href="_indexOf.html" class="bluehighlight">_indexOf()</a>
+              </li>
+              <li><a href="_map.html" class="bluehighlight">_map()</a></li>
+              <li>
+                <a href="_reduce.html" class="bluehighlight">_reduce()</a>
+              </li>
+              <li><a href="_sum.html" class="bluehighlight">_sum()</a></li>
+              <li>
+                <a href="_indexOfRecursive.html" class="bluehighlight"
+                  >_indexOfRecursive()</a
+                >
+              </li>
+              <li>
+                <a href="_intersection.html" class="bluehighlight"
+                  >_intersection()</a
+                >
+              </li>
+              <li>
+                <a href="_union.html" class="bluehighlight">_union()</a>
+              </li>
+              <li>
+                <a href="_every.html" class="bluehighlight">_every()</a>
+              </li>
+              <li>
+                <a href="_min.html" class="bluehighlight">_arrayMin()</a>
+              </li>
+              <li>
+                <a href="_max.html" class="bluehighlight">_arrayMax()</a>
+              </li>
+              <li>
+                <a href="_findIndex.html" class="bluehighlight">_findIndex()</a>
+              </li>
+              <li>
+                <a href="_lastIndexOf.html" class="bluehighlight"
+                  >_lastIndexOf()</a
+                >
+              </li>
+              <li>
+                <a href="_concat.html" class="bluehighlight">_concat()</a>
+              </li>
+              <li>
+                <a href="_isEqual.html" class="bluehighlight">_isEqual()</a>
+              </li>
+            </ul>
+          </section>
       </article>
     </main>
     <script src="../app.js"></script>

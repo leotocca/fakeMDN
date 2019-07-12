@@ -1,4 +1,4 @@
-const fakeAreEqual = (array1, array2) => {
+const _isEqual = (array1, array2) => {
 	let result = [];
 	for (let i = 0; i < array1.length; i++) {
 		if (array1[i] === array2[i]) {
@@ -15,7 +15,7 @@ const fakeAreEqual = (array1, array2) => {
 	}
 };
 
-const fakeFindIndex = (arr, callbackfunction) => {
+const _findIndex = (arr, callbackfunction) => {
 	for (let i = 0; i < arr.length; i++) {
 		if (callbackfunction(arr[i])) {
 			return i;
@@ -24,7 +24,7 @@ const fakeFindIndex = (arr, callbackfunction) => {
 	return -1;
 };
 
-const fakeLastIndex = (array, value) => {
+const _lastIndex = (array, value) => {
 	let result = 0;
 	for (let i = 0; i < array.length; i++) {
 		if (array[i] === value) {
@@ -38,7 +38,7 @@ const fakeLastIndex = (array, value) => {
 	}
 };
 
-function fakeConcat(array1, array2) {
+function _concat(array1, array2) {
 	const arrayConcated = [];
 	for (const elem of array1) {
 		arrayConcated.push(elem);
@@ -49,16 +49,16 @@ function fakeConcat(array1, array2) {
 	return arrayConcated;
 }
 
-function fakeArrayMin(array) {
+function _min(array) {
 	if (array.length === 0) return undefined;
-	return fakeReduce(array, (accumulator, value) =>
+	return _Reduce(array, (accumulator, value) =>
 		value < accumulator ? value : accumulator
 	);
 }
 
-function fakeArrayMax(array) {
+function _max(array) {
 	if (array.length === 0) return undefined;
-	return fakeReduce(arr, (accumulator, value) =>
+	return _reduce(arr, (accumulator, value) =>
 		value > accumulator ? value : accumulator
 	);
 }
@@ -66,14 +66,14 @@ function fakeArrayMax(array) {
 function removeDuplicatesFrom(arr) {
 	const duplicateFreeList = [];
 	for (const elem of arr) {
-		if (!fakeIncludes(duplicateFreeList, elem)) {
+		if (!_includes(duplicateFreeList, elem)) {
 			duplicateFreeList.push(elem);
 		}
 	}
 	return duplicateFreeList;
 }
 
-function fakeReduce(array, callbackFunction, initialValue) {
+function _reduce(array, callbackFunction, initialValue) {
 	let begin = 0;
 	if (initialValue === undefined) {
 		initialValue = arr[0];
@@ -88,13 +88,13 @@ function fakeReduce(array, callbackFunction, initialValue) {
 	return accumulator;
 }
 
-function fakeSum(array) {
-	return fakeReduce(array, (a, b) => a + b);
+function _sum(array) {
+	return _reduce(array, (a, b) => a + b);
 }
 
-function fakeFilter(array, callbackFunction) {
+function _filter(array, callbackFunction) {
 	const arrFiltered = [];
-	fakeForEach(array, elem => {
+	_forEach(array, elem => {
 		if (callbackFunction(elem)) {
 			arrFiltered.push(elem);
 		}
@@ -102,13 +102,13 @@ function fakeFilter(array, callbackFunction) {
 	return arrFiltered;
 }
 
-function fakeForEach(array, callbackFunction) {
+function _forEach(array, callbackFunction) {
 	for (const element of array) {
 		callbackFunction(element);
 	}
 }
 
-function fakeSome(array, callbackFunction) {
+function _some(array, callbackFunction) {
 	for (const element of array) {
 		if (callbackFunction(element)) {
 			return true;
@@ -117,8 +117,8 @@ function fakeSome(array, callbackFunction) {
 	return false;
 }
 
-function fakeEvery(array, callbackFunction) {
-	fakeForEach(array, element => {
+function _every(array, callbackFunction) {
+	_forEach(array, element => {
 		if (!callbackFunction(element)) {
 			return false;
 		}
@@ -126,7 +126,7 @@ function fakeEvery(array, callbackFunction) {
 	return true;
 }
 
-function fakeFind(array, callbackFunction) {
+function _find(array, callbackFunction) {
 	for (const elem of array) {
 		if (callbackFunction(elem)) {
 			return elem;
@@ -135,15 +135,15 @@ function fakeFind(array, callbackFunction) {
 	return undefined;
 }
 
-function fakeMap(array, callbackFunction) {
+function _map(array, callbackFunction) {
 	const arrMaped = [];
-	fakeForEach(array, function(array) {
+	_forEach(array, function(array) {
 		arrMaped.push(callbackFunction(array));
 	});
 	return arrMaped;
 }
 
-function fakeIndexOf(array, value) {
+function _indexOf(array, value) {
 	for (let i = 0; i < array.length; i++) {
 		if (array[i] === value) {
 			return i;
@@ -152,18 +152,16 @@ function fakeIndexOf(array, value) {
 	return -1;
 }
 
-function fakeIndexOfRecursive(array, value) {
+function _indexOfRecursive(array, value) {
 	if (!array.length) return -1;
-	return array.pop() === value
-		? array.length
-		: fakeIndexOfRecursive(array, value);
+	return array.pop() === value ? array.length : _indexOfRecursive(array, value);
 }
 
-function fakeIncludes(array, value) {
-	return fakeIndexOf(array, value) !== -1;
+function _includes(array, value) {
+	return _indexOf(array, value) !== -1;
 }
 
-function fakeIntersection(array1, array2) {
+function _intersection(array1, array2) {
 	const arrIntersection = [];
 	for (const i of array1) {
 		for (const j of array2) {
@@ -175,16 +173,11 @@ function fakeIntersection(array1, array2) {
 	return arrIntersection;
 }
 
-function fakeIntersection(array1, array2) {
-	const repetedIntersection = fakeFilter(array1, x => fakeIncludes(array2, x));
-	return removeDuplicatesFrom(repetedIntersection);
-}
-
-function fakeUnion(arr1, ...arr2) {
+function _union(arr1, ...arr2) {
 	const arrUnion = arr1.slice();
-	fakeForEach(arr2, function(i) {
-		fakeForEach(i, function(j) {
-			if (!fakeIncludes(arrUnion, j)) {
+	_forEach(arr2, function(i) {
+		_forEach(i, function(j) {
+			if (!_includes(arrUnion, j)) {
 				arrUnion.push(j);
 			}
 		});

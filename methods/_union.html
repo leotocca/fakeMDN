@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>_union()</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" >
+    <link rel="stylesheet" href="../styles.css" >
+  </head>
+  <body>
+
+    <nav class="nav">
+      <h1>_union()</h1>
+      <p><a href="../index.html">Home</a></p>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
+
+      <article class="container2">
+
+        <section class="description text">
+          <p>
+							La función
+							<a href="#" class="bluehighlight mono">_union()</a> devuelve un array nuevo que incluye todos los valores de los arrays que se le pasen como argumentos sin repetirlos.
+          </p>
+        </section>
+
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
+
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                  _union(arrays);
+              </code>
+            </pre>
+          </section>
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <h4>
+            <span class="highlight">array</span>
+          </h4>
+
+          <p class="descripcion tab">Arrays que se van a evaluar para generar un nuevo array que incluya todos sus valores</p>
+
+          <h3>
+            <span class="subtitle">Valor de retorno </span>
+          </h3>
+
+          <p>
+            Un <span class="bluehighlight mono">array</span>
+          </p>
+        </section>
+
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplos</h2>
+
+          <section class="sandbox">
+            <pre>
+              <code class="javascript">
+                  _union([1 ,2], [3, 4], [5, 8], [743, 95], [85, 863, 9]); // [1, 2, 3, 4, 5, 8, 743, 95, 85, 863, 9]<br />
+                  _union([1 ,2], [3, 4], [743, 95], [85, 863, 9]); // [1, 2, 3, 4, 743, 95, 85, 863, 9]<br />
+                  _union([1 ,2], [3, 4], [85, 863, 9]); // [1, 2, 3, 4, 85, 863, 9]<br />
+              </code>
+            </pre>
+          </section>
+
+          <section class="seealso">
+              <h2 class="sectionTitle">Ver también</h2>
+    
+              <ul>
+                <li>
+                  <a href="_find.html" class="bluehighlight">_find()</a>
+                </li>
+                <li>
+                  <a href="_forEach.html" class="bluehighlight">_forEach()</a>
+                </li>
+                <li>
+                  <a href="_every.html" class="bluehighlight">_every()</a>
+                </li>
+                <li>
+                  <a href="_some.html" class="bluehighlight">_some()</a>
+                </li>
+                <li>
+                  <a href="_filter.html" class="bluehighlight">_filter()</a>
+                </li>
+                <li>
+                  <a href="_indexOf.html" class="bluehighlight">_indexOf()</a>
+                </li>
+                <li><a href="_map.html" class="bluehighlight">_map()</a></li>
+                <li>
+                  <a href="_reduce.html" class="bluehighlight">_reduce()</a>
+                </li>
+                <li><a href="_sum.html" class="bluehighlight">_sum()</a></li>
+                <li>
+                  <a href="_indexOfRecursive.html" class="bluehighlight"
+                    >_indexOfRecursive()</a
+                  >
+                </li>
+                <li>
+                  <a href="_intersection.html" class="bluehighlight"
+                    >_intersection()</a
+                  >
+                </li>
+                <li>
+                  <a href="_union.html" class="bluehighlight">_union()</a>
+                </li>
+                <li>
+                  <a href="_every.html" class="bluehighlight">_every()</a>
+                </li>
+                <li>
+                  <a href="_min.html" class="bluehighlight">_arrayMin()</a>
+                </li>
+                <li>
+                  <a href="_max.html" class="bluehighlight">_arrayMax()</a>
+                </li>
+                <li>
+                  <a href="_findIndex.html" class="bluehighlight">_findIndex()</a>
+                </li>
+                <li>
+                  <a href="_lastIndexOf.html" class="bluehighlight"
+                    >_lastIndexOf()</a
+                  >
+                </li>
+                <li>
+                  <a href="_concat.html" class="bluehighlight">_concat()</a>
+                </li>
+                <li>
+                  <a href="_isEqual.html" class="bluehighlight">_isEqual()</a>
+                </li>
+              </ul>
+            </section>
+      </article>
+    </main>
+    <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

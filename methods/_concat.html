@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>fakeConcat()</title>
-		<link rel="stylesheet" href="../styles.css" />
+		<title>_concat()</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
 		/>
-		<link rel="icon" type="x-icon" href="../favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../styles.css" />
 	</head>
 	<body>
 		<nav class="nav">
-			<h1>fakeConcat()</h1>
+			<h1>_concat()</h1>
 			<p><a href="../index.html">Home</a></p>
 		</nav>
 
@@ -22,8 +22,8 @@
 				<section class="description text">
 					<p>
 						La funcion
-						<a href="#" class="bluehighlight mono">fakeConcat()</a> es usado
-						para concatenar dos elementos. Esta función no cambia los elementos
+						<a href="#" class="bluehighlight mono">_concat()</a> es usado para
+						concatenar dos elementos. Esta función no cambia los elementos
 						originales, sino que devuelve un array nuevo.
 					</p>
 				</section>
@@ -34,7 +34,7 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                fakeConcat(element1, element2);
+                _concat(element1, element2);
               </code>
             </pre>
 					</section>
@@ -64,7 +64,7 @@
 				<section class="description text">
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
-						La función <code class="highlight">fakeConcat()</code> crea un nuevo
+						La función <code class="highlight">_concat()</code> crea un nuevo
 						<span class="bluehighlight">array</span> que consta de los elementos
 						del objeto que lo llama, seguido, en orden de ingreso, por los
 						elementos de cada parámetro (en caso de que el parámetro sea un
@@ -72,7 +72,7 @@
 						aplica de forma recursiva a parámetros con arreglos anidados.
 					</p>
 					<p>
-						La función <code class="highlight">fakeConcat()</code> no altera el
+						La función <code class="highlight">_concat()</code> no altera el
 						<span class="bluehighlight">array</span> original, ni ninguno de los
 						que fueron ingresados como parámetros, sino que devuelve una copia
 						superficial que contiene copias de los mismos elementos de los
@@ -94,7 +94,7 @@
               <code class="javascript">
 								const alpha = ['a', 'b', 'c'];
 
-								const alphaNumeric = fakeConcat(alpha, [2, 3]);
+								const alphaNumeric = _concat(alpha, [2, 3]);
 
 								console.log(alphaNumeric);
 								// Da como resultado: ['a', 'b', 'c', 2, 3]
@@ -112,7 +112,7 @@
 								const alpha = ['a', 'b', 'c'],
 								const numeric = [1, 2, 3];
 
-								var alphaNumeric = fakeConcat(alpha,numeric);
+								var alphaNumeric = _concat(alpha,numeric);
 
 								console.log(alphaNumeric);
 								// Da como resultado: ['a', 'b', 'c', 1, 2, 3]
@@ -135,7 +135,7 @@
 								const num1 = [[1]];
 								const num2 = [2, [3]];
 
-								const nums = fakeConcat(num1, num2);
+								const nums = _concat(num1, num2);
 
 								console.log(nums);
 								// Da como resultado: [[1], 2, [3]]
@@ -153,69 +153,65 @@
 				<section class="seealso">
 					<h2 class="sectionTitle">Ver también</h2>
 
-					<!--Lista de links-->
 					<ul>
 						<li>
-							<a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
+							<a href="_find.html" class="bluehighlight">_find()</a>
 						</li>
 						<li>
-							<a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a>
+							<a href="_forEach.html" class="bluehighlight">_forEach()</a>
 						</li>
 						<li>
-							<a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+							<a href="_every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="fakeSome.html" class="bluehighlight">fakeSome()</a>
+							<a href="_some.html" class="bluehighlight">_some()</a>
 						</li>
 						<li>
-							<a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a>
+							<a href="_filter.html" class="bluehighlight">_filter()</a>
 						</li>
 						<li>
-							<a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a>
+							<a href="_indexOf.html" class="bluehighlight">_indexOf()</a>
 						</li>
-						<li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+						<li><a href="_map.html" class="bluehighlight">_map()</a></li>
 						<li>
-							<a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a>
+							<a href="_reduce.html" class="bluehighlight">_reduce()</a>
 						</li>
-						<li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+						<li><a href="_sum.html" class="bluehighlight">_sum()</a></li>
 						<li>
-							<a href="fakeIndexOfRecursive.html" class="bluehighlight"
-								>fakeIndexOfRecursive()</a
+							<a href="_indexOfRecursive.html" class="bluehighlight"
+								>_indexOfRecursive()</a
 							>
 						</li>
 						<li>
-							<a href="fakeIntersection.html" class="bluehighlight"
-								>fakeIntersection()</a
+							<a href="_intersection.html" class="bluehighlight"
+								>_intersection()</a
 							>
 						</li>
 						<li>
-							<a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a>
+							<a href="_union.html" class="bluehighlight">_union()</a>
 						</li>
 						<li>
-							<a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+							<a href="_every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="fakeArrayMin.html" class="bluehighlight"
-								>fakeArrayMin()</a
+							<a href="_min.html" class="bluehighlight">_arrayMin()</a>
+						</li>
+						<li>
+							<a href="_max.html" class="bluehighlight">_arrayMax()</a>
+						</li>
+						<li>
+							<a href="_findIndex.html" class="bluehighlight">_findIndex()</a>
+						</li>
+						<li>
+							<a href="_lastIndexOf.html" class="bluehighlight"
+								>_lastIndexOf()</a
 							>
 						</li>
 						<li>
-							<a href="fakeArrayMax.html" class="bluehighlight"
-								>fakeArrayMax()</a
-							>
+							<a href="_concat.html" class="bluehighlight">_concat()</a>
 						</li>
 						<li>
-							<a href="fakeFindIndex.html" class="bluehighlight"
-								>fakeFindIndex()</a
-							>
-						</li>
-						<li>
-							<a href="fakeLastIndexOf.html" class="bluehighlight"
-								>fakeLastIndexOf()</a
-							>
-						</li>
-						<li>
-							<a href="fakeConcat.html" class="bluehighlight">fakeConcat()</a>
+							<a href="_isEqual.html" class="bluehighlight">_isEqual()</a>
 						</li>
 					</ul>
 				</section>
