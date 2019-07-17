@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>_every()</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles.css"> 
+  </head>
+  <body>
+
+    <nav class="nav">
+      <h1>_every()</h1>
+      <p><a href="../index.html">Home</a></p>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
+      
+      <article class="container2"> 
+
+        <section class="description text">
+          <p>
+            La funcion
+            <a href="#" class="bluehighlight">_every()</a> devuelve un
+            booleano, true si todos los elementos en el arreglo pasan la
+            condición implementada por la función dada y false si alguno no la
+            cumple.
+          </p>
+        </section>
+
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
+
+          <section class="sandbox">
+            <pre>
+            <code class="JavaScript">
+              _forEach(arr,function){
+              //tu iteración
+              });
+            </code>
+          </pre>
+          </section>
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <h4>
+            <span class="highlight">Array</span>
+          </h4>
+
+          <p class="descripcion tab">Array que sera iterada</p>
+
+          <h4>
+            <span class="highlight">Función</span>
+          </h4>
+
+          <p class="descripcion tab">
+            Función para probar cada elemento del array
+          </p>
+
+          <h3>
+            <span class="highlight">Valor de retorno </span>
+          </h3>
+
+          <p class="descripcion tab">
+            Un <span class="bluehighlight">boolean</span>.
+          </p>
+        </section>
+        <section class="description text">
+          <h2 class="sectionTitle">Descripción</h2>
+          <p>
+            <code class="highlight">_every()</code> ejecuta la funcion
+            <code class="highlight">fn</code> una vez por cada elemento de la
+            array hasta encontrar uno que haga retornar un valor <code class="highlight">false</code>. Si no se encuentra tal elemento, la funcion <code class="highlight">_Every()</code> de inmediato retorna  false. O si  <code class="highlight">fn()</code> retorna verdadero
+            para todos los elementos, every retornará <code class="highlight">true</code>.
+          </p>
+        </section>
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplo</h2>
+
+          <h3>
+            <span class="subtitle"> Javascript demo </span>
+          </h3>
+
+          <section class="sandbox">
+            <pre>
+              <code class="javascript ">
+                let array1 = [1, 30, 59, 9, 10, 13];<br />
+                function isBelowThreshold(currentValue) { <br />
+                return currentValue < 40;<br />
+                }<br />
+                <br />
+                function _every(arr, fn) {<br />
+                let allPassTheTest = true; <br />
+                _forEach(arr, element => { <br />
+                if (!fn(element)) { <br />
+                allPassTheTest = false; <br />
+                }<br />
+                }); <br />
+                return allPassTheTest; <br />
+                } <br />
+                <br />
+                console.log(_Every(array1, isBelowThreshold)); <br />
+              </code>
+            </pre>
+          </section>
+
+          <section class="seealso">
+            <h2 class="sectionTitle">Ver también</h2>
+  
+            <ul>
+              <li>
+                <a href="find.html" class="bluehighlight">_find()</a>
+              </li>
+              <li>
+                <a href="forEach.html" class="bluehighlight">_forEach()</a>
+              </li>
+              <li>
+                <a href="every.html" class="bluehighlight">_every()</a>
+              </li>
+              <li>
+                <a href="some.html" class="bluehighlight">_some()</a>
+              </li>
+              <li>
+                <a href="filter.html" class="bluehighlight">_filter()</a>
+              </li>
+              <li>
+                <a href="indexOf.html" class="bluehighlight">_indexOf()</a>
+              </li>
+              <li><a href="map.html" class="bluehighlight">_map()</a></li>
+              <li>
+                <a href="reduce.html" class="bluehighlight">_reduce()</a>
+              </li>
+              <li><a href="sum.html" class="bluehighlight">_sum()</a></li>
+              <li>
+                <a href="indexOfRecursive.html" class="bluehighlight"
+                  >_indexOfRecursive()</a
+                >
+              </li>
+              <li>
+                <a href="intersection.html" class="bluehighlight"
+                  >_intersection()</a
+                >
+              </li>
+              <li>
+                <a href="union.html" class="bluehighlight">_union()</a>
+              </li>
+              <li>
+                <a href="every.html" class="bluehighlight">_every()</a>
+              </li>
+              <li>
+                <a href="min.html" class="bluehighlight">_arrayMin()</a>
+              </li>
+              <li>
+                <a href="max.html" class="bluehighlight">_arrayMax()</a>
+              </li>
+              <li>
+                <a href="findIndex.html" class="bluehighlight">_findIndex()</a>
+              </li>
+              <li>
+                <a href="lastIndexOf.html" class="bluehighlight"
+                  >_lastIndexOf()</a
+                >
+              </li>
+              <li>
+                <a href="concat.html" class="bluehighlight">_concat()</a>
+              </li>
+              <li>
+                <a href="isEqual.html" class="bluehighlight">_isEqual()</a>
+              </li>
+            </ul>
+          </section>
+      </article>
+    </main>
+
+    <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

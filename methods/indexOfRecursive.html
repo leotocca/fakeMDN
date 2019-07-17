@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>fakeIndexOfRecursive()</title>
-		<link rel="stylesheet" href="../styles.css" />
+		<title>_indexOfRecursive()</title>
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
 		/>
-		<link rel="icon" type="x-icon" href="../favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../styles.css" />
 	</head>
 	<body>
 		<nav class="nav">
-			<h1>fakeIndexOfRecursive()</h1>
+			<h1>_indexOfRecursive()</h1>
 			<p><a href="../index.html">Home</a></p>
 		</nav>
 
@@ -22,8 +23,8 @@
 				<section class="description text">
 					<p>
 						La funcion
-						<a href="#" class="bluehighlight">fakeIndexOfRecursive()</a> retorna
-						el primer índice en el que se puede encontrar un elemento dado en el
+						<a href="#" class="bluehighlight">_indexOfRecursive()</a> retorna el
+						primer índice en el que se puede encontrar un elemento dado en el
 						array, ó retorna -1 si el elemento no esta presente.
 					</p>
 				</section>
@@ -34,7 +35,7 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                fakeIndexOfRecursive(array, searchElement)
+                _indexOfRecursive(array, searchElement)
               </code>
             </pre>
 					</section>
@@ -69,7 +70,7 @@
 				<section class="description text">
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
-						<code class="highlight">fakeIndexOfRecursive()</code> compara
+						<code class="highlight">_indexOfRecursive()</code> compara
 						<code class="highlight">searchElement</code> con los elementos del
 						array usando
 						<span class="bluehighlight">igualdad estricta</span> (el mismo
@@ -82,23 +83,23 @@
 
 					<h3>
 						<span class="subtitle"
-							>Usando <span class="codejs">fakeIndexOfRecursive()</span>
+							>Usando <span class="codejs">_indexOfRecursive()</span>
 						</span>
 					</h3>
 					<p>
-						El siguiente ejemplo usa fakeIndexOfRecursive() para localizar
-						valores en un array
+						El siguiente ejemplo usa _indexOfRecursive() para localizar valores
+						en un array
 					</p>
 
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
                 var array = [2, 9, 9];
-                array.fakeIndexOfRecursive(2); // 0
-                array.fakeIndexOfRecursive(7); // -1 
-                array.fakeIndexOfRecursive(9, 2); // 2 
-                array.fakeIndexOfRecursive(2, -1); // -1 
-                array.fakeIndexOfRecursive(2, -3); // 0 
+                array._indexOfRecursive(2); // 0
+                array._indexOfRecursive(7); // -1 
+                array._indexOfRecursive(9, 2); // 2 
+                array._indexOfRecursive(2, -1); // -1 
+                array._indexOfRecursive(2, -3); // 0 
               </code>
             </pre>
 					</section>
@@ -115,10 +116,10 @@
                 const indices = []; 
                 const array = ['a', 'b', 'a', 'c', 'a', 'd'];
                 const element = 'a';
-                let idx = array.fakeIndexOfRecursive(element);
+                let idx = array._indexOfRecursive(element);
                 while (idx != -1) {
                 indices.push(idx);
-                idx = array.fakeIndexOfRecursive(element, idx + 1);
+                idx = array._indexOfRecursive(element, idx + 1);
                 } 
                 console.log(indices);
                 // [0, 2, 4] 
@@ -132,58 +133,64 @@
 
 					<ul>
 						<li>
-							<a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
+							<a href="find.html" class="bluehighlight">_find()</a>
 						</li>
 						<li>
-							<a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a>
+							<a href="forEach.html" class="bluehighlight">_forEach()</a>
 						</li>
 						<li>
-							<a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+							<a href="every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="fakeSome.html" class="bluehighlight">fakeSome()</a>
+							<a href="some.html" class="bluehighlight">_some()</a>
 						</li>
 						<li>
-							<a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a>
+							<a href="filter.html" class="bluehighlight">_filter()</a>
 						</li>
 						<li>
-							<a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a>
+							<a href="indexOf.html" class="bluehighlight">_indexOf()</a>
 						</li>
-						<li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+						<li><a href="map.html" class="bluehighlight">_map()</a></li>
 						<li>
-							<a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a>
+							<a href="reduce.html" class="bluehighlight">_reduce()</a>
 						</li>
-						<li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+						<li><a href="sum.html" class="bluehighlight">_sum()</a></li>
 						<li>
-							<a href="fakeIndexOfRecursive.html" class="bluehighlight"
-								>fakeIndexOfRecursive()</a
+							<a href="indexOfRecursive.html" class="bluehighlight"
+								>_indexOfRecursive()</a
 							>
 						</li>
 						<li>
-							<a href="fakeIntersection.html" class="bluehighlight"
-								>fakeIntersection()</a
+							<a href="intersection.html" class="bluehighlight"
+								>_intersection()</a
 							>
 						</li>
 						<li>
-							<a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a>
+							<a href="union.html" class="bluehighlight">_union()</a>
 						</li>
 						<li>
-							<a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+							<a href="every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="fakeArrayMin.html" class="bluehighlight"
-								>fakeArrayMin()</a
+							<a href="min.html" class="bluehighlight">_arrayMin()</a>
+						</li>
+						<li>
+							<a href="max.html" class="bluehighlight">_arrayMax()</a>
+						</li>
+						<li>
+							<a href="findIndex.html" class="bluehighlight">_findIndex()</a>
+						</li>
+						<li>
+							<a href="lastIndexOf.html" class="bluehighlight"
+								>_lastIndexOf()</a
 							>
 						</li>
 						<li>
-							<a href="fakeArrayMax.html" class="bluehighlight"
-								>fakeArrayMax()</a
-							>
+							<a href="concat.html" class="bluehighlight">_concat()</a>
 						</li>
-            <li><a href="fakeFindIndex.html" class="bluehighlight">fakeFindIndex()</a></li>
-            <li><a href="fakeLastIndexOf.html" class="bluehighlight">fakeLastIndexOf()</a></li>
-            <li><a href="fakeConcat.html" class="bluehighlight">fakeConcat()</a></li>
-        </ul>
+						<li>
+							<a href="isEqual.html" class="bluehighlight">_isEqual()</a>
+						</li>
 					</ul>
 				</section>
 			</article>

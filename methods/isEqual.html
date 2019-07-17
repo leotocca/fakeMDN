@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>fakeAreEqual()</title>
-		<link rel="stylesheet" href="../styles.css" />
+		<title>_isEqual()</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
 		/>
-		<link rel="icon" type="x-icon" href="../favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../styles.css" />
 	</head>
 	<body>
 		<nav class="nav">
-			<h1>fakeAreEqual</h1>
+			<h1>_isEqual</h1>
 			<p><a href="../index.html">Home</a></p>
 		</nav>
 
@@ -22,10 +22,10 @@
 				<section class="description text">
 					<p>
 						La funcion
-						<a href="#" class="bluehighlight">fakeAreEqual()</a> evalua dos
-						arrays que son pasados como parametro a la función y si es que ambos
-						son identicos (mismos valores en los mismos indices) devuelve
-						"true", sino devuelve "false".
+						<a href="#" class="bluehighlight">_isEqual()</a> evalua dos arrays
+						que son pasados como parametro a la función y si es que ambos son
+						identicos (mismos valores en los mismos indices) devuelve "true",
+						sino devuelve "false".
 					</p>
 				</section>
 
@@ -35,7 +35,7 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                fakeAreEqual(array1, array2){<br />
+                _isEqual(array1, array2){<br />
                 <span class="italic">//tu iteración</span><br />
                 });
               </code>
@@ -63,10 +63,10 @@
 				<section class="description text">
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
-						<code class="highlight">fakeAreEqual()</code> evalua dos arrays que
-						son pasados como parametro a la función y si es que ambos son
-						identicos (mismos valores en los mismos indices) devuelve "true",
-						sino devuelve "false".
+						<code class="highlight">_isEqual()</code> evalua dos arrays que son
+						pasados como parametro a la función y si es que ambos son identicos
+						(mismos valores en los mismos indices) devuelve "true", sino
+						devuelve "false".
 					</p>
 				</section>
 				<section class="examples">
@@ -81,13 +81,13 @@
               <code class="javascript">
                 const arr1 = ['a', 'b', 'c'];
                 const arr2 = ['a', 'b', 'c'];
-                console.log(fakeAreEqual(arr1, arr2));
+                console.log(_isEqual(arr1, arr2));
                 // output esperado = true;
 
 
                 const fruitsArr1 = ['orange', 'pear', 'banana'];
                 const fruitsArr1 = ['orange', 'banana', 'pear'];
-                console.log(fakeAreEqual(arr1, arr2));
+                console.log(_isEqual(arr1, arr2));
                 // output esperado = false;
               </code>
             </pre>
@@ -99,71 +99,63 @@
 
 					<ul>
 						<li>
-							<a href="fakeFind.html" class="bluehighlight">fakeFind()</a>
+							<a href="find.html" class="bluehighlight">_find()</a>
 						</li>
 						<li>
-							<a href="fakeForEach.html" class="bluehighlight">fakeForEach()</a>
+							<a href="forEach.html" class="bluehighlight">_forEach()</a>
 						</li>
 						<li>
-							<a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+							<a href="every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="fakeSome.html" class="bluehighlight">fakeSome()</a>
+							<a href="some.html" class="bluehighlight">_some()</a>
 						</li>
 						<li>
-							<a href="fakeFilter.html" class="bluehighlight">fakeFilter()</a>
+							<a href="filter.html" class="bluehighlight">_filter()</a>
 						</li>
 						<li>
-							<a href="fakeIndexOf.html" class="bluehighlight">fakeIndexOf()</a>
+							<a href="indexOf.html" class="bluehighlight">_indexOf()</a>
 						</li>
-						<li><a href="fakeMap.html" class="bluehighlight">fakeMap()</a></li>
+						<li><a href="map.html" class="bluehighlight">_map()</a></li>
 						<li>
-							<a href="fakeReduce.html" class="bluehighlight">fakeReduce()</a>
+							<a href="reduce.html" class="bluehighlight">_reduce()</a>
 						</li>
-						<li><a href="fakeSum.html" class="bluehighlight">fakeSum()</a></li>
+						<li><a href="sum.html" class="bluehighlight">_sum()</a></li>
 						<li>
-							<a href="fakeIndexOfRecursive.html" class="bluehighlight"
-								>fakeIndexOfRecursive()</a
+							<a href="indexOfRecursive.html" class="bluehighlight"
+								>_indexOfRecursive()</a
 							>
 						</li>
 						<li>
-							<a href="fakeIntersection.html" class="bluehighlight"
-								>fakeIntersection()</a
+							<a href="intersection.html" class="bluehighlight"
+								>_intersection()</a
 							>
 						</li>
 						<li>
-							<a href="fakeUnion.html" class="bluehighlight">fakeUnion()</a>
+							<a href="union.html" class="bluehighlight">_union()</a>
 						</li>
 						<li>
-							<a href="fakeEvery.html" class="bluehighlight">fakeEvery()</a>
+							<a href="every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="fakeArrayMin.html" class="bluehighlight"
-								>fakeArrayMin()</a
+							<a href="min.html" class="bluehighlight">_arrayMin()</a>
+						</li>
+						<li>
+							<a href="max.html" class="bluehighlight">_arrayMax()</a>
+						</li>
+						<li>
+							<a href="findIndex.html" class="bluehighlight">_findIndex()</a>
+						</li>
+						<li>
+							<a href="lastIndexOf.html" class="bluehighlight"
+								>_lastIndexOf()</a
 							>
 						</li>
 						<li>
-							<a href="fakeArrayMax.html" class="bluehighlight"
-								>fakeArrayMax()</a
-							>
+							<a href="concat.html" class="bluehighlight">_concat()</a>
 						</li>
 						<li>
-							<a href="fakeFindIndex.html" class="bluehighlight"
-								>fakeFindIndex()</a
-							>
-						</li>
-						<li>
-							<a href="fakeLastIndexOf.html" class="bluehighlight"
-								>fakeLastIndexOf()</a
-							>
-						</li>
-						<li>
-							<a href="fakeConcat.html" class="bluehighlight">fakeConcat()</a>
-						</li>
-						<li>
-							<a href="fakeAreEqual.html" class="bluehighlight"
-								>fakeAreEqual()</a
-							>
+							<a href="isEqual.html" class="bluehighlight">_isEqual()</a>
 						</li>
 					</ul>
 				</section>

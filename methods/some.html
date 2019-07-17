@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>_some()</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    
+    <nav class="nav">
+      <h1>_some()</h1>
+      <p><a href="../index.html">Home</a></p>
+    </nav>
+
+    <main class="container">
+      <aside class="container1"></aside>
+
+      <article class="container2">
+
+        <section class="description text">
+          <p>
+            La funcion
+            <a href="#" class="bluehighlight">_some()</a> comprueba si al menos un elemento del array cumple con la condición
+             implementada por la función proporcionada
+          </p>
+        </section>
+
+        <section class="sintax">
+          <h2 class="sectionTitle">Sintaxis</h2>
+
+          <section class="sandbox">
+            <pre>
+            <code class="javascript">
+              function _some(arr, fn) {
+                for (let element of arr) {
+                  if (fn(element)) { 
+                    return true;
+                  }
+                }
+                return false;
+              } 
+            </code>
+            </pre>
+          </section>
+
+          <h3>
+            <span class="subtitle">Parametros </span>
+          </h3>
+
+          <h4>
+            <span class="highlight">Array</span>
+          </h4>
+
+          <p class="descripcion tab">Array a iterar.</p>
+
+          <h4>
+            <span class="highlight">Función</span>
+          </h4>
+
+          <p class="descripcion tab">Funcion con la condicion a cumplir</p>
+
+
+          <h3>
+            <span class="subtitle">Valor de retorno </span>
+          </h3>
+
+          <p class="descripcion tab">
+             Un <span class="bluehighlight">Boolean</span>
+            </p>
+        </section>
+
+        <section class="description text">
+          <h2 class="sectionTitle">Descripción</h2>
+          <p>
+            <code class="highlight">_some()</code> ejecuta
+            <code class="highlight">fn</code> una vez por cada elemento presente en el array hasta que tome
+            uno con valor true; sino retornara el valor false.
+          </p>
+        </section>
+
+        <section class="examples">
+          <h2 class="sectionTitle">Ejemplo</h2>
+
+          <h3>
+              <span class="subtitle"> Mostrar cada elemento del array </span>
+          </h3>
+
+          <section class="sandbox">
+            <pre>
+            <code class="javascript">
+              const array = [1, 2, 3, 4, 5];
+              const even = function(element) { 
+                return element % 2 === 0; 
+                }
+              console.log(_some(array, even));
+            </code>
+            </pre>  
+          </section>
+
+          <section class="seealso">
+            <h2 class="sectionTitle">Ver también</h2>
+  
+            <ul>
+              <li>
+                <a href="find.html" class="bluehighlight">_find()</a>
+              </li>
+              <li>
+                <a href="forEach.html" class="bluehighlight">_forEach()</a>
+              </li>
+              <li>
+                <a href="every.html" class="bluehighlight">_every()</a>
+              </li>
+              <li>
+                <a href="some.html" class="bluehighlight">_some()</a>
+              </li>
+              <li>
+                <a href="filter.html" class="bluehighlight">_filter()</a>
+              </li>
+              <li>
+                <a href="indexOf.html" class="bluehighlight">_indexOf()</a>
+              </li>
+              <li><a href="map.html" class="bluehighlight">_map()</a></li>
+              <li>
+                <a href="reduce.html" class="bluehighlight">_reduce()</a>
+              </li>
+              <li><a href="sum.html" class="bluehighlight">_sum()</a></li>
+              <li>
+                <a href="indexOfRecursive.html" class="bluehighlight"
+                  >_indexOfRecursive()</a
+                >
+              </li>
+              <li>
+                <a href="intersection.html" class="bluehighlight"
+                  >_intersection()</a
+                >
+              </li>
+              <li>
+                <a href="union.html" class="bluehighlight">_union()</a>
+              </li>
+              <li>
+                <a href="every.html" class="bluehighlight">_every()</a>
+              </li>
+              <li>
+                <a href="min.html" class="bluehighlight">_arrayMin()</a>
+              </li>
+              <li>
+                <a href="max.html" class="bluehighlight">_arrayMax()</a>
+              </li>
+              <li>
+                <a href="findIndex.html" class="bluehighlight">_findIndex()</a>
+              </li>
+              <li>
+                <a href="lastIndexOf.html" class="bluehighlight"
+                  >_lastIndexOf()</a
+                >
+              </li>
+              <li>
+                <a href="concat.html" class="bluehighlight">_concat()</a>
+              </li>
+              <li>
+                <a href="isEqual.html" class="bluehighlight">_isEqual()</a>
+              </li>
+            </ul>
+          </section>
+      </article>
+    </main>
+
+    <script src="../app.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
