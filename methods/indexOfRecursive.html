@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>_indexOf()</title>
+		<title>_indexOfRecursive()</title>
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
@@ -11,7 +12,7 @@
 	</head>
 	<body>
 		<nav class="nav">
-			<h1>_indexOf()</h1>
+			<h1>_indexOfRecursive()</h1>
 			<p><a href="../index.html">Home</a></p>
 		</nav>
 
@@ -22,9 +23,9 @@
 				<section class="description text">
 					<p>
 						La funcion
-						<a href="#" class="bluehighlight">_indexOf()</a> retorna el primer
-						índice en el que se puede encontrar un elemento dado en el array, ó
-						retorna -1 si el elemento no esta presente.
+						<a href="#" class="bluehighlight">_indexOfRecursive()</a> retorna el
+						primer índice en el que se puede encontrar un elemento dado en el
+						array, ó retorna -1 si el elemento no esta presente.
 					</p>
 				</section>
 
@@ -34,13 +35,13 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                _indexOf(array, searchElement);
+                _indexOfRecursive(array, searchElement)
               </code>
             </pre>
 					</section>
 
 					<h3>
-						<span class="subtitle">Parámetros </span>
+						<span class="subtitle">Parametros </span>
 					</h3>
 
 					<h4>
@@ -69,7 +70,7 @@
 				<section class="description text">
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
-						<code class="highlight">indexOf()</code> compara
+						<code class="highlight">_indexOfRecursive()</code> compara
 						<code class="highlight">searchElement</code> con los elementos del
 						array usando
 						<span class="bluehighlight">igualdad estricta</span> (el mismo
@@ -82,23 +83,23 @@
 
 					<h3>
 						<span class="subtitle"
-							>Usando <span class="codejs">indexOf()</span>
+							>Usando <span class="codejs">_indexOfRecursive()</span>
 						</span>
 					</h3>
 					<p>
-						El siguiente ejemplo usa indexof() para localizar valores en un
-						array
+						El siguiente ejemplo usa _indexOfRecursive() para localizar valores
+						en un array
 					</p>
 
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
                 var array = [2, 9, 9];
-                array.indexOf(2); // 0 
-                array.indexOf(7); // -1 
-                array.indexOf(9, 2); // 2
-                array.indexOf(2, -1); // -1
-                array.indexOf(2, -3); // 0
+                array._indexOfRecursive(2); // 0
+                array._indexOfRecursive(7); // -1 
+                array._indexOfRecursive(9, 2); // 2 
+                array._indexOfRecursive(2, -1); // -1 
+                array._indexOfRecursive(2, -3); // 0 
               </code>
             </pre>
 					</section>
@@ -115,10 +116,10 @@
                 const indices = []; 
                 const array = ['a', 'b', 'a', 'c', 'a', 'd'];
                 const element = 'a';
-                let idx = array.indexOf(element);
+                let idx = array._indexOfRecursive(element);
                 while (idx != -1) {
                 indices.push(idx);
-                idx = array.indexOf(element, idx + 1);
+                idx = array._indexOfRecursive(element, idx + 1);
                 } 
                 console.log(indices);
                 // [0, 2, 4] 
@@ -132,68 +133,69 @@
 
 					<ul>
 						<li>
-							<a href="_find.html" class="bluehighlight">_find()</a>
+							<a href="find.html" class="bluehighlight">_find()</a>
 						</li>
 						<li>
-							<a href="_forEach.html" class="bluehighlight">_forEach()</a>
+							<a href="forEach.html" class="bluehighlight">_forEach()</a>
 						</li>
 						<li>
-							<a href="_every.html" class="bluehighlight">_every()</a>
+							<a href="every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="_some.html" class="bluehighlight">_some()</a>
+							<a href="some.html" class="bluehighlight">_some()</a>
 						</li>
 						<li>
-							<a href="_filter.html" class="bluehighlight">_filter()</a>
+							<a href="filter.html" class="bluehighlight">_filter()</a>
 						</li>
 						<li>
-							<a href="_indexOf.html" class="bluehighlight">_indexOf()</a>
+							<a href="indexOf.html" class="bluehighlight">_indexOf()</a>
 						</li>
-						<li><a href="_map.html" class="bluehighlight">_map()</a></li>
+						<li><a href="map.html" class="bluehighlight">_map()</a></li>
 						<li>
-							<a href="_reduce.html" class="bluehighlight">_reduce()</a>
+							<a href="reduce.html" class="bluehighlight">_reduce()</a>
 						</li>
-						<li><a href="_sum.html" class="bluehighlight">_sum()</a></li>
+						<li><a href="sum.html" class="bluehighlight">_sum()</a></li>
 						<li>
-							<a href="_indexOfRecursive.html" class="bluehighlight"
+							<a href="indexOfRecursive.html" class="bluehighlight"
 								>_indexOfRecursive()</a
 							>
 						</li>
 						<li>
-							<a href="_intersection.html" class="bluehighlight"
+							<a href="intersection.html" class="bluehighlight"
 								>_intersection()</a
 							>
 						</li>
 						<li>
-							<a href="_union.html" class="bluehighlight">_union()</a>
+							<a href="union.html" class="bluehighlight">_union()</a>
 						</li>
 						<li>
-							<a href="_every.html" class="bluehighlight">_every()</a>
+							<a href="every.html" class="bluehighlight">_every()</a>
 						</li>
 						<li>
-							<a href="_min.html" class="bluehighlight">_arrayMin()</a>
+							<a href="min.html" class="bluehighlight">_arrayMin()</a>
 						</li>
 						<li>
-							<a href="_max.html" class="bluehighlight">_arrayMax()</a>
+							<a href="max.html" class="bluehighlight">_arrayMax()</a>
 						</li>
 						<li>
-							<a href="_findIndex.html" class="bluehighlight">_findIndex()</a>
+							<a href="findIndex.html" class="bluehighlight">_findIndex()</a>
 						</li>
 						<li>
-							<a href="_lastIndexOf.html" class="bluehighlight"
+							<a href="lastIndexOf.html" class="bluehighlight"
 								>_lastIndexOf()</a
 							>
 						</li>
 						<li>
-							<a href="_concat.html" class="bluehighlight">_concat()</a>
+							<a href="concat.html" class="bluehighlight">_concat()</a>
 						</li>
 						<li>
-							<a href="_isEqual.html" class="bluehighlight">_isEqual()</a>
+							<a href="isEqual.html" class="bluehighlight">_isEqual()</a>
 						</li>
 					</ul>
 				</section>
 			</article>
 		</main>
+
 		<script src="../app.js"></script>
 		<script
 			type="text/javascript"

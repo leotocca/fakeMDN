@@ -162,15 +162,8 @@ function _includes(array, value) {
 }
 
 function _intersection(array1, array2) {
-	const arrIntersection = [];
-	for (const i of array1) {
-		for (const j of array2) {
-			if (i === j) {
-				arrIntersection.push(j);
-			}
-		}
-	}
-	return arrIntersection;
+	const repetedIntersection = fakeFilter(array1, x => fakeIncludes(array2, x));
+	return removeDuplicatesFrom(repetedIntersection);
 }
 
 function _union(arr1, ...arr2) {
