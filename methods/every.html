@@ -22,8 +22,8 @@
           <p>
             La funcion
             <a href="#" class="bluehighlight">_every()</a> devuelve un
-            booleano, true si todos los elementos en el arreglo pasan la
-            condición implementada por la función dada y false si alguno no la
+            booleano, <span class="bluehighlight">true</span> si todos los elementos en el arreglo pasan la
+            condición implementada por la función dada y <span class="bluehighlight">false</span> si alguno no la
             cumple.
           </p>
         </section>
@@ -34,9 +34,7 @@
           <section class="sandbox">
             <pre>
             <code class="JavaScript">
-              _forEach(arr,function){
-              //tu iteración
-              });
+              _every(array, callbackFunction);
             </code>
           </pre>
           </section>
@@ -52,7 +50,7 @@
           <p class="descripcion tab">Array que sera iterada</p>
 
           <h4>
-            <span class="highlight">Función</span>
+            <span class="highlight">callbackFunction</span>
           </h4>
 
           <p class="descripcion tab">
@@ -80,28 +78,19 @@
           <h2 class="sectionTitle">Ejemplo</h2>
 
           <h3>
-            <span class="subtitle"> Javascript demo </span>
+            <span class="subtitle">Todos mayor a 10</span>
           </h3>
+
+
 
           <section class="sandbox">
             <pre>
-              <code class="javascript ">
-                let array1 = [1, 30, 59, 9, 10, 13];<br />
-                function isBelowThreshold(currentValue) { <br />
-                return currentValue < 40;<br />
-                }<br />
-                <br />
-                function _every(arr, fn) {<br />
-                let allPassTheTest = true; <br />
-                _forEach(arr, element => { <br />
-                if (!fn(element)) { <br />
-                allPassTheTest = false; <br />
-                }<br />
-                }); <br />
-                return allPassTheTest; <br />
-                } <br />
-                <br />
-                console.log(_Every(array1, isBelowThreshold)); <br />
+              <code class="javascript">
+                function isBigEnough(element, index, array) {
+                  return element >= 10;
+                }
+                _every([12, 5, 8, 130, 44],isBigEnough);   // false
+                _every([12, 54, 18, 130, 44],isBigEnough); // true
               </code>
             </pre>
           </section>
