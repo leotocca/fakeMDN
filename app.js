@@ -73,20 +73,20 @@ function removeDuplicatesFrom(arr) {
 	return duplicateFreeList;
 }
 
-function _reduce(array, callbackFunction, initialValue) {
+Array.prototype._reduce = function(callbackFunction, initialValue) {
 	let begin = 0;
 	if (initialValue === undefined) {
-		initialValue = arr[0];
+		initialValue = this[0];
 		begin = 1;
 	}
 	let accumulator = initialValue;
 
-	for (let i = begin; i < array.length; i++) {
-		accumulator = callbackFunction(accumulator, arr[i]);
+	for (let i = begin; i < this.length; i++) {
+		accumulator = callbackFunction(accumulator, this[i]);
 	}
 
 	return accumulator;
-}
+};
 
 function _sum(array) {
 	return _reduce(array, (a, b) => a + b);
@@ -102,20 +102,20 @@ function _filter(array, callbackFunction) {
 	return arrFiltered;
 }
 
-function _forEach(array, callbackFunction) {
-	for (const element of array) {
+Array.prototype._forEach = function(callbackFunction) {
+	for (const element of this) {
 		callbackFunction(element);
 	}
-}
+};
 
-function _some(array, callbackFunction) {
-	for (const element of array) {
+Array.prototype._some = function(callbackFunction) {
+	for (const element of this) {
 		if (callbackFunction(element)) {
 			return true;
 		}
 	}
 	return false;
-}
+};
 
 function _every(array, callbackFunction) {
 	_forEach(array, element => {
@@ -126,14 +126,14 @@ function _every(array, callbackFunction) {
 	return true;
 }
 
-function _find(array, callbackFunction) {
-	for (const elem of array) {
+Array.prototype._find = function(callbackFunction) {
+	for (const elem of this) {
 		if (callbackFunction(elem)) {
 			return elem;
 		}
 	}
 	return undefined;
-}
+};
 
 function _map(array, callbackFunction) {
 	const arrMaped = [];
