@@ -39,14 +39,7 @@ const _lastIndex = (array, value) => {
 };
 
 function _concat(array1, array2) {
-	const arrayConcated = [];
-	for (const elem of array1) {
-		arrayConcated.push(elem);
-	}
-	for (const elem of array2) {
-		arrayConcated.push(elem);
-	}
-	return arrayConcated;
+	return [...array1, ...array2];
 }
 
 function _min(array) {
@@ -167,7 +160,7 @@ function _intersection(array1, array2) {
 }
 
 function _union(arr1, ...arr2) {
-	const arrUnion = arr1.slice();
+	const arrUnion = [...arr1];
 	_forEach(arr2, function(i) {
 		_forEach(i, function(j) {
 			if (!_includes(arrUnion, j)) {
