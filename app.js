@@ -4,15 +4,10 @@ const _isEqual = (array1, array2) => {
 		if (array1[i] === array2[i]) {
 			result.push(true);
 		} else {
-			result.push(false);
+			return false;
 		}
 	}
-
-	if (result.includes(false)) {
-		return false;
-	} else {
-		return true;
-	}
+	return true;
 };
 
 const _findIndex = (arr, callbackfunction) => {
@@ -54,16 +49,6 @@ function _max(array) {
 	return _reduce(arr, (accumulator, value) =>
 		value > accumulator ? value : accumulator
 	);
-}
-
-function removeDuplicatesFrom(arr) {
-	const duplicateFreeList = [];
-	for (const elem of arr) {
-		if (!_includes(duplicateFreeList, elem)) {
-			duplicateFreeList.push(elem);
-		}
-	}
-	return duplicateFreeList;
 }
 
 Array.prototype._reduce = function(callbackFunction, initialValue) {
@@ -155,18 +140,9 @@ function _includes(array, value) {
 }
 
 function _intersection(array1, array2) {
-	const repetedIntersection = fakeFilter(array1, x => fakeIncludes(array2, x));
-	return removeDuplicatesFrom(repetedIntersection);
+	return Array.from(new Set(array1.filter(x => array2.includes(x))));
 }
 
-function _union(arr1, ...arr2) {
-	const arrUnion = [...arr1];
-	_forEach(arr2, function(i) {
-		_forEach(i, function(j) {
-			if (!_includes(arrUnion, j)) {
-				arrUnion.push(j);
-			}
-		});
-	});
-	return arrUnion;
+function _union(arr1, arr2) {
+	return Array.from(new Set([...arr1, ...arr2]));
 }
