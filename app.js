@@ -33,23 +33,23 @@ const _lastIndex = (array, value) => {
 	}
 };
 
-function _concat(array1, array2) {
-	return [...array1, ...array2];
-}
+Array.prototype._concat = function(array) {
+	return [...this, ...array];
+};
 
-function _min(array) {
-	if (array.length === 0) return undefined;
-	return _Reduce(array, (accumulator, value) =>
+Array.prototype._min = function() {
+	if (this.length === 0) return undefined;
+	return this.reduce((accumulator, value) =>
 		value < accumulator ? value : accumulator
 	);
-}
+};
 
-function _max(array) {
-	if (array.length === 0) return undefined;
-	return _reduce(arr, (accumulator, value) =>
+Array.prototype._max = function() {
+	if (this.length === 0) return undefined;
+	return this._reduce((accumulator, value) =>
 		value > accumulator ? value : accumulator
 	);
-}
+};
 
 Array.prototype._reduce = function(callbackFunction, initialValue) {
 	let begin = 0;
@@ -66,19 +66,19 @@ Array.prototype._reduce = function(callbackFunction, initialValue) {
 	return accumulator;
 };
 
-function _sum(array) {
-	return _reduce(array, (a, b) => a + b);
-}
+Array.prototype._sum = function() {
+	return this._reduce((a, b) => a + b);
+};
 
-function _filter(array, callbackFunction) {
+Array.prototype._filter = function(callbackFunction) {
 	const arrFiltered = [];
-	_forEach(array, elem => {
+	this._forEach(elem => {
 		if (callbackFunction(elem)) {
 			arrFiltered.push(elem);
 		}
 	});
 	return arrFiltered;
-}
+};
 
 Array.prototype._forEach = function(callbackFunction) {
 	for (const element of this) {
@@ -95,14 +95,15 @@ Array.prototype._some = function(callbackFunction) {
 	return false;
 };
 
-function _every(array, callbackFunction) {
-	_forEach(array, element => {
+//este metodo NO anda
+Array.prototype._every = function(callbackFunction) {
+	this._forEach(element => {
 		if (!callbackFunction(element)) {
 			return false;
 		}
 	});
 	return true;
-}
+};
 
 Array.prototype._find = function(callbackFunction) {
 	for (const elem of this) {
@@ -113,6 +114,7 @@ Array.prototype._find = function(callbackFunction) {
 	return undefined;
 };
 
+//aca cambie todo pero no me deja enviar this como parametro de la callback en _forEach
 function _map(array, callbackFunction) {
 	const arrMaped = [];
 	_forEach(array, function(array) {
@@ -121,28 +123,28 @@ function _map(array, callbackFunction) {
 	return arrMaped;
 }
 
-function _indexOf(array, value) {
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] === value) {
+Array.prototype._indexOf = function(value) {
+	for (let i = 0; i < this.length; i++) {
+		if (this[i] === value) {
 			return i;
 		}
 	}
 	return -1;
-}
+};
 
-function _indexOfRecursive(array, value) {
-	if (!array.length) return -1;
-	return array.pop() === value ? array.length : _indexOfRecursive(array, value);
-}
+Array.prototype._indexOfRecursive = function(value) {
+	if (!this.length) return -1;
+	return this.pop() === value ? this.length : this._indexOfRecursive(value);
+};
 
-function _includes(array, value) {
-	return _indexOf(array, value) !== -1;
-}
+Array.prototype._includes = function(value) {
+	return this._indexOf(value) !== -1;
+};
 
-function _intersection(array1, array2) {
-	return Array.from(new Set(array1.filter(x => array2.includes(x))));
-}
+Array.prototype._intersection = function(array1, array2) {
+	return Array.from(new Set(array1._filter(x => array2._includes(x))));
+};
 
-function _union(arr1, arr2) {
-	return Array.from(new Set([...arr1, ...arr2]));
-}
+Array.prototype._union = function(array1, array2) {
+	return Array.from(new Set([...array1, ...array2]));
+};
