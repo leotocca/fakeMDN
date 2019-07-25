@@ -1,3 +1,24 @@
+Array.prototype._reduce = function(callbackFunction, initialValue) {
+	let begin = 0;
+	if (initialValue === undefined) {
+		initialValue = this[0];
+		begin = 1;
+	}
+	let accumulator = initialValue;
+
+	for (let i = begin; i < this.length; i++) {
+		accumulator = callbackFunction(accumulator, this[i]);
+	}
+
+	return accumulator;
+};
+
+Array.prototype._forEach = function(callbackFunction) {
+	for (const element of this) {
+		callbackFunction(element);
+	}
+};
+
 const _isEqual = (array1, array2) => {
 	let result = [];
 	for (let i = 0; i < array1.length; i++) {
@@ -39,7 +60,7 @@ Array.prototype._concat = function(array) {
 
 Array.prototype._min = function() {
 	if (this.length === 0) return undefined;
-	return this.reduce((accumulator, value) =>
+	return this._reduce((accumulator, value) =>
 		value < accumulator ? value : accumulator
 	);
 };
@@ -49,21 +70,6 @@ Array.prototype._max = function() {
 	return this._reduce((accumulator, value) =>
 		value > accumulator ? value : accumulator
 	);
-};
-
-Array.prototype._reduce = function(callbackFunction, initialValue) {
-	let begin = 0;
-	if (initialValue === undefined) {
-		initialValue = this[0];
-		begin = 1;
-	}
-	let accumulator = initialValue;
-
-	for (let i = begin; i < this.length; i++) {
-		accumulator = callbackFunction(accumulator, this[i]);
-	}
-
-	return accumulator;
 };
 
 Array.prototype._sum = function() {
@@ -80,12 +86,6 @@ Array.prototype._filter = function(callbackFunction) {
 	return arrFiltered;
 };
 
-Array.prototype._forEach = function(callbackFunction) {
-	for (const element of this) {
-		callbackFunction(element);
-	}
-};
-
 Array.prototype._some = function(callbackFunction) {
 	for (const element of this) {
 		if (callbackFunction(element)) {
@@ -95,13 +95,12 @@ Array.prototype._some = function(callbackFunction) {
 	return false;
 };
 
-//este metodo NO anda
 Array.prototype._every = function(callbackFunction) {
-	this._forEach(element => {
+	for (const element of this) {
 		if (!callbackFunction(element)) {
 			return false;
 		}
-	});
+	}
 	return true;
 };
 
@@ -114,14 +113,11 @@ Array.prototype._find = function(callbackFunction) {
 	return undefined;
 };
 
-//aca cambie todo pero no me deja enviar this como parametro de la callback en _forEach
-function _map(array, callbackFunction) {
+Array.prototype._map = function(callbackFunction) {
 	const arrMaped = [];
-	_forEach(array, function(array) {
-		arrMaped.push(callbackFunction(array));
-	});
+	this._forEach(elem => arrMaped.push(callbackFunction(elem)));
 	return arrMaped;
-}
+};
 
 Array.prototype._indexOf = function(value) {
 	for (let i = 0; i < this.length; i++) {
@@ -141,10 +137,10 @@ Array.prototype._includes = function(value) {
 	return this._indexOf(value) !== -1;
 };
 
-Array.prototype._intersection = function(array1, array2) {
-	return Array.from(new Set(array1._filter(x => array2._includes(x))));
+Array.prototype._intersection = function(array2) {
+	return Array.from(new Set(this._filter(x => array2._includes(x))));
 };
 
-Array.prototype._union = function(array1, array2) {
-	return Array.from(new Set([...array1, ...array2]));
+Array.prototype._union = function(array2) {
+	return Array.from(new Set([...this, ...array2]));
 };
