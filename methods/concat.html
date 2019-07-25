@@ -21,10 +21,10 @@
 			<article class="main_column">
 				<section class="description text">
 					<p>
-						La funcion
+						El método
 						<a href="#" class="bluehighlight mono">_concat()</a> es usado para
-						concatenar dos elementos. Esta función no cambia los elementos
-						originales, sino que devuelve un array nuevo.
+						concatenar dos elementos. Este método no modifica los arrays originales,
+						sino que devuelve uno nuevo.
 					</p>
 				</section>
 
@@ -34,7 +34,7 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                _concat(element1, element2);
+                array1._concat(array2);
               </code>
             </pre>
 					</section>
@@ -43,13 +43,13 @@
 					</h3>
 
 					<h4>
-						<span class="highlight tab">elementN</span>
+						<span class="highlight tab">arrayN</span>
 					</h4>
 
 					<p class="descripcion tab">
-						Arrays y/o elementos a concatenar dentro del nuevo array. Si todos
-						los <span class="bluehighlight mono">valueN</span> son omitidos,
-						concat retorna un array vacío.
+						Arrays y/o elementos a concatenar dentro del nuevo array. Si todos los
+						<span class="bluehighlight mono">arrayN</span> son vacíos, concat retorna
+						un array vacío.
 					</p>
 
 					<h3>
@@ -64,19 +64,18 @@
 				<section class="description text">
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
-						La función <code class="highlight">_concat()</code> crea un nuevo
-						<span class="bluehighlight">array</span> que consta de los elementos
-						del objeto que lo llama, seguido, en orden de ingreso, por los
-						elementos de cada parámetro (en caso de que el parámetro sea un
-						array), o el parámetro mismo (en caso de que no sea un array). No se
-						aplica de forma recursiva a parámetros con arreglos anidados.
+						El método <code class="highlight">_concat()</code> crea un nuevo
+						<span class="bluehighlight">array</span> que consta de los elementos del
+						objeto que lo llama, seguido, en orden de ingreso, por los elementos de
+						cada parámetro (en caso de que el parámetro sea un array), o el parámetro
+						mismo (en caso de que no sea un array). No se aplica de forma recursiva a
+						parámetros con arreglos anidados.
 					</p>
 					<p>
-						La función <code class="highlight">_concat()</code> no altera el
-						<span class="bluehighlight">array</span> original, ni ninguno de los
-						que fueron ingresados como parámetros, sino que devuelve una copia
-						superficial que contiene copias de los mismos elementos de los
-						arrays originales combinados.
+						El método <code class="highlight">_concat()</code> no altera el
+						<span class="bluehighlight">array</span> original, ni el que fue ingresado
+						como parámetros, sino que devuelve una copia superficial que contiene
+						copias de los mismos elementos de los arrays originales combinados.
 					</p>
 				</section>
 
@@ -94,7 +93,7 @@
               <code class="javascript">
 								const alpha = ['a', 'b', 'c'];
 
-								const alphaNumeric = _concat(alpha, [2, 3]);
+								const alphaNumeric = alpha._concat([2, 3]);
 
 								console.log(alphaNumeric);
 								// Da como resultado: ['a', 'b', 'c', 2, 3]
@@ -125,8 +124,8 @@
 					</h3>
 
 					<p>
-						En el siguiente código concatena arrays anidados y demuestra
-						retención de referencias:
+						En el siguiente código concatena arrays anidados y demuestra retención de
+						referencias:
 					</p>
 
 					<section class="sandbox">
@@ -135,7 +134,7 @@
 								const num1 = [[1]];
 								const num2 = [2, [3]];
 
-								const nums = _concat(num1, num2);
+								const nums = num1._concat(num2);
 
 								console.log(nums);
 								// Da como resultado: [[1], 2, [3]]
