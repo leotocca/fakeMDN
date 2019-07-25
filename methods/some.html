@@ -32,7 +32,7 @@
           <section class="sandbox">
             <pre>
             <code class="javascript">
-              function _some(arr, fn) {
+              arr._some(fn) {
                 for (let element of arr) {
                   if (fn(element)) { 
                     return true;
@@ -45,16 +45,9 @@
           </section>
 
           <h3>
-            <span class="subtitle">Parametros </span>
+            <span class="subtitle">Parametro </span>
           </h3>
 
-          <h4>
-            <span class="highlight">Array</span>
-          </h4>
-
-          <p class="descripcion tab">Array a iterar.</p>
-
-          <h4>
             <span class="highlight">Función</span>
           </h4>
 
@@ -93,7 +86,7 @@
               const even = function(element) { 
                 return element % 2 === 0; 
                 }
-              console.log(_some(array, even));
+              console.log(array._some(even));
             </code>
             </pre>  
           </section>

@@ -31,12 +31,12 @@
 					<pre>
 						<code class="javascript">
               const numbers = [1, 5, 10, 15];
-              let doubles = _map(numbers,function(x) {
+              let doubles = numbers._map(function(x) {
               return x * 2;
               // doubles is now [2, 10, 20, 30]
               // numbers is still [1, 5, 10, 15]
               const numbers = [1, 4, 9];
-              let roots = _map(numbers,Math.sqrt);
+              let roots = numbers._map(Math.sqrt);
               // roots is now [1, 2, 3]
               // numbers is still [1, 4, 9]
             </code>
@@ -49,7 +49,7 @@
 					<section class="sandbox">
 						<pre>
             <code class="javascript">
-              let arrMaped = _map(array, function callback(currentValue) {
+              let arrMaped = array._map(, function callback(currentValue) {
               // Elemento devuelto de newArray
               });
             </code>
@@ -59,12 +59,6 @@
 					<h3>
 						<span class="subtitle">Parametros </span>
 					</h3>
-
-					<h4>
-						<span class="highlight">array</span>
-					</h4>
-
-					<p class="descripcion tab">Array a iterar.</p>
 
 					<h4>
 						<span class="highlight tab">callback</span>
@@ -136,7 +130,7 @@
 						<pre>
               <code class="javascript">
                 const numeros= [1, 4, 9];
-                let raices = _Map(numeros,Math.sqrt);
+                let raices = numeros._Map(Math.sqrt);
                 // raices tiene [1, 2, 3]
                 // numeros aún mantiene [1, 4, 9] 
               </code>
@@ -160,7 +154,7 @@
 						<pre>
               <code class="javascript">
                 const numeros = [1, 4, 9]; 
-                let dobles = _map(numeros,function(num) {
+                let dobles = numeros._map(function(num) {
                 return num * 2; 
                 });
                 // dobles es ahora [2, 8, 18]
