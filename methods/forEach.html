@@ -21,10 +21,9 @@
 			<article class="main_column">
 				<section class="description text">
 					<p>
-						La funcion
-						<a href="#" class="bluehighlight">_forEach()</a> ejecuta la función
-						pasada por un parametro una vez, para cada elemento del array
-						provisto
+						El método
+						<code class="bluehighlight">_forEach()</code> ejecuta la función pasada
+						por un parametro una vez, para cada elemento del array provisto
 					</p>
 				</section>
 
@@ -34,7 +33,7 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                _forEach(arr,fn){<br />
+                array._forEach(callbackFunction){<br />
                 <span class="italic">//tu iteración</span><br />
                 });
               </code>
@@ -46,13 +45,7 @@
 					</h3>
 
 					<h4>
-						<span class="highlight">Array</span>
-					</h4>
-
-					<p class="descripcion tab">Array que sera iterada</p>
-
-					<h4>
-						<span class="highlight">Función</span>
+						<span class="highlight">callbackFunction</span>
 					</h4>
 
 					<p class="descripcion tab">
@@ -63,10 +56,10 @@
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
 						<code class="highlight">_forEach()</code> ejecuta la funcion
-						<code class="highlight">fn</code> una vez por cada elemento de la
-						array. A diferencia de <code class="highlight">map()</code> o
-						<code class="highlight">reduce()</code> este siempre devuelve el
-						valor undefined y no es encadenable
+						<code class="highlight">callbackFunction</code> una vez por cada elemento
+						de la array. A diferencia de <code class="highlight">_map()</code> o
+						<code class="highlight">_reduce()</code> este siempre devuelve el valor
+						<span class="bluehighlight">undefined</span> y no es encadenable.
 					</p>
 				</section>
 				<section class="examples">
@@ -80,8 +73,8 @@
 						<pre>
               <code class="javascript">
                 let arr = ['a', 'b', 'c'];
-                console.log(_forEach(arr, (showEachElement = arr =>
-                console.log(arr)))); 
+                console.log(arr._forEach(showEachElement = arr =>
+                console.log(arr))); 
                 // output 'a' 
                 // output 'b' 
                 // output 'c'
@@ -105,7 +98,7 @@
                 }
                 
                 // after
-                _forEach(items, (convertir = arr => copy.push(arr)));
+                items._forEach(convertir = arr => copy.push(arr));
               </code>
             </pre>
 					</section>
