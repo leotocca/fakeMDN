@@ -22,10 +22,11 @@
 			<article class="main_column">
 				<section class="description text">
 					<p>
-						La funcion
-						<a href="#" class="bluehighlight">_indexOfRecursive()</a> retorna el
-						primer índice en el que se puede encontrar un elemento dado en el
-						array, ó retorna -1 si el elemento no esta presente.
+						El método
+						<code class="bluehighlight">_indexOfRecursive()</code> retorna el primer
+						índice en el que se puede encontrar un elemento dado en el array, ó
+						retorna <span class="bluehighlight">-1</span> si el elemento no esta
+						presente.
 					</p>
 				</section>
 
@@ -35,7 +36,7 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                _indexOfRecursive(array, searchElement)
+                array._indexOfRecursive(searchElement)
               </code>
             </pre>
 					</section>
@@ -43,12 +44,6 @@
 					<h3>
 						<span class="subtitle">Parametros </span>
 					</h3>
-
-					<h4>
-						<span class="highlight">array</span>
-					</h4>
-
-					<p class="descripcion tab">Array a iterar.</p>
 
 					<h4>
 						<span class="highlight tab">searchElement</span>
@@ -71,9 +66,8 @@
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
 						<code class="highlight">_indexOfRecursive()</code> compara
-						<code class="highlight">searchElement</code> con los elementos del
-						array usando
-						<span class="bluehighlight">igualdad estricta</span> (el mismo
+						<code class="highlight">searchElement</code> con los elementos del array
+						usando <span class="bluehighlight">igualdad estricta</span> (el mismo
 						método que cuando se usa ===, o el operador igualdad-triple).
 					</p>
 				</section>
@@ -87,8 +81,8 @@
 						</span>
 					</h3>
 					<p>
-						El siguiente ejemplo usa _indexOfRecursive() para localizar valores
-						en un array
+						El siguiente ejemplo usa _indexOfRecursive() para localizar valores en un
+						array
 					</p>
 
 					<section class="sandbox">
@@ -97,9 +91,8 @@
                 var array = [2, 9, 9];
                 array._indexOfRecursive(2); // 0
                 array._indexOfRecursive(7); // -1 
-                array._indexOfRecursive(9, 2); // 2 
-                array._indexOfRecursive(2, -1); // -1 
-                array._indexOfRecursive(2, -3); // 0 
+                array._indexOfRecursive(9); // 1 
+                array._indexOfRecursive(-1); // -1
               </code>
             </pre>
 					</section>
