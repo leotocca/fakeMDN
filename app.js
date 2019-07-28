@@ -21,6 +21,9 @@ Array.prototype._forEach = function(callbackFunction) {
 
 Array.prototype._isEqual = function(array2) {
 	let result = [];
+	if (this.length===0){
+		return false;
+		}
 	for (let i = 0; i < this.length; i++) {
 		if (this[i] === array2[i]) {
 			result.push(true);
