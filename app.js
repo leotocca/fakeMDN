@@ -19,10 +19,13 @@ Array.prototype._forEach = function(callbackFunction) {
 	}
 };
 
-const _isEqual = (array1, array2) => {
+Array.prototype._isEqual = function(array2) {
 	let result = [];
-	for (let i = 0; i < array1.length; i++) {
-		if (array1[i] === array2[i]) {
+	if (this.length===0){
+		return false;
+		}
+	for (let i = 0; i < this.length; i++) {
+		if (this[i] === array2[i]) {
 			result.push(true);
 		} else {
 			return false;
@@ -31,19 +34,19 @@ const _isEqual = (array1, array2) => {
 	return true;
 };
 
-const _findIndex = (arr, callbackfunction) => {
-	for (let i = 0; i < arr.length; i++) {
-		if (callbackfunction(arr[i])) {
+Array.prototype._findIndex = function(callbackfunction) {
+	for (let i = 0; i < this.length; i++) {
+		if (callbackfunction(this[i])) {
 			return i;
 		}
 	}
 	return -1;
 };
 
-const _lastIndex = (array, value) => {
+Array.prototype._lastIndexOf = function(value) {
 	let result = 0;
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] === value) {
+	for (let i = 0; i < this.length; i++) {
+		if (this[i] === value) {
 			result = i;
 		}
 	}
