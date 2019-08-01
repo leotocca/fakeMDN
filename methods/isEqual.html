@@ -35,7 +35,7 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                _isEqual(array1, array2){<br />
+                array1._isEqual(array2){<br />
                 <span class="italic">//tu iteración</span><br />
                 });
               </code>
@@ -43,14 +43,8 @@
 					</section>
 
 					<h3>
-						<span class="subtitle">Parametros </span>
+						<span class="subtitle">Parametro </span>
 					</h3>
-
-					<h4>
-						<span class="highlight">Array1</span>
-					</h4>
-
-					<p class="descripcion tab">Array que sera evaluado</p>
 
 					<h4>
 						<span class="highlight">Array2</span>
@@ -64,9 +58,8 @@
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
 						<code class="highlight">_isEqual()</code> evalua dos arrays que son
-						pasados como parametro a la función y si es que ambos son identicos
-						(mismos valores en los mismos indices) devuelve "true", sino
-						devuelve "false".
+						y si ambos son identicos (mismos valores en los mismos indices)
+						devuelve "true", sino devuelve "false".
 					</p>
 				</section>
 				<section class="examples">
@@ -81,13 +74,13 @@
               <code class="javascript">
                 const arr1 = ['a', 'b', 'c'];
                 const arr2 = ['a', 'b', 'c'];
-                console.log(_isEqual(arr1, arr2));
+                console.log(arr1._isEqual(arr2));
                 // output esperado = true;
 
 
                 const fruitsArr1 = ['orange', 'pear', 'banana'];
-                const fruitsArr1 = ['orange', 'banana', 'pear'];
-                console.log(_isEqual(arr1, arr2));
+                const fruitsArr2 = ['orange', 'banana', 'pear'];
+                console.log(fruitsArr1._isEqual(fruitsArr2));
                 // output esperado = false;
               </code>
             </pre>
