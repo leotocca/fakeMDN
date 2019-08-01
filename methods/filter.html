@@ -1,126 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>_filter()</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css">
-    <link rel="icon" type="image/icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles.css">
-  </head>
-  <body>
-    
-    <nav class="nav">
-      <h1>_filter()</h1>
-      <p><a href="../index.html">Home</a></p>
-    </nav>
+	<head>
+		<title>_filter()</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atelier-lakeside-light.min.css"
+		/>
+		<link rel="icon" type="image/icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../styles.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<h1>_filter()</h1>
+			<p><a href="../index.html">Home</a></p>
+		</nav>
 
-    <main class="container">
-      <aside class="container_aside"></aside>
-      
-      <article class="main_column">
-        
-        <section class="description text">
-          <p>
-            La función
-            <a href="#" class="bluehighlight">_filter()</a> crea un nuevo array
-             con todos los elementos que cumplan la condición 
-            implementada por la función dada.
-          </p>
-		</section>
-		
-        <section class="sintax">
-          <h2 class="sectionTitle">Sintaxis</h2>
+		<main class="container">
+			<aside class="container_aside"></aside>
 
-          <section class="sandbox">
-            <pre>
+			<article class="main_column">
+				<section class="description text">
+					<p>
+						El método
+						<a href="#" class="bluehighlight">_filter()</a> crea un nuevo array con
+						todos los elementos que cumplan la condición implementada por la función
+						dada.
+					</p>
+				</section>
+
+				<section class="sintax">
+					<h2 class="sectionTitle">Sintaxis</h2>
+
+					<section class="sandbox">
+						<pre>
               <code class="javascript">
-              let arregloFiltrado = _filter(arreglo, funcionFiltradora);
+              let filteredArray = array._filter(callbackFunction(param));
               </code>
             </pre>
-          </section>
+					</section>
 
-          <h3>
-            <span class="subtitle">Parámetros </span>
-          </h3>
+					<h3>
+						<span class="subtitle">Parámetros </span>
+					</h3>
 
-          <h4>
-            <span class="highlight">arreglo</span>
-          </h4>
+					<h4>
+						<span class="highlight tab">callbackFunction</span>
+					</h4>
 
-          <p class="descripcion tab">El array a ser filtrado
-          </p>
+					<p class="descripcion tab">
+						Es la función que se utilizará para filtrar el arreglo, puede ser anónima,
+						recibe un parámetro, lo evalúa y devuelve
+						<span class="bluehighlight">true o false </span>
+						dependiendo de que cumpla o no con la condición que interesa evaluar.
+					</p>
 
-          <h4>
-            <span class="highlight tab">funcionFiltradora</span>
-          </h4>
+					<h4>
+						<span class="highlight tab">param</span>
+					</h4>
 
-          <p class="descripcion tab">Es la función que se utilizará para filtrar el arreglo,
-            puede ser anónima, recibe un parámetro, lo evalúa y devuelve true o false
-            dependiendo de que cumpla o no con la condición que interesa evaluar.  
-           </br></br>let funcionFiltradora = param => true | false
-          </p>
+					<p class="descripcion tab">
+						El valor que callbackFunction evaluará para ver si cumple con la condición
+						que se utilizará de filtro
+					</p>
 
-          <h4>
-            <span class="highlight tab">param</span>
-          </h4>
+					<h3>
+						<span class="subtitle">Valor de retorno </span>
+					</h3>
 
-          <p class="descripcion tab">
-              El valor que funcionFiltradora
-              evaluará para ver si cumple con 
-              la condición que se utilizará de filtro
-          </p>
+					<p>
+						Un
+						<span class="bluehighlight">array</span>formado solo por los elementos que
+						cumplen con la condición de interés
+					</p>
+				</section>
 
-          <h3>
-            <span class="subtitle">Valor de retorno </span>
-          </h3>
+				<section class="examples">
+					<h2 class="sectionTitle">Ejemplos</h2>
 
-          <p>
-            <span class="bluehighlight">
-                Un array formado solo por los elementos que cumplen
-                con la condición de interés 
-            </span>
-          </p>
-        </section>
+					<h3>
+						<span class="subtitle">
+							Filtrar los elementos impares
+						</span>
+					</h3>
 
-        <section class="examples">
-          <h2 class="sectionTitle">Ejemplos</h2>
-
-          <h3>
-            <span class="subtitle">
-                Filtrar los elementos impares
-            </span>
-          </h3>
-
-          <section class="sandboxjs">
-            <pre>
+					<section class="sandboxjs">
+						<pre>
               <code class="javascript">
-                  let funcionFiltradora = x => x % 2 != 0;
-                  arregloFiltrado = _filter(arreglo, funcionFiltradora);
+                  const filterFunction = x => x % 2 != 0;
+                  const filteredArray = array._filter(filterFunction);
               </code>
             </pre>
-          </section>
+					</section>
 
-          <h3>
-            <span class="subtitle">
-                Elementos negativos  
-            </span>
-          </h3>
+					<h3>
+						<span class="subtitle">
+							Elementos negativos
+						</span>
+					</h3>
 
-          <section class="sandboxjs">
-            <pre>
+					<section class="sandboxjs">
+						<pre>
               <code class="javascript">
-                arregloFiltrado = _filter(arreglo, function (x) {
+                const filteredArray = array._filter(function(x) {
                 return (x < 0); 
-                })
+                });
               </code>
           </pre>
-          </section>
-        </section>
+					</section>
+				</section>
+			</article>
+		</main>
 
-      </article>
-    </main>
-
-    <script src="../app.js"></script>
-    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </body>
+		<script src="../app.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
+		></script>
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+	</body>
 </html>

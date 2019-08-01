@@ -20,7 +20,7 @@
 
         <section class="description text">
           <p>
-            La funcion
+            El método 
             <a href="#" class="bluehighlight">_every()</a> devuelve un
             booleano, <span class="bluehighlight">true</span> si todos los elementos en el arreglo pasan la
             condición implementada por la función dada y <span class="bluehighlight">false</span> si alguno no la
@@ -34,7 +34,7 @@
           <section class="sandbox">
             <pre>
             <code class="JavaScript">
-              _every(array, callbackFunction);
+             array._every(callbackFunction);
             </code>
           </pre>
           </section>
@@ -42,12 +42,6 @@
           <h3>
             <span class="subtitle">Parametros </span>
           </h3>
-
-          <h4>
-            <span class="highlight">Array</span>
-          </h4>
-
-          <p class="descripcion tab">Array que sera iterada</p>
 
           <h4>
             <span class="highlight">callbackFunction</span>
@@ -68,9 +62,9 @@
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">_every()</code> ejecuta la funcion
-            <code class="highlight">fn</code> una vez por cada elemento de la
-            array hasta encontrar uno que haga retornar un valor <code class="highlight">false</code>. Si no se encuentra tal elemento, la funcion <code class="highlight">_Every()</code> de inmediato retorna  false. O si  <code class="highlight">fn()</code> retorna verdadero
+            <code class="highlight">_every()</code> ejecuta la 
+            <code class="highlight">callbackFunction</code> una vez por cada elemento de la
+            array hasta encontrar uno que haga retornar un valor <code class="highlight">false</code>. Si no se encuentra tal elemento, la funcion <code class="highlight">_every()</code> de inmediato retorna  false. O si  <code class="highlight">fn()</code> retorna verdadero
             para todos los elementos, every retornará <code class="highlight">true</code>.
           </p>
         </section>
@@ -81,16 +75,14 @@
             <span class="subtitle">Todos mayor a 10</span>
           </h3>
 
-
-
           <section class="sandbox">
             <pre>
               <code class="javascript">
                 function isBigEnough(element, index, array) {
                   return element >= 10;
                 }
-                _every([12, 5, 8, 130, 44],isBigEnough);   // false
-                _every([12, 54, 18, 130, 44],isBigEnough); // true
+                [12, 5, 8, 130, 44]._every(isBigEnough);   // false
+                [12, 54, 18, 130, 44]._every(isBigEnough); // true
               </code>
             </pre>
           </section>

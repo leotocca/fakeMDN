@@ -21,12 +21,12 @@
 			<article class="main_column">
 				<section class="description text">
 					<p>
-						La funcion
+						El método
 						<a href="#" class="bluehighlight">_findIndex()</a> ejecuta la
-						función callback que se pasa como parametro una vez por cada
-						elemento del array, tambien provisto, hasta que se verifique la
-						condición de la función callback. En ese caso, devuelve el indice
-						del elemento que la verifica. De lo contrario devuelve -1.
+						<span class="highlight">callbackfunction</span> que se pasa como parametro
+						una vez por cada elemento del array, hasta que se verifique la condición.
+						En ese caso, devuelve el indice del elemento que la verifica. De lo
+						contrario devuelve <span class="bluehighlight">-1</span>
 					</p>
 				</section>
 
@@ -36,8 +36,8 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                _findIndex(arr, callbackfunction){<br />
-                <span class="italic">//tu iteración</span><br />
+                array._findIndex(callbackfunction{
+                <span class="italic">//tu iteración</span>
                 });
               </code>
             </pre>
@@ -48,13 +48,7 @@
 					</h3>
 
 					<h4>
-						<span class="highlight">Array</span>
-					</h4>
-
-					<p class="descripcion tab">Array que sera iterado</p>
-
-					<h4>
-						<span class="highlight">Función</span>
+						<span class="highlight">callbackfunction</span>
 					</h4>
 
 					<p class="descripcion tab">
@@ -64,12 +58,20 @@
 				<section class="description text">
 					<h2 class="sectionTitle">Descripción</h2>
 					<p>
-						<code class="highlight">_findIndex()</code> ejecuta la funcion
-						<code class="highlight">callbackfunction</code> que se pasa como
-						parametro una vez por cada elemento del array, tambien provisto,
-						hasta que se verifique la condición de la función callback. En ese
-						caso, devuelve el indice del elemento que la verifica. De lo
-						contrario devuelve -1.
+						ejecuta la funcion
+						<code class="highlight">callbackfunction</code> que se pasa como parametro
+						una vez por cada elemento del array, tambien provisto, hasta que se
+						verifique la condición de la función callback. En ese caso, devuelve el
+						indice del elemento que la verifica. De lo contrario devuelve -1. El
+						método <code class="highlight">_findIndex()</code> ejecuta la
+						<span class="highlight">callbackFunction</span> una vez por cada índice
+						del array hasta que encuentre uno donde callback devuelva un
+						<span class="bluehightlight">true</span>. Si dicho elemento es encontrado,
+						<code class="highlight">_findIndex()</code> inmediatamente devuelve el
+						índice de esa iteración. Si la función callback nunca devuelve un valor
+						verdadero o el tamaño del array es 0,
+						<code class="highlight">_findIndex()</code> devuelve
+						<span class="bluehighlight">-1</span>.
 					</p>
 				</section>
 				<section class="examples">
@@ -82,9 +84,10 @@
 					<section class="sandbox">
 						<pre>
               <code class="javascript">
-                const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
-                console.log(_findIndex(arr, fruit => fruit === "blueberries"); 
-                // output esperado = 3
+			const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+			const index = fruits._findIndex(fruit => fruit === "blueberries");
+			console.log(index); // 3
+			console.log(fruits[index]); // blueberries
               </code>
             </pre>
 					</section>

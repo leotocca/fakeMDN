@@ -20,9 +20,9 @@
         
         <section class="description text">
           <p>
-							La función
+							El método 
 							<a href="#" class="bluehighlight mono"">_includes()</a> determina si
-							una matriz incluye un determinado elemento, devuelve true o false
+							una matriz incluye un determinado elemento, devuelve <span class="bluehighlight">true</span> o <span class="bluehighlight">false</span>
 							según corresponda.
           </p>
         </section>
@@ -31,18 +31,13 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                  _includes(array, searchElement);
+                  array._includes(searchElement);
               </code>
             </pre>
           </section>
           <h3>
             <span class="subtitle">Parametros </span>
           </h3>
-          <h4>
-            <span class="highlight">array</span>
-          </h4>
-          <p class="descripcion tab">Array a iterar en la búsqueda</p>
-          <h4>
             <span class="highlight tab">searchElement</span>
           </h4>
           <p class="descripcion tab">Elemento buscado dentro del array</p>
@@ -58,11 +53,11 @@
           <section class="sandboxjs">
             <pre>
               <code class="javascript">
-                  _includes([1, 2, 3],2); // true
-                  _includes([1, 2, 3],4); // false
-                  _includes([1, 2, 3],3); // false
-                  _includes([1, 2, 3],3); // true
-                  _includes([1, 2, NaN],NaN); // true
+                [1, 2, 3]._includes(,2); // true
+                [1, 2, 3]._includes(4); // false
+                [1, 2, 3]._includes(3); // false
+                [1, 2, 3]._includes(3); // true
+                [1, 2, NaN]._includes(NaN); // true
               </code>
             </pre>
           </section>

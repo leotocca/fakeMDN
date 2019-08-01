@@ -20,9 +20,7 @@
         
         <section class="description text">
           <p>
-            La funcion
-            <a href="#" class="bluehighlight">_find()</a>  devuelve el valor del primer elemento del array que cumple
-             la función <code class="code"> fn </code>de prueba proporcionada. En cualquier otro caso se devuelve <code class="code"> undefined</code>.
+            El método <a href="#" class="bluehighlight">_find()</a> devuelve el valor del primer elemento del array que cumple con la condición dada por la <code class="code">callbackFunction</code> de prueba proporcionada. En cualquier otro caso se devuelve <code class="code"> undefined</code>.
           </p>
         </section>
 
@@ -32,7 +30,7 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                _find(arr,fn){
+                array._find(callbackFunction){
                 //tu iteración
                 });
               </code>
@@ -44,13 +42,7 @@
           </h3>
 
           <h4>
-            <span class="highlight">Array</span>
-          </h4>
-
-          <p class="descripcion tab">Array que sera iterada</p>
-
-          <h4>
-            <span class="highlight">Función</span>
+            <span class="highlight">callbackFunction</span>
           </h4>
 
           <p class="descripcion tab">
@@ -68,9 +60,9 @@
         <section class="description text">
           <h2 class="sectionTitle">Descripción</h2>
           <p>
-            <code class="highlight">_find()</code> ejecuta la funcion
-            <code class="highlight">fn</code> El método find ejecuta la función fn una vez por cada índice del array hasta que encuentre uno en el que 
-            la fn devuelva un valor true. Si dicho elemento se encuentra, find devuelve inmediatamente el valor del elemento. En caso contrario, find devuelve undefined. 
+            El método <code class="highlight">_find()</code> ejecuta la 
+            <code class="highlight">callbackFunction</code> una vez por cada índice del array hasta que encuentre uno en el que 
+            la <code class="highlight">callbackFunction</code> devuelva un valor <span class="bluehighlight">true</span>. Si dicho elemento se encuentra, <code class="highlight">_find</code> devuelve inmediatamente el valor del elemento. En caso contrario, <code class="highlight">_find</code> devuelve undefined. 
           </p>
         </section>
 
@@ -83,12 +75,12 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                let array1 = [5, 12, 8, 130, 44];
+                const array1 = [5, 12, 8, 130, 44];
                 const lessThanTen = function(element) {
                   return element < 1;
                 };
               
-                console.log(_Find(array1, lessThanTen));
+                console.log(array1._find(lessThanTen));
               </code>
           </pre>
           </section>
@@ -99,16 +91,16 @@
           <section class="sandbox">
             <pre>
               <code class="javascript">
-                let inventario = [
-                { nombre: 'manzanas', cantidad: 2 },
-                { nombre: 'bananas', cantidad: 0 },
-                { nombre: 'cerezas', cantidad: 5 }
+                let inventory = [
+                { name: 'manzanas', amount: 2 },
+                { name: 'bananas', amount: 0 },
+                { name: 'cerezas', amount: 5 }
                 ]; 
-                function esCereza(fruta) { 
-                  return fruta.nombre === 'cerezas';
+                function isCherry(fruit) { 
+                  return fruit.name === 'cerezas';
                 } 
                 
-                console.log(_find(inventario, esCereza));
+                console.log(inventory._find(isCherry));
                 
               </code>
             </pre>
